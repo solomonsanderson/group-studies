@@ -21,11 +21,11 @@ always @(posedge clk) begin
 	if (square_count == 0) begin // if at zero generate pi/2 pulse
 		
 		if (short_counter == 0) begin  // if the counter for the pi/2 pulse is zero, flip. 
-			rf <= 1'b1; // flip to high 
+			rf <= 1; // flip to high 
 		end
 		
 		else if (short_counter == pi_2) begin //when at pi_2 length flip and increment squares
-			rf <= 1'b0;  // flip to low 
+			rf <= 0;  // flip to low 
 			short_counter <= 0; // reset the short counter			
 			square_count <= square_count + 1; // increment count of squares
 		end
@@ -37,7 +37,7 @@ always @(posedge clk) begin
 		
 	// interval
 	else if ( 0 < square_count < 201) begin
-		rf <= 1'b0;
+		rf <= 0;
 		if (interval_count == pi_2) begin
 			// rf <= ~rf; // should already be low
 			square_count <= square_count + 1;
@@ -74,8 +74,29 @@ always @(posedge clk) begin
 	// pi/2 pulse
 	
 	//else if
-	
 
 end
 endmodule
+
+module control_testbench;
+	reg trig, clk; //inputs
+	wire rf; //output
+	
+	parameter sim_delay = 1;
+	
+	control control(trig, clk, rf);
+	
+	initial begin
+		trig = 1, clk = 0;
+		always begin  // creating oscillating 
+		#(sim_delay) rf = 0;
+		#(sim_delay) rf = 1;
+		end
+	
+	#100; //let simulation finish
+
+	endmodule
+	
+
+
 
