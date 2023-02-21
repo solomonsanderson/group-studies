@@ -21,11 +21,11 @@ always @(posedge clk) begin
 	if (square_count == 0) begin // if at zero generate pi/2 pulse
 		
 		if (short_counter == 0) begin  // if the counter for the pi/2 pulse is zero, flip. 
-			rf <= ~ rf; // flip to high 
+			rf <= 1'b1; // flip to high 
 		end
 		
 		else if (short_counter == pi_2) begin //when at pi_2 length flip and increment squares
-			rf <= ~ rf;  // flip to low 
+			rf <= 1'b0;  // flip to low 
 			short_counter <= 0; // reset the short counter			
 			square_count <= square_count + 1; // increment count of squares
 		end
@@ -37,6 +37,7 @@ always @(posedge clk) begin
 		
 	// interval
 	else if ( 0 < square_count < 201) begin
+		rf <= 1'b0;
 		if (interval_count == pi_2) begin
 			// rf <= ~rf; // should already be low
 			square_count <= square_count + 1;
@@ -52,10 +53,13 @@ always @(posedge clk) begin
 	
 	// pi pulse
 	else if (square_count == 201) begin
-		if (pi_count == pi) begin
+		if (pi_count == 0) begin
+		rf <= 1'b1;
+		end
+		else if (pi_count == pi) begin
+			rf <= 1'b0;
 			square_count <= square_count + 2; //we add 2 as the pi pulse is twice the length of our normal pulses
 			pi_count = 0;
-		
 		end else begin 
 			pi_count <= pi_count + 1; 
 		end
