@@ -10,62 +10,41 @@ integer pi_2 = 333;  // this changes the frequency, it is the number of clock cy
 integer pi; // sets pi pulse to be twice the length of the pi over 2 
 assign pi = pi_2 * 2;
 
-integer square_count = 0; // counts the number of switches between high and low. 
-integer short_counter = 0;
-integer interval_count = 0;
-integer pi_count = 0; 
+// user inputs
+integer dead_time = 5; //multiples of 5, micro seconds
+assign dead_counts = (dead_time/5) * 333;
+integer interval = 1000;
+assign interval_counts = (interval / 5) * 333;
 
-always @(posedge clk) begin
 
-	// pi/2 pulse
-	if (square_count == 0) begin // if at zero generate pi/2 pulse
-		
-		if (short_counter == 0) begin  // if the counter for the pi/2 pulse is zero, flip. 
-			rf <= 1; // flip to high 
-		end
-		
-		else if (short_counter == pi_2) begin //when at pi_2 length flip and increment squares
-			rf <= 0;  // flip to low 
-			short_counter <= 0; // reset the short counter			
-			square_count <= square_count + 1; // increment count of squares
-		end
-		
-		else begin //incrementing
-			short_counter <= short_counter + 1;
-		end 
-	end
-		
-	// interval
-	else if ( 0 < square_count < 201) begin
-		rf <= 0;
-		if (interval_count == pi_2) begin
-			// rf <= ~rf; // should already be low
-			square_count <= square_count + 1;
-			interval_count <= 0; // reset when one square is complete
-		
-		end else begin
-			interval_count <= interval_count + 1; //counting to make square
-		end 
-		
-	end
-	
-	
-	
-	// pi pulse
-	else if (square_count == 201) begin
-		if (pi_count == 0) begin
-		rf <= 1'b1;
-		end
-		else if (pi_count == pi) begin
-			rf <= 1'b0;
-			square_count <= square_count + 2; //we add 2 as the pi pulse is twice the length of our normal pulses
-			pi_count = 0;
-		end else begin 
-			pi_count <= pi_count + 1; 
-		end
-		
-		
-	end
+
+
+// always @(posedge clk) begin
+// 	// deadtime at start. 
+// 	if (counter <= dead_counts) begin
+// 		$display("deadtime");
+// 		rf = 0;
+// 		counter <= counter + 1; 
+// 	end 
+// 	// pi/2 pulse 
+// 	else if ( dead_counts < counter <= (pi_2 + dead_time)) begin 
+// 		$display("pi/2");
+// 		rf = 1;
+// 		counter <= counter + 1;
+// 	end 
+// 	// first interval
+// 	else if ((dead_counts + pi_2) < counter <= (dead_counts + pi_2 + interval_counts)) begin 
+// 		$display("interval 1");
+// 		rf = 0;
+// 		counter <= counter + 1; 
+// 	end 
+// 	// pi pulse
+// 	else if ((dead_counts + pi_2 + interval_counts) < counter <= (dead_counts + pi_2 + interval_counts + pi)) begin
+// 		$display("pi pulse");
+// 		rf = 1;
+// 		counter <= counter + 1; 
+// 	end
+// end
 	
 	
 	// interval
@@ -75,27 +54,33 @@ always @(posedge clk) begin
 	
 	//else if
 
-end
-endmodule
+// 
+// endmodule
 
 module control_testbench;
-	reg trig, clk; //inputs
-	wire rf; //output
-	
-	parameter sim_delay = 1;
-	
-	control control(trig, clk, rf);
-	
-	initial begin
-		trig = 1, clk = 0;
-		always begin  // creating oscillating 
-		#(sim_delay) rf = 0;
-		#(sim_delay) rf = 1;
-		end
-	
-	#100; //let simulation finish
 
-	endmodule
+ 	reg trig, clk; //inputs
+ 	wire rf; //output
+	
+ 	parameter sim_delay = 1;
+	
+ 	control ctrl(trig, clk, rf);
+	
+ 	initial begin
+ 		trig = 1; clk = 0;
+		// creating oscillating 
+ 		#(sim_delay) rf = 0;
+ 		#(sim_delay) rf = 1;
+		#(sim_delay) rf = 0;
+ 		#(sim_delay) rf = 1;
+		#(sim_delay) rf = 0;
+ 		#(sim_delay) rf = 1;
+		#(sim_delay) rf = 0;
+ 		#(sim_delay) rf = 1;
+		
+ 	#100; //let simulation finish
+	end
+endmodule
 	
 
 

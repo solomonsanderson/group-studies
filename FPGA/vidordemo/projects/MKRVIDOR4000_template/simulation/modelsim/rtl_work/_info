@@ -1,0 +1,58 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/simulation/modelsim
+vMKRVIDOR4000_top
+!s110 1677011395
+!i10b 1
+!s100 @B=mSZeEihjlENJ:ZAJhI1
+ICzmQmfH13BAE>6[@IjDb`3
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1677001736
+8C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v
+FC:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v
+L0 23
+Z2 OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1677011395.000000
+!s107 C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v|
+!s90 -reportprogress|300|-work|work|C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v|
+!i113 1
+o-work work
+Z3 tCvgOpt 0
+n@m@k@r@v@i@d@o@r4000_top
+vSYSTEM_PLL
+DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+!s110 1677011225
+!i10b 1
+!s100 JWI3TQPoA[`=VJgzcNa?>3
+I9e680QQ>IK3SLQRJ;d^b52
+R1
+!s105 SYSTEM_PLL_v_unit
+S1
+R0
+w1675712318
+8C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/ip/SYSTEM_PLL/SYSTEM_PLL.v
+FC:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/ip/SYSTEM_PLL/SYSTEM_PLL.v
+L0 40
+R2
+r1
+!s85 0
+31
+!s108 1677011225.000000
+!s107 C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/ip/SYSTEM_PLL/SYSTEM_PLL.v|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/ip/SYSTEM_PLL|C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/ip/SYSTEM_PLL/SYSTEM_PLL.v|
+!i113 1
+o-sv -work work
+!s92 -sv -work work +incdir+C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/ip/SYSTEM_PLL
+R3
+n@s@y@s@t@e@m_@p@l@l

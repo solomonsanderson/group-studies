@@ -170,7 +170,7 @@ SYSTEM_PLL PLL_inst(
 
 control control_seq
 (
-.trig(bMKR_D[1]), // digital pin 1 as an inpu
+.trig(bMKR_D[1]), // digital pin 1 as an input
 .clk(wOSC_CLK), // clock input is linked to the internal 80Mhz oscillator
 .rf(bMKR_D[6]) // rf output is linked to pin 6
 );
