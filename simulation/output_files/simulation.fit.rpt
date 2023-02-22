@@ -1,5 +1,5 @@
 Fitter report for simulation
-Wed Feb 22 13:38:34 2023
+Wed Feb 22 14:10:53 2023
 Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 
 
@@ -61,15 +61,15 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                      ;
 +------------------------------------+------------------------------------------------+
-; Fitter Status                      ; Successful - Wed Feb 22 13:38:34 2023          ;
+; Fitter Status                      ; Successful - Wed Feb 22 14:10:53 2023          ;
 ; Quartus Prime Version              ; 22.1std.0 Build 915 10/25/2022 SC Lite Edition ;
 ; Revision Name                      ; simulation                                     ;
 ; Top-level Entity Name              ; simulation                                     ;
 ; Family                             ; Cyclone 10 LP                                  ;
 ; Device                             ; 10CL016YU256C8G                                ;
 ; Timing Models                      ; Final                                          ;
-; Total logic elements               ; 46 / 15,408 ( < 1 % )                          ;
-;     Total combinational functions  ; 46 / 15,408 ( < 1 % )                          ;
+; Total logic elements               ; 45 / 15,408 ( < 1 % )                          ;
+;     Total combinational functions  ; 45 / 15,408 ( < 1 % )                          ;
 ;     Dedicated logic registers      ; 0 / 15,408 ( 0 % )                             ;
 ; Total registers                    ; 0                                              ;
 ; Total pins                         ; 33 / 163 ( 20 % )                              ;
@@ -153,7 +153,7 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.3%      ;
+;     Processors 2-4         ;   0.4%      ;
 +----------------------------+-------------+
 
 
@@ -163,8 +163,8 @@ https://fpgasoftware.intel.com/eula.
 ; Type                ; Total [A + B]      ; From Design Partitions [A] ; From Rapid Recompile [B] ;
 +---------------------+--------------------+----------------------------+--------------------------+
 ; Placement (by node) ;                    ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 124 ) ; 0.00 % ( 0 / 124 )         ; 0.00 % ( 0 / 124 )       ;
-;     -- Achieved     ; 0.00 % ( 0 / 124 ) ; 0.00 % ( 0 / 124 )         ; 0.00 % ( 0 / 124 )       ;
+;     -- Requested    ; 0.00 % ( 0 / 123 ) ; 0.00 % ( 0 / 123 )         ; 0.00 % ( 0 / 123 )       ;
+;     -- Achieved     ; 0.00 % ( 0 / 123 ) ; 0.00 % ( 0 / 123 )         ; 0.00 % ( 0 / 123 )       ;
 ;                     ;                    ;                            ;                          ;
 ; Routing (by net)    ;                    ;                            ;                          ;
 ;     -- Requested    ; 0.00 % ( 0 / 0 )   ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
@@ -187,7 +187,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Top                            ; 0.00 % ( 0 / 114 )    ; N/A                     ; Source File       ; N/A                 ;       ;
+; Top                            ; 0.00 % ( 0 / 113 )    ; N/A                     ; Source File       ; N/A                 ;       ;
 ; hard_block:auto_generated_inst ; 0.00 % ( 0 / 10 )     ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
@@ -203,26 +203,26 @@ The pin-out file can be found in C:/Users/Solom/OneDrive/Desktop/Control/simulat
 +---------------------------------------------+-----------------------+
 ; Resource                                    ; Usage                 ;
 +---------------------------------------------+-----------------------+
-; Total logic elements                        ; 46 / 15,408 ( < 1 % ) ;
-;     -- Combinational with no register       ; 46                    ;
+; Total logic elements                        ; 45 / 15,408 ( < 1 % ) ;
+;     -- Combinational with no register       ; 45                    ;
 ;     -- Register only                        ; 0                     ;
 ;     -- Combinational with a register        ; 0                     ;
 ;                                             ;                       ;
 ; Logic element usage by number of LUT inputs ;                       ;
-;     -- 4 input functions                    ; 13                    ;
+;     -- 4 input functions                    ; 12                    ;
 ;     -- 3 input functions                    ; 2                     ;
 ;     -- <=2 input functions                  ; 31                    ;
 ;     -- Register only                        ; 0                     ;
 ;                                             ;                       ;
 ; Logic elements by mode                      ;                       ;
-;     -- normal mode                          ; 16                    ;
+;     -- normal mode                          ; 15                    ;
 ;     -- arithmetic mode                      ; 30                    ;
 ;                                             ;                       ;
 ; Total registers*                            ; 0 / 16,148 ( 0 % )    ;
 ;     -- Dedicated logic registers            ; 0 / 15,408 ( 0 % )    ;
 ;     -- I/O registers                        ; 0 / 740 ( 0 % )       ;
 ;                                             ;                       ;
-; Total LABs:  partially or completely used   ; 3 / 963 ( < 1 % )     ;
+; Total LABs:  partially or completely used   ; 4 / 963 ( < 1 % )     ;
 ; Virtual pins                                ; 0                     ;
 ; I/O pins                                    ; 33 / 163 ( 20 % )     ;
 ;     -- Clock pins                           ; 0 / 8 ( 0 % )         ;
@@ -240,12 +240,12 @@ The pin-out file can be found in C:/Users/Solom/OneDrive/Desktop/Control/simulat
 ; ASMI blocks                                 ; 0 / 1 ( 0 % )         ;
 ; Oscillator blocks                           ; 0 / 1 ( 0 % )         ;
 ; Impedance control blocks                    ; 0 / 4 ( 0 % )         ;
-; Average interconnect usage (total/H/V)      ; 0.1% / 0.1% / 0.2%    ;
-; Peak interconnect usage (total/H/V)         ; 1.4% / 1.1% / 1.8%    ;
-; Maximum fan-out                             ; 7                     ;
-; Highest non-global fan-out                  ; 6                     ;
-; Total fan-out                               ; 191                   ;
-; Average fan-out                             ; 1.55                  ;
+; Average interconnect usage (total/H/V)      ; 0.2% / 0.1% / 0.2%    ;
+; Peak interconnect usage (total/H/V)         ; 1.3% / 1.2% / 1.4%    ;
+; Maximum fan-out                             ; 6                     ;
+; Highest non-global fan-out                  ; 5                     ;
+; Total fan-out                               ; 187                   ;
+; Average fan-out                             ; 1.53                  ;
 +---------------------------------------------+-----------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -258,19 +258,19 @@ The pin-out file can be found in C:/Users/Solom/OneDrive/Desktop/Control/simulat
 +---------------------------------------------+----------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low                  ; Low                            ;
 ;                                             ;                      ;                                ;
-; Total logic elements                        ; 46 / 15408 ( < 1 % ) ; 0 / 15408 ( 0 % )              ;
-;     -- Combinational with no register       ; 46                   ; 0                              ;
+; Total logic elements                        ; 45 / 15408 ( < 1 % ) ; 0 / 15408 ( 0 % )              ;
+;     -- Combinational with no register       ; 45                   ; 0                              ;
 ;     -- Register only                        ; 0                    ; 0                              ;
 ;     -- Combinational with a register        ; 0                    ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Logic element usage by number of LUT inputs ;                      ;                                ;
-;     -- 4 input functions                    ; 13                   ; 0                              ;
+;     -- 4 input functions                    ; 12                   ; 0                              ;
 ;     -- 3 input functions                    ; 2                    ; 0                              ;
 ;     -- <=2 input functions                  ; 31                   ; 0                              ;
 ;     -- Register only                        ; 0                    ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Logic elements by mode                      ;                      ;                                ;
-;     -- normal mode                          ; 16                   ; 0                              ;
+;     -- normal mode                          ; 15                   ; 0                              ;
 ;     -- arithmetic mode                      ; 30                   ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Total registers                             ; 0                    ; 0                              ;
@@ -292,7 +292,7 @@ The pin-out file can be found in C:/Users/Solom/OneDrive/Desktop/Control/simulat
 ;     -- Registered Output Connections        ; 0                    ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Internal Connections                        ;                      ;                                ;
-;     -- Total Connections                    ; 186                  ; 5                              ;
+;     -- Total Connections                    ; 182                  ; 5                              ;
 ;     -- Registered Connections               ; 0                    ; 0                              ;
 ;                                             ;                      ;                                ;
 ; External Connections                        ;                      ;                                ;
@@ -325,39 +325,39 @@ The pin-out file can be found in C:/Users/Solom/OneDrive/Desktop/Control/simulat
 +-------------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+----------------------+----------------------+---------------------+
 ; Name        ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Output Register ; Output Enable Register ; Power Up High ; Slew Rate ; PCI I/O Enabled ; Open Drain ; TRI Primitive ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Termination                       ; Termination Control Block ; Output Buffer Pre-emphasis ; Voltage Output Differential ; Location assigned by ; Output Enable Source ; Output Enable Group ;
 +-------------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+----------------------+----------------------+---------------------+
-; counter[0]  ; C14   ; 7        ; 39           ; 29           ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; counter[10] ; C16   ; 6        ; 41           ; 27           ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; counter[11] ; A15   ; 7        ; 28           ; 29           ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; counter[12] ; F13   ; 6        ; 41           ; 18           ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; counter[13] ; G11   ; 6        ; 41           ; 26           ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; counter[14] ; J14   ; 5        ; 41           ; 14           ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; counter[15] ; G16   ; 6        ; 41           ; 18           ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; counter[16] ; A13   ; 7        ; 28           ; 29           ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; counter[17] ; B11   ; 7        ; 30           ; 29           ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; counter[18] ; D12   ; 7        ; 37           ; 29           ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; counter[19] ; E10   ; 7        ; 32           ; 29           ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; counter[1]  ; C15   ; 6        ; 41           ; 27           ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; counter[20] ; A12   ; 7        ; 32           ; 29           ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; counter[0]  ; A13   ; 7        ; 28           ; 29           ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; counter[10] ; A15   ; 7        ; 28           ; 29           ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; counter[11] ; E10   ; 7        ; 32           ; 29           ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; counter[12] ; G16   ; 6        ; 41           ; 18           ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; counter[13] ; J13   ; 5        ; 41           ; 14           ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; counter[14] ; D12   ; 7        ; 37           ; 29           ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; counter[15] ; D15   ; 6        ; 41           ; 24           ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; counter[16] ; F9    ; 7        ; 26           ; 29           ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; counter[17] ; B14   ; 7        ; 35           ; 29           ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; counter[18] ; C14   ; 7        ; 39           ; 29           ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; counter[19] ; J12   ; 5        ; 41           ; 14           ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; counter[1]  ; A14   ; 7        ; 35           ; 29           ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; counter[20] ; F15   ; 6        ; 41           ; 19           ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
 ; counter[21] ; B16   ; 6        ; 41           ; 19           ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; counter[22] ; F14   ; 6        ; 41           ; 23           ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; counter[23] ; J12   ; 5        ; 41           ; 14           ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; counter[24] ; D16   ; 6        ; 41           ; 24           ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; counter[25] ; A11   ; 7        ; 30           ; 29           ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; counter[26] ; F9    ; 7        ; 26           ; 29           ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; counter[27] ; L15   ; 5        ; 41           ; 10           ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; counter[28] ; L13   ; 5        ; 41           ; 9            ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; counter[29] ; D15   ; 6        ; 41           ; 24           ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; counter[2]  ; F15   ; 6        ; 41           ; 19           ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; counter[30] ; E11   ; 7        ; 32           ; 29           ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; counter[31] ; D14   ; 7        ; 39           ; 29           ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; counter[3]  ; B14   ; 7        ; 35           ; 29           ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; counter[4]  ; B13   ; 7        ; 37           ; 29           ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; counter[5]  ; C11   ; 7        ; 37           ; 29           ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; counter[6]  ; G15   ; 6        ; 41           ; 18           ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; counter[7]  ; D11   ; 7        ; 39           ; 29           ; 28           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; counter[8]  ; A14   ; 7        ; 35           ; 29           ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; counter[9]  ; B12   ; 7        ; 32           ; 29           ; 28           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; rf          ; B10   ; 7        ; 26           ; 29           ; 28           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; counter[22] ; E11   ; 7        ; 32           ; 29           ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; counter[23] ; A11   ; 7        ; 30           ; 29           ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; counter[24] ; B12   ; 7        ; 32           ; 29           ; 28           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; counter[25] ; L14   ; 5        ; 41           ; 6            ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; counter[26] ; B13   ; 7        ; 37           ; 29           ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; counter[27] ; B11   ; 7        ; 30           ; 29           ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; counter[28] ; A12   ; 7        ; 32           ; 29           ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; counter[29] ; E9    ; 7        ; 21           ; 29           ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; counter[2]  ; G11   ; 6        ; 41           ; 26           ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; counter[30] ; D11   ; 7        ; 39           ; 29           ; 28           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; counter[31] ; F14   ; 6        ; 41           ; 23           ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; counter[3]  ; C11   ; 7        ; 37           ; 29           ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; counter[4]  ; G15   ; 6        ; 41           ; 18           ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; counter[5]  ; C16   ; 6        ; 41           ; 27           ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; counter[6]  ; F13   ; 6        ; 41           ; 18           ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; counter[7]  ; C15   ; 6        ; 41           ; 27           ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; counter[8]  ; D14   ; 7        ; 39           ; 29           ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; counter[9]  ; D16   ; 6        ; 41           ; 24           ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; rf          ; A10   ; 7        ; 26           ; 29           ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
 +-------------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+----------------------+----------------------+---------------------+
 
 
@@ -378,10 +378,10 @@ The pin-out file can be found in C:/Users/Solom/OneDrive/Desktop/Control/simulat
 ; H12      ; MSEL1                       ; -                        ; -                       ; Dedicated Programming Pin ;
 ; G12      ; MSEL2                       ; -                        ; -                       ; Dedicated Programming Pin ;
 ; G12      ; MSEL3                       ; -                        ; -                       ; Dedicated Programming Pin ;
-; G16      ; DIFFIO_R17n, INIT_DONE      ; Use as regular IO        ; counter[15]             ; Dual Purpose Pin          ;
-; G15      ; DIFFIO_R17p, CRC_ERROR      ; Use as regular IO        ; counter[6]              ; Dual Purpose Pin          ;
+; G16      ; DIFFIO_R17n, INIT_DONE      ; Use as regular IO        ; counter[12]             ; Dual Purpose Pin          ;
+; G15      ; DIFFIO_R17p, CRC_ERROR      ; Use as regular IO        ; counter[4]              ; Dual Purpose Pin          ;
 ; F16      ; DIFFIO_R16n, nCEO           ; Use as programming pin   ; ~ALTERA_nCEO~           ; Dual Purpose Pin          ;
-; F15      ; DIFFIO_R16p, CLKUSR         ; Use as regular IO        ; counter[2]              ; Dual Purpose Pin          ;
+; F15      ; DIFFIO_R16p, CLKUSR         ; Use as regular IO        ; counter[20]             ; Dual Purpose Pin          ;
 +----------+-----------------------------+--------------------------+-------------------------+---------------------------+
 
 
@@ -394,9 +394,9 @@ The pin-out file can be found in C:/Users/Solom/OneDrive/Desktop/Control/simulat
 ; 2        ; 0 / 18 ( 0 % )   ; 2.5V          ; --           ;
 ; 3        ; 0 / 25 ( 0 % )   ; 2.5V          ; --           ;
 ; 4        ; 0 / 27 ( 0 % )   ; 2.5V          ; --           ;
-; 5        ; 4 / 20 ( 20 % )  ; 2.5V          ; --           ;
+; 5        ; 3 / 20 ( 15 % )  ; 2.5V          ; --           ;
 ; 6        ; 12 / 14 ( 86 % ) ; 2.5V          ; --           ;
-; 7        ; 18 / 24 ( 75 % ) ; 2.5V          ; --           ;
+; 7        ; 19 / 24 ( 79 % ) ; 2.5V          ; --           ;
 ; 8        ; 0 / 23 ( 0 % )   ; 2.5V          ; --           ;
 +----------+------------------+---------------+--------------+
 
@@ -415,12 +415,12 @@ The pin-out file can be found in C:/Users/Solom/OneDrive/Desktop/Control/simulat
 ; A7       ; 334        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; A8       ; 321        ; 8        ; GND+                                                      ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; A9       ; 319        ; 7        ; GND+                                                      ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
-; A10      ; 307        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; A11      ; 296        ; 7        ; counter[25]                                               ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; A12      ; 292        ; 7        ; counter[20]                                               ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; A13      ; 300        ; 7        ; counter[16]                                               ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; A14      ; 284        ; 7        ; counter[8]                                                ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; A15      ; 301        ; 7        ; counter[11]                                               ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; A10      ; 307        ; 7        ; rf                                                        ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; A11      ; 296        ; 7        ; counter[23]                                               ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; A12      ; 292        ; 7        ; counter[28]                                               ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; A13      ; 300        ; 7        ; counter[0]                                                ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; A14      ; 284        ; 7        ; counter[1]                                                ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; A15      ; 301        ; 7        ; counter[10]                                               ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; A16      ;            ; 7        ; VCCIO7                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; B1       ; 6          ; 1        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; B2       ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -431,11 +431,11 @@ The pin-out file can be found in C:/Users/Solom/OneDrive/Desktop/Control/simulat
 ; B7       ; 335        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; B8       ; 322        ; 8        ; GND+                                                      ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; B9       ; 320        ; 7        ; GND+                                                      ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
-; B10      ; 308        ; 7        ; rf                                                        ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; B11      ; 297        ; 7        ; counter[17]                                               ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; B12      ; 293        ; 7        ; counter[9]                                                ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; B13      ; 282        ; 7        ; counter[4]                                                ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; B14      ; 285        ; 7        ; counter[3]                                                ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; B10      ; 308        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; B11      ; 297        ; 7        ; counter[27]                                               ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; B12      ; 293        ; 7        ; counter[24]                                               ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; B13      ; 282        ; 7        ; counter[26]                                               ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; B14      ; 285        ; 7        ; counter[17]                                               ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; B15      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; B16      ; 241        ; 6        ; counter[21]                                               ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; C1       ; 9          ; 1        ; ~ALTERA_ASDO_DATA1~ / RESERVED_INPUT_WITH_WEAK_PULLUP     ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; On           ;
@@ -448,12 +448,12 @@ The pin-out file can be found in C:/Users/Solom/OneDrive/Desktop/Control/simulat
 ; C8       ; 329        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; C9       ; 309        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; C10      ;            ; 7        ; VCCIO7                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
-; C11      ; 281        ; 7        ; counter[5]                                                ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; C11      ; 281        ; 7        ; counter[3]                                                ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; C12      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; C13      ;            ; 7        ; VCCIO7                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
-; C14      ; 274        ; 7        ; counter[0]                                                ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; C15      ; 271        ; 6        ; counter[1]                                                ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
-; C16      ; 270        ; 6        ; counter[10]                                               ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; C14      ; 274        ; 7        ; counter[18]                                               ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; C15      ; 271        ; 6        ; counter[7]                                                ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; C16      ; 270        ; 6        ; counter[5]                                                ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; D1       ; 14         ; 1        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; D2       ; 13         ; 1        ; ~ALTERA_FLASH_nCE_nCSO~ / RESERVED_INPUT_WITH_WEAK_PULLUP ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; On           ;
 ; D3       ; 363        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
@@ -464,12 +464,12 @@ The pin-out file can be found in C:/Users/Solom/OneDrive/Desktop/Control/simulat
 ; D8       ; 330        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; D9       ; 310        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; D10      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; D11      ; 278        ; 7        ; counter[7]                                                ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; D12      ; 279        ; 7        ; counter[18]                                               ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; D11      ; 278        ; 7        ; counter[30]                                               ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; D12      ; 279        ; 7        ; counter[14]                                               ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; D13      ;            ;          ; VCCD_PLL2                                                 ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
-; D14      ; 275        ; 7        ; counter[31]                                               ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; D15      ; 261        ; 6        ; counter[29]                                               ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
-; D16      ; 260        ; 6        ; counter[24]                                               ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; D14      ; 275        ; 7        ; counter[8]                                                ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; D15      ; 261        ; 6        ; counter[15]                                               ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; D16      ; 260        ; 6        ; counter[9]                                                ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; E1       ; 39         ; 1        ; GND+                                                      ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; E2       ; 38         ; 1        ; GND+                                                      ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; E3       ;            ; 1        ; VCCIO1                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
@@ -478,9 +478,9 @@ The pin-out file can be found in C:/Users/Solom/OneDrive/Desktop/Control/simulat
 ; E6       ; 348        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; E7       ; 345        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; E8       ; 332        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; E9       ; 315        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; E10      ; 290        ; 7        ; counter[19]                                               ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; E11      ; 289        ; 7        ; counter[30]                                               ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; E9       ; 315        ; 7        ; counter[29]                                               ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; E10      ; 290        ; 7        ; counter[11]                                               ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; E11      ; 289        ; 7        ; counter[22]                                               ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; E12      ;            ;          ; GNDA2                                                     ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; E13      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; E14      ;            ; 6        ; VCCIO6                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
@@ -494,13 +494,13 @@ The pin-out file can be found in C:/Users/Solom/OneDrive/Desktop/Control/simulat
 ; F6       ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; F7       ;            ;          ; VCCINT                                                    ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; F8       ; 333        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; F9       ; 306        ; 7        ; counter[26]                                               ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; F9       ; 306        ; 7        ; counter[16]                                               ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; F10      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; F11      ;            ;          ; VCCINT                                                    ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; F12      ;            ; --       ; VCCA2                                                     ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
-; F13      ; 237        ; 6        ; counter[12]                                               ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
-; F14      ; 257        ; 6        ; counter[22]                                               ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
-; F15      ; 240        ; 6        ; counter[2]                                                ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; F13      ; 237        ; 6        ; counter[6]                                                ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; F14      ; 257        ; 6        ; counter[31]                                               ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; F15      ; 240        ; 6        ; counter[20]                                               ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; F16      ; 239        ; 6        ; ~ALTERA_nCEO~ / RESERVED_OUTPUT_OPEN_DRAIN                ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; G1       ; 27         ; 1        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; G2       ; 24         ; 1        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
@@ -512,13 +512,13 @@ The pin-out file can be found in C:/Users/Solom/OneDrive/Desktop/Control/simulat
 ; G8       ;            ;          ; VCCINT                                                    ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; G9       ;            ;          ; VCCINT                                                    ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; G10      ;            ;          ; VCCINT                                                    ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
-; G11      ; 269        ; 6        ; counter[13]                                               ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; G11      ; 269        ; 6        ; counter[2]                                                ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; G12      ; 230        ; 6        ; ^MSEL2                                                    ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; G12      ; 231        ; 6        ; ^MSEL3                                                    ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; G13      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; G14      ;            ; 6        ; VCCIO6                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
-; G15      ; 235        ; 6        ; counter[6]                                                ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
-; G16      ; 234        ; 6        ; counter[15]                                               ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; G15      ; 235        ; 6        ; counter[4]                                                ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; G16      ; 234        ; 6        ; counter[12]                                               ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; H1       ; 30         ; 1        ; ~ALTERA_DCLK~                                             ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; On           ;
 ; H2       ; 31         ; 1        ; ~ALTERA_DATA0~ / RESERVED_INPUT_WITH_WEAK_PULLUP          ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; On           ;
 ; H3       ; 34         ; 1        ; #TCK                                                      ; input  ;              ;         ; --         ;                 ; --       ; --           ;
@@ -546,9 +546,9 @@ The pin-out file can be found in C:/Users/Solom/OneDrive/Desktop/Control/simulat
 ; J9       ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; J10      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; J11      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; J12      ; 221        ; 5        ; counter[23]                                               ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
-; J13      ; 222        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; J14      ; 220        ; 5        ; counter[14]                                               ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; J12      ; 221        ; 5        ; counter[19]                                               ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; J13      ; 222        ; 5        ; counter[13]                                               ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; J14      ; 220        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; J15      ; 217        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; J16      ; 216        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; K1       ; 55         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
@@ -579,9 +579,9 @@ The pin-out file can be found in C:/Users/Solom/OneDrive/Desktop/Control/simulat
 ; L10      ; 153        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; L11      ; 173        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; L12      ;            ; --       ; VCCA4                                                     ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
-; L13      ; 203        ; 5        ; counter[28]                                               ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
-; L14      ; 194        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
-; L15      ; 208        ; 5        ; counter[27]                                               ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; L13      ; 203        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; L14      ; 194        ; 5        ; counter[25]                                               ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; L15      ; 208        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; L16      ; 204        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; M1       ; 41         ; 2        ; GND+                                                      ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; M2       ; 40         ; 2        ; GND+                                                      ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
@@ -746,7 +746,7 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------+-------------+--------------+
-; |simulation                ; 46 (46)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 33   ; 0            ; 46 (46)      ; 0 (0)             ; 0 (0)            ; |simulation         ; simulation  ; work         ;
+; |simulation                ; 45 (45)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 33   ; 0            ; 45 (45)      ; 0 (0)             ; 0 (0)            ; |simulation         ; simulation  ; work         ;
 +----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -797,23 +797,98 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------+
 ; Routing Resource Type ; Usage                 ;
 +-----------------------+-----------------------+
-; Block interconnects   ; 62 / 47,787 ( < 1 % ) ;
-; C16 interconnects     ; 1 / 1,804 ( < 1 % )   ;
-; C4 interconnects      ; 65 / 31,272 ( < 1 % ) ;
-; Direct links          ; 1 / 47,787 ( < 1 % )  ;
+; Block interconnects   ; 63 / 47,787 ( < 1 % ) ;
+; C16 interconnects     ; 3 / 1,804 ( < 1 % )   ;
+; C4 interconnects      ; 51 / 31,272 ( < 1 % ) ;
+; Direct links          ; 10 / 47,787 ( < 1 % ) ;
 ; Global clocks         ; 0 / 20 ( 0 % )        ;
-; Local interconnects   ; 45 / 15,408 ( < 1 % ) ;
-; R24 interconnects     ; 0 / 1,775 ( 0 % )     ;
-; R4 interconnects      ; 49 / 41,310 ( < 1 % ) ;
+; Local interconnects   ; 44 / 15,408 ( < 1 % ) ;
+; R24 interconnects     ; 3 / 1,775 ( < 1 % )   ;
+; R4 interconnects      ; 51 / 41,310 ( < 1 % ) ;
 +-----------------------+-----------------------+
 
 
 +---------------------------------------------------------------------------+
 ; LAB Logic Elements                                                        ;
 +---------------------------------------------+-----------------------------+
-; Number of Logic Elements  (Average = 15.67) ; Number of LABs  (Total = 3) ;
+; Number of Logic Elements  (Average = 11.50) ; Number of LABs  (Total = 4) ;
 +---------------------------------------------+-----------------------------+
-; 1                                           ; 0                           ;
+; 1                                           ; 1                           ;
+; 2                                           ; 0                           ;
+; 3                                           ; 0                           ;
+; 4                                           ; 0                           ;
+; 5                                           ; 0                           ;
+; 6                                           ; 0                           ;
+; 7                                           ; 0                           ;
+; 8                                           ; 0                           ;
+; 9                                           ; 0                           ;
+; 10                                          ; 0                           ;
+; 11                                          ; 0                           ;
+; 12                                          ; 0                           ;
+; 13                                          ; 1                           ;
+; 14                                          ; 0                           ;
+; 15                                          ; 0                           ;
+; 16                                          ; 2                           ;
++---------------------------------------------+-----------------------------+
+
+
++----------------------------------------------------------------------------+
+; LAB Signals Sourced                                                        ;
++----------------------------------------------+-----------------------------+
+; Number of Signals Sourced  (Average = 11.50) ; Number of LABs  (Total = 4) ;
++----------------------------------------------+-----------------------------+
+; 0                                            ; 0                           ;
+; 1                                            ; 1                           ;
+; 2                                            ; 0                           ;
+; 3                                            ; 0                           ;
+; 4                                            ; 0                           ;
+; 5                                            ; 0                           ;
+; 6                                            ; 0                           ;
+; 7                                            ; 0                           ;
+; 8                                            ; 0                           ;
+; 9                                            ; 0                           ;
+; 10                                           ; 0                           ;
+; 11                                           ; 0                           ;
+; 12                                           ; 0                           ;
+; 13                                           ; 1                           ;
+; 14                                           ; 0                           ;
+; 15                                           ; 0                           ;
+; 16                                           ; 2                           ;
++----------------------------------------------+-----------------------------+
+
+
++-------------------------------------------------------------------------------+
+; LAB Signals Sourced Out                                                       ;
++-------------------------------------------------+-----------------------------+
+; Number of Signals Sourced Out  (Average = 8.50) ; Number of LABs  (Total = 4) ;
++-------------------------------------------------+-----------------------------+
+; 0                                               ; 0                           ;
+; 1                                               ; 2                           ;
+; 2                                               ; 0                           ;
+; 3                                               ; 0                           ;
+; 4                                               ; 0                           ;
+; 5                                               ; 0                           ;
+; 6                                               ; 0                           ;
+; 7                                               ; 0                           ;
+; 8                                               ; 0                           ;
+; 9                                               ; 0                           ;
+; 10                                              ; 0                           ;
+; 11                                              ; 0                           ;
+; 12                                              ; 0                           ;
+; 13                                              ; 0                           ;
+; 14                                              ; 0                           ;
+; 15                                              ; 0                           ;
+; 16                                              ; 2                           ;
++-------------------------------------------------+-----------------------------+
+
+
++---------------------------------------------------------------------------+
+; LAB Distinct Inputs                                                       ;
++---------------------------------------------+-----------------------------+
+; Number of Distinct Inputs  (Average = 7.50) ; Number of LABs  (Total = 4) ;
++---------------------------------------------+-----------------------------+
+; 0                                           ; 0                           ;
+; 1                                           ; 2                           ;
 ; 2                                           ; 0                           ;
 ; 3                                           ; 0                           ;
 ; 4                                           ; 0                           ;
@@ -827,96 +902,21 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 12                                          ; 0                           ;
 ; 13                                          ; 0                           ;
 ; 14                                          ; 0                           ;
-; 15                                          ; 1                           ;
-; 16                                          ; 2                           ;
+; 15                                          ; 0                           ;
+; 16                                          ; 0                           ;
+; 17                                          ; 0                           ;
+; 18                                          ; 0                           ;
+; 19                                          ; 0                           ;
+; 20                                          ; 0                           ;
+; 21                                          ; 0                           ;
+; 22                                          ; 0                           ;
+; 23                                          ; 0                           ;
+; 24                                          ; 0                           ;
+; 25                                          ; 0                           ;
+; 26                                          ; 0                           ;
+; 27                                          ; 0                           ;
+; 28                                          ; 1                           ;
 +---------------------------------------------+-----------------------------+
-
-
-+----------------------------------------------------------------------------+
-; LAB Signals Sourced                                                        ;
-+----------------------------------------------+-----------------------------+
-; Number of Signals Sourced  (Average = 15.67) ; Number of LABs  (Total = 3) ;
-+----------------------------------------------+-----------------------------+
-; 0                                            ; 0                           ;
-; 1                                            ; 0                           ;
-; 2                                            ; 0                           ;
-; 3                                            ; 0                           ;
-; 4                                            ; 0                           ;
-; 5                                            ; 0                           ;
-; 6                                            ; 0                           ;
-; 7                                            ; 0                           ;
-; 8                                            ; 0                           ;
-; 9                                            ; 0                           ;
-; 10                                           ; 0                           ;
-; 11                                           ; 0                           ;
-; 12                                           ; 0                           ;
-; 13                                           ; 0                           ;
-; 14                                           ; 0                           ;
-; 15                                           ; 1                           ;
-; 16                                           ; 2                           ;
-+----------------------------------------------+-----------------------------+
-
-
-+--------------------------------------------------------------------------------+
-; LAB Signals Sourced Out                                                        ;
-+--------------------------------------------------+-----------------------------+
-; Number of Signals Sourced Out  (Average = 11.33) ; Number of LABs  (Total = 3) ;
-+--------------------------------------------------+-----------------------------+
-; 0                                                ; 0                           ;
-; 1                                                ; 0                           ;
-; 2                                                ; 1                           ;
-; 3                                                ; 0                           ;
-; 4                                                ; 0                           ;
-; 5                                                ; 0                           ;
-; 6                                                ; 0                           ;
-; 7                                                ; 0                           ;
-; 8                                                ; 0                           ;
-; 9                                                ; 0                           ;
-; 10                                               ; 0                           ;
-; 11                                               ; 0                           ;
-; 12                                               ; 0                           ;
-; 13                                               ; 0                           ;
-; 14                                               ; 0                           ;
-; 15                                               ; 0                           ;
-; 16                                               ; 2                           ;
-+--------------------------------------------------+-----------------------------+
-
-
-+----------------------------------------------------------------------------+
-; LAB Distinct Inputs                                                        ;
-+----------------------------------------------+-----------------------------+
-; Number of Distinct Inputs  (Average = 10.00) ; Number of LABs  (Total = 3) ;
-+----------------------------------------------+-----------------------------+
-; 0                                            ; 0                           ;
-; 1                                            ; 2                           ;
-; 2                                            ; 0                           ;
-; 3                                            ; 0                           ;
-; 4                                            ; 0                           ;
-; 5                                            ; 0                           ;
-; 6                                            ; 0                           ;
-; 7                                            ; 0                           ;
-; 8                                            ; 0                           ;
-; 9                                            ; 0                           ;
-; 10                                           ; 0                           ;
-; 11                                           ; 0                           ;
-; 12                                           ; 0                           ;
-; 13                                           ; 0                           ;
-; 14                                           ; 0                           ;
-; 15                                           ; 0                           ;
-; 16                                           ; 0                           ;
-; 17                                           ; 0                           ;
-; 18                                           ; 0                           ;
-; 19                                           ; 0                           ;
-; 20                                           ; 0                           ;
-; 21                                           ; 0                           ;
-; 22                                           ; 0                           ;
-; 23                                           ; 0                           ;
-; 24                                           ; 0                           ;
-; 25                                           ; 0                           ;
-; 26                                           ; 0                           ;
-; 27                                           ; 0                           ;
-; 28                                           ; 1                           ;
-+----------------------------------------------+-----------------------------+
 
 
 +------------------------------------------+
@@ -1077,97 +1077,97 @@ Critical Warning (169085): No exact pin location assignment(s) for 33 pins of 33
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'simulation.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332144): No user constrained base clocks found in the design
 Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
-Warning (332125): Found combinational loop of 2 nodes File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 32
+Warning (332125): Found combinational loop of 2 nodes File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 33
     Warning (332126): Node "Add0~60|dataa"
     Warning (332126): Node "Add0~60|combout"
-Warning (332125): Found combinational loop of 2 nodes File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 32
+Warning (332125): Found combinational loop of 2 nodes File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 33
     Warning (332126): Node "Add0~58|dataa"
     Warning (332126): Node "Add0~58|combout"
-Warning (332125): Found combinational loop of 2 nodes File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 32
+Warning (332125): Found combinational loop of 2 nodes File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 33
     Warning (332126): Node "Add0~56|dataa"
     Warning (332126): Node "Add0~56|combout"
-Warning (332125): Found combinational loop of 2 nodes File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 32
+Warning (332125): Found combinational loop of 2 nodes File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 33
     Warning (332126): Node "Add0~54|dataa"
     Warning (332126): Node "Add0~54|combout"
-Warning (332125): Found combinational loop of 2 nodes File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 32
+Warning (332125): Found combinational loop of 2 nodes File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 33
     Warning (332126): Node "Add0~52|dataa"
     Warning (332126): Node "Add0~52|combout"
-Warning (332125): Found combinational loop of 2 nodes File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 32
+Warning (332125): Found combinational loop of 2 nodes File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 33
     Warning (332126): Node "Add0~50|dataa"
     Warning (332126): Node "Add0~50|combout"
-Warning (332125): Found combinational loop of 2 nodes File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 32
+Warning (332125): Found combinational loop of 2 nodes File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 33
     Warning (332126): Node "Add0~48|dataa"
     Warning (332126): Node "Add0~48|combout"
-Warning (332125): Found combinational loop of 2 nodes File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 32
+Warning (332125): Found combinational loop of 2 nodes File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 33
     Warning (332126): Node "Add0~46|dataa"
     Warning (332126): Node "Add0~46|combout"
-Warning (332125): Found combinational loop of 2 nodes File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 32
+Warning (332125): Found combinational loop of 2 nodes File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 33
     Warning (332126): Node "Add0~44|dataa"
     Warning (332126): Node "Add0~44|combout"
-Warning (332125): Found combinational loop of 2 nodes File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 32
+Warning (332125): Found combinational loop of 2 nodes File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 33
     Warning (332126): Node "Add0~42|dataa"
     Warning (332126): Node "Add0~42|combout"
-Warning (332125): Found combinational loop of 2 nodes File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 32
+Warning (332125): Found combinational loop of 2 nodes File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 33
     Warning (332126): Node "Add0~40|dataa"
     Warning (332126): Node "Add0~40|combout"
-Warning (332125): Found combinational loop of 2 nodes File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 32
+Warning (332125): Found combinational loop of 2 nodes File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 33
     Warning (332126): Node "Add0~38|dataa"
     Warning (332126): Node "Add0~38|combout"
-Warning (332125): Found combinational loop of 2 nodes File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 32
+Warning (332125): Found combinational loop of 2 nodes File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 33
     Warning (332126): Node "Add0~36|dataa"
     Warning (332126): Node "Add0~36|combout"
-Warning (332125): Found combinational loop of 2 nodes File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 32
+Warning (332125): Found combinational loop of 2 nodes File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 33
     Warning (332126): Node "Add0~34|dataa"
     Warning (332126): Node "Add0~34|combout"
-Warning (332125): Found combinational loop of 2 nodes File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 32
+Warning (332125): Found combinational loop of 2 nodes File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 33
     Warning (332126): Node "Add0~32|dataa"
     Warning (332126): Node "Add0~32|combout"
-Warning (332125): Found combinational loop of 2 nodes File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 32
+Warning (332125): Found combinational loop of 2 nodes File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 33
     Warning (332126): Node "Add0~30|dataa"
     Warning (332126): Node "Add0~30|combout"
-Warning (332125): Found combinational loop of 2 nodes File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 32
+Warning (332125): Found combinational loop of 2 nodes File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 33
     Warning (332126): Node "Add0~28|dataa"
     Warning (332126): Node "Add0~28|combout"
-Warning (332125): Found combinational loop of 2 nodes File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 32
+Warning (332125): Found combinational loop of 2 nodes File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 33
     Warning (332126): Node "Add0~26|dataa"
     Warning (332126): Node "Add0~26|combout"
-Warning (332125): Found combinational loop of 2 nodes File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 32
+Warning (332125): Found combinational loop of 2 nodes File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 33
     Warning (332126): Node "Add0~24|dataa"
     Warning (332126): Node "Add0~24|combout"
-Warning (332125): Found combinational loop of 2 nodes File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 32
+Warning (332125): Found combinational loop of 2 nodes File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 33
     Warning (332126): Node "Add0~22|dataa"
     Warning (332126): Node "Add0~22|combout"
-Warning (332125): Found combinational loop of 2 nodes File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 32
+Warning (332125): Found combinational loop of 2 nodes File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 33
     Warning (332126): Node "Add0~20|dataa"
     Warning (332126): Node "Add0~20|combout"
-Warning (332125): Found combinational loop of 2 nodes File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 32
+Warning (332125): Found combinational loop of 2 nodes File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 33
     Warning (332126): Node "Add0~18|dataa"
     Warning (332126): Node "Add0~18|combout"
-Warning (332125): Found combinational loop of 2 nodes File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 32
+Warning (332125): Found combinational loop of 2 nodes File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 33
     Warning (332126): Node "Add0~16|dataa"
     Warning (332126): Node "Add0~16|combout"
-Warning (332125): Found combinational loop of 2 nodes File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 32
+Warning (332125): Found combinational loop of 2 nodes File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 33
     Warning (332126): Node "Add0~14|dataa"
     Warning (332126): Node "Add0~14|combout"
-Warning (332125): Found combinational loop of 2 nodes File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 32
+Warning (332125): Found combinational loop of 2 nodes File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 33
     Warning (332126): Node "Add0~12|dataa"
     Warning (332126): Node "Add0~12|combout"
-Warning (332125): Found combinational loop of 2 nodes File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 32
+Warning (332125): Found combinational loop of 2 nodes File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 33
     Warning (332126): Node "Add0~10|dataa"
     Warning (332126): Node "Add0~10|combout"
-Warning (332125): Found combinational loop of 2 nodes File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 32
+Warning (332125): Found combinational loop of 2 nodes File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 33
     Warning (332126): Node "Add0~8|dataa"
     Warning (332126): Node "Add0~8|combout"
-Warning (332125): Found combinational loop of 2 nodes File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 32
+Warning (332125): Found combinational loop of 2 nodes File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 33
     Warning (332126): Node "Add0~6|dataa"
     Warning (332126): Node "Add0~6|combout"
-Warning (332125): Found combinational loop of 2 nodes File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 32
+Warning (332125): Found combinational loop of 2 nodes File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 33
     Warning (332126): Node "Add0~4|dataa"
     Warning (332126): Node "Add0~4|combout"
-Warning (332125): Found combinational loop of 2 nodes File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 32
+Warning (332125): Found combinational loop of 2 nodes File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 33
     Warning (332126): Node "Add0~2|dataa"
     Warning (332126): Node "Add0~2|combout"
-Warning (332125): Found combinational loop of 2 nodes File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 32
+Warning (332125): Found combinational loop of 2 nodes File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 33
     Warning (332126): Node "Add0~0|datab"
     Warning (332126): Node "Add0~0|combout"
 Warning (332125): Found combinational loop of 2 nodes File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 11
@@ -1193,13 +1193,13 @@ Info (176215): I/O bank details before I/O pin placement
         Info (176213): I/O bank number 6 does not use VREF pins and has undetermined VCCIO pins. 1 total pin(s) used --  13 pins available
         Info (176213): I/O bank number 7 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  24 pins available
         Info (176213): I/O bank number 8 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  23 pins available
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:00
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:01
 Info (14896): Fitter has disabled Advanced Physical Optimization because it is not supported for the current family.
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
-Info (170192): Fitter placement operations ending: elapsed time is 00:00:00
+Info (170192): Fitter placement operations ending: elapsed time is 00:00:01
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
     Info (170196): Router estimated peak interconnect usage is 1% of the available device resources in the region that extends from location X31_Y20 to location X41_Y29
@@ -1207,7 +1207,7 @@ Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
-Info (11888): Total time spent on timing analysis during the Fitter is 0.04 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.05 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
@@ -1215,10 +1215,10 @@ Info (334004): Delay annotation completed successfully
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Info (144001): Generated suppressed messages file C:/Users/Solom/OneDrive/Desktop/Control/simulation/output_files/simulation.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 102 warnings
-    Info: Peak virtual memory: 5407 megabytes
-    Info: Processing ended: Wed Feb 22 13:38:35 2023
+    Info: Peak virtual memory: 5411 megabytes
+    Info: Processing ended: Wed Feb 22 14:10:54 2023
     Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:06
+    Info: Total CPU time (on all processors): 00:00:07
 
 
 +----------------------------+

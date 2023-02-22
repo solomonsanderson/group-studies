@@ -1,4 +1,4 @@
-module simulation(rf, counter);
+	module simulation(rf, counter);
 /*	initial begin
 		control_testbench(trig, clk, rf);
 	end
@@ -17,6 +17,7 @@ module simulation(rf, counter);
 		integer interval;
 		integer pi;
 		
+		integer mz_start_time;
 		integer pi_start;
 		integer interval_2_start;
 		integer second_pi_2_start;
@@ -31,7 +32,7 @@ module simulation(rf, counter);
 			#5000 clk = ~clk;  // flips the clock value every 5 counts to simulate clock 
 			counter = counter + 1;
 		
-			if ((1 <= counter) & (counter < pi_2)) begin // first pi/2 pulse
+			if ((mz_start_time <= counter) & (counter < (pi_2 + mz_start_time))) begin // first pi/2 pulse
 				$display("pi/2 1");
 				rf = 1;
 			end
@@ -80,11 +81,12 @@ module simulation(rf, counter);
 		pi_2 = 10;
 		interval = 20;
 		pi = 20;
+		mz_start_time = 10;
 
 		//reg[7:0] pi_start;
-		pi_start = pi_2 + interval; // 30
-		interval_2_start = pi_2 + interval + pi; // 50
-		second_pi_2_start = pi_2 + pi + (2 * interval); // 70
+		pi_start = mz_start_time + pi_2 + interval; // 30
+		interval_2_start = mz_start_time + pi_2 + interval + pi; // 50
+		second_pi_2_start = mz_start_time + pi_2 + pi + (2 * interval); // 70
 		end_time = second_pi_2_start + pi_2;
 		$display("interval 2 start = %0d, pi start = %0d, second pi_2 start= %0d", interval_2_start, pi_start, second_pi_2_start);
 

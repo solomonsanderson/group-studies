@@ -1,5 +1,5 @@
 Analysis & Synthesis report for simulation
-Wed Feb 22 13:38:28 2023
+Wed Feb 22 14:10:47 2023
 Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 
 
@@ -44,13 +44,13 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Feb 22 13:38:28 2023          ;
+; Analysis & Synthesis Status        ; Successful - Wed Feb 22 14:10:47 2023          ;
 ; Quartus Prime Version              ; 22.1std.0 Build 915 10/25/2022 SC Lite Edition ;
 ; Revision Name                      ; simulation                                     ;
 ; Top-level Entity Name              ; simulation                                     ;
 ; Family                             ; Cyclone 10 LP                                  ;
-; Total logic elements               ; 47                                             ;
-;     Total combinational functions  ; 47                                             ;
+; Total logic elements               ; 46                                             ;
+;     Total combinational functions  ; 46                                             ;
 ;     Dedicated logic registers      ; 0                                              ;
 ; Total registers                    ; 0                                              ;
 ; Total pins                         ; 33                                             ;
@@ -178,16 +178,16 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+--------+
 ; Resource                                    ; Usage  ;
 +---------------------------------------------+--------+
-; Estimated Total logic elements              ; 47     ;
+; Estimated Total logic elements              ; 46     ;
 ;                                             ;        ;
-; Total combinational functions               ; 47     ;
+; Total combinational functions               ; 46     ;
 ; Logic element usage by number of LUT inputs ;        ;
-;     -- 4 input functions                    ; 13     ;
+;     -- 4 input functions                    ; 12     ;
 ;     -- 3 input functions                    ; 2      ;
 ;     -- <=2 input functions                  ; 32     ;
 ;                                             ;        ;
 ; Logic elements by mode                      ;        ;
-;     -- normal mode                          ; 17     ;
+;     -- normal mode                          ; 16     ;
 ;     -- arithmetic mode                      ; 30     ;
 ;                                             ;        ;
 ; Total registers                             ; 0      ;
@@ -198,10 +198,10 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;        ;
 ; Embedded Multiplier 9-bit elements          ; 0      ;
 ;                                             ;        ;
-; Maximum fan-out node                        ; Add0~4 ;
-; Maximum fan-out                             ; 7      ;
-; Total fan-out                               ; 186    ;
-; Average fan-out                             ; 1.65   ;
+; Maximum fan-out node                        ; Add0~6 ;
+; Maximum fan-out                             ; 6      ;
+; Total fan-out                               ; 182    ;
+; Average fan-out                             ; 1.63   ;
 +---------------------------------------------+--------+
 
 
@@ -210,7 +210,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; |simulation                ; 47 (47)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 33   ; 0            ; |simulation         ; simulation  ; work         ;
+; |simulation                ; 46 (46)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 33   ; 0            ; |simulation         ; simulation  ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -278,18 +278,18 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 33                          ;
-; cycloneiii_lcell_comb ; 47                          ;
+; cycloneiii_lcell_comb ; 46                          ;
 ;     arith             ; 30                          ;
 ;         2 data inputs ; 29                          ;
 ;         3 data inputs ; 1                           ;
-;     normal            ; 17                          ;
+;     normal            ; 16                          ;
 ;         1 data inputs ; 2                           ;
 ;         2 data inputs ; 1                           ;
 ;         3 data inputs ; 1                           ;
-;         4 data inputs ; 13                          ;
+;         4 data inputs ; 12                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 4.00                        ;
-; Average LUT depth     ; 3.43                        ;
+; Average LUT depth     ; 3.22                        ;
 +-----------------------+-----------------------------+
 
 
@@ -308,7 +308,7 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
-    Info: Processing started: Wed Feb 22 13:38:16 2023
+    Info: Processing started: Wed Feb 22 14:10:32 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off simulation -c simulation
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -322,20 +322,20 @@ Warning (10236): Verilog HDL Implicit Net warning at control.v(19): created impl
 Warning (10227): Verilog HDL Port Declaration warning at simulation.v(15): data type declaration for "counter" declares packed dimensions but the port declaration declaration does not File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 15
 Info (10499): HDL info at simulation.v(11): see declaration for object "counter" File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 11
 Info (12127): Elaborating entity "simulation" for the top level hierarchy
-Warning (10755): Verilog HDL warning at simulation.v(31): assignments to clk create a combinational loop File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 31
-Warning (10175): Verilog HDL warning at simulation.v(75): ignoring unsupported system task File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 75
-Info (10648): Verilog HDL Display System Task info at simulation.v(89): interval 2 start = 50, pi start = 30, second pi_2 start= 70 File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 89
+Warning (10755): Verilog HDL warning at simulation.v(32): assignments to clk create a combinational loop File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 32
+Warning (10175): Verilog HDL warning at simulation.v(76): ignoring unsupported system task File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 76
+Info (10648): Verilog HDL Display System Task info at simulation.v(91): interval 2 start = 150, pi start = 130, second pi_2 start= 170 File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 91
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 80 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 79 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 0 input pins
     Info (21059): Implemented 33 output pins
-    Info (21061): Implemented 47 logic cells
+    Info (21061): Implemented 46 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 6 warnings
     Info: Peak virtual memory: 4762 megabytes
-    Info: Processing ended: Wed Feb 22 13:38:28 2023
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:31
+    Info: Processing ended: Wed Feb 22 14:10:47 2023
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:36
 
 
