@@ -1,5 +1,5 @@
 Analysis & Synthesis report for simulation
-Wed Feb 22 14:10:47 2023
+Thu Mar  2 15:16:40 2023
 Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 
 
@@ -13,11 +13,13 @@ Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Logic Cells Representing Combinational Loops
-  9. General Register Statistics
- 10. Post-Synthesis Netlist Statistics for Top Partition
- 11. Elapsed Time Per Partition
- 12. Analysis & Synthesis Messages
+  8. User-Specified and Inferred Latches
+  9. Logic Cells Representing Combinational Loops
+ 10. General Register Statistics
+ 11. Parameter Settings for User Entity Instance: Top-level Entity: |simulation
+ 12. Post-Synthesis Netlist Statistics for Top Partition
+ 13. Elapsed Time Per Partition
+ 14. Analysis & Synthesis Messages
 
 
 
@@ -44,13 +46,13 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Feb 22 14:10:47 2023          ;
+; Analysis & Synthesis Status        ; Successful - Thu Mar  2 15:16:40 2023          ;
 ; Quartus Prime Version              ; 22.1std.0 Build 915 10/25/2022 SC Lite Edition ;
 ; Revision Name                      ; simulation                                     ;
 ; Top-level Entity Name              ; simulation                                     ;
 ; Family                             ; Cyclone 10 LP                                  ;
-; Total logic elements               ; 46                                             ;
-;     Total combinational functions  ; 46                                             ;
+; Total logic elements               ; 79                                             ;
+;     Total combinational functions  ; 79                                             ;
 ;     Dedicated logic registers      ; 0                                              ;
 ; Total registers                    ; 0                                              ;
 ; Total pins                         ; 33                                             ;
@@ -173,36 +175,36 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------+-----------------+------------------------+-----------------------------------------------------------------+---------+
 
 
-+------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary          ;
-+---------------------------------------------+--------+
-; Resource                                    ; Usage  ;
-+---------------------------------------------+--------+
-; Estimated Total logic elements              ; 46     ;
-;                                             ;        ;
-; Total combinational functions               ; 46     ;
-; Logic element usage by number of LUT inputs ;        ;
-;     -- 4 input functions                    ; 12     ;
-;     -- 3 input functions                    ; 2      ;
-;     -- <=2 input functions                  ; 32     ;
-;                                             ;        ;
-; Logic elements by mode                      ;        ;
-;     -- normal mode                          ; 16     ;
-;     -- arithmetic mode                      ; 30     ;
-;                                             ;        ;
-; Total registers                             ; 0      ;
-;     -- Dedicated logic registers            ; 0      ;
-;     -- I/O registers                        ; 0      ;
-;                                             ;        ;
-; I/O pins                                    ; 33     ;
-;                                             ;        ;
-; Embedded Multiplier 9-bit elements          ; 0      ;
-;                                             ;        ;
-; Maximum fan-out node                        ; Add0~6 ;
-; Maximum fan-out                             ; 6      ;
-; Total fan-out                               ; 182    ;
-; Average fan-out                             ; 1.63   ;
-+---------------------------------------------+--------+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 79        ;
+;                                             ;           ;
+; Total combinational functions               ; 79        ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 12        ;
+;     -- 3 input functions                    ; 63        ;
+;     -- <=2 input functions                  ; 4         ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 48        ;
+;     -- arithmetic mode                      ; 31        ;
+;                                             ;           ;
+; Total registers                             ; 0         ;
+;     -- Dedicated logic registers            ; 0         ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 33        ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; Equal0~13 ;
+; Maximum fan-out                             ; 37        ;
+; Total fan-out                               ; 310       ;
+; Average fan-out                             ; 2.14      ;
++---------------------------------------------+-----------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -210,9 +212,20 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; |simulation                ; 46 (46)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 33   ; 0            ; |simulation         ; simulation  ; work         ;
+; |simulation                ; 79 (79)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 33   ; 0            ; |simulation         ; simulation  ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                               ;
++----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal ; Free of Timing Hazards ;
++----------------------------------------------------+---------------------+------------------------+
+; rf$latch                                           ; GND                 ; yes                    ;
+; Number of user-specified and inferred latches = 1  ;                     ;                        ;
++----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
 +-------------------------------------------------------------+
@@ -220,39 +233,41 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------------------------------+----+
 ; Logic Cell Name                                        ;    ;
 +--------------------------------------------------------+----+
-; counter[31]~0                                          ;    ;
-; counter[30]~1                                          ;    ;
-; counter[29]~2                                          ;    ;
-; counter[28]~3                                          ;    ;
-; counter[27]~4                                          ;    ;
-; counter[26]~5                                          ;    ;
-; counter[25]~6                                          ;    ;
-; counter[24]~7                                          ;    ;
-; counter[23]~8                                          ;    ;
-; counter[22]~9                                          ;    ;
-; counter[21]~10                                         ;    ;
-; counter[20]~11                                         ;    ;
-; counter[19]~12                                         ;    ;
-; counter[18]~13                                         ;    ;
-; counter[17]~14                                         ;    ;
-; counter[16]~15                                         ;    ;
-; counter[15]~16                                         ;    ;
-; counter[14]~17                                         ;    ;
-; counter[13]~18                                         ;    ;
-; counter[12]~19                                         ;    ;
-; counter[11]~20                                         ;    ;
-; counter[10]~21                                         ;    ;
-; counter[9]~22                                          ;    ;
-; counter[8]~23                                          ;    ;
-; counter[7]~24                                          ;    ;
-; counter[6]~25                                          ;    ;
-; counter[5]~26                                          ;    ;
-; counter[4]~27                                          ;    ;
-; counter[3]~28                                          ;    ;
-; counter[2]~29                                          ;    ;
-; counter[1]~30                                          ;    ;
-; counter[0]~31                                          ;    ;
-; Number of logic cells representing combinational loops ; 32 ;
+; counter[0]~33                                          ;    ;
+; counter~34                                             ;    ;
+; counter~35                                             ;    ;
+; counter~36                                             ;    ;
+; counter~37                                             ;    ;
+; counter[3]~38                                          ;    ;
+; counter~39                                             ;    ;
+; counter~40                                             ;    ;
+; counter~41                                             ;    ;
+; counter~42                                             ;    ;
+; counter~43                                             ;    ;
+; counter~44                                             ;    ;
+; counter~45                                             ;    ;
+; counter~46                                             ;    ;
+; counter~47                                             ;    ;
+; counter~48                                             ;    ;
+; counter~49                                             ;    ;
+; counter~50                                             ;    ;
+; counter~51                                             ;    ;
+; counter~52                                             ;    ;
+; counter~53                                             ;    ;
+; counter~54                                             ;    ;
+; counter~55                                             ;    ;
+; counter~56                                             ;    ;
+; counter~57                                             ;    ;
+; counter~58                                             ;    ;
+; counter~59                                             ;    ;
+; counter~60                                             ;    ;
+; counter~61                                             ;    ;
+; counter~62                                             ;    ;
+; counter~63                                             ;    ;
+; counter~64                                             ;    ;
+; counter~65                                             ;    ;
+; counter[31]~66                                         ;    ;
+; Number of logic cells representing combinational loops ; 34 ;
 +--------------------------------------------------------+----+
 Note: All cells listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
@@ -272,24 +287,34 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 +----------------------------------------------+-------+
 
 
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |simulation ;
++----------------+-------+---------------------------------------------------+
+; Parameter Name ; Value ; Type                                              ;
++----------------+-------+---------------------------------------------------+
+; PULSE_LENGTH   ; 10    ; Signed Integer                                    ;
++----------------+-------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 33                          ;
-; cycloneiii_lcell_comb ; 46                          ;
-;     arith             ; 30                          ;
-;         2 data inputs ; 29                          ;
-;         3 data inputs ; 1                           ;
-;     normal            ; 16                          ;
-;         1 data inputs ; 2                           ;
+; cycloneiii_lcell_comb ; 79                          ;
+;     arith             ; 31                          ;
+;         2 data inputs ; 2                           ;
+;         3 data inputs ; 29                          ;
+;     normal            ; 48                          ;
+;         1 data inputs ; 1                           ;
 ;         2 data inputs ; 1                           ;
-;         3 data inputs ; 1                           ;
+;         3 data inputs ; 34                          ;
 ;         4 data inputs ; 12                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 4.00                        ;
-; Average LUT depth     ; 3.22                        ;
+; Max LUT depth         ; 5.10                        ;
+; Average LUT depth     ; 4.07                        ;
 +-----------------------+-----------------------------+
 
 
@@ -308,7 +333,7 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
-    Info: Processing started: Wed Feb 22 14:10:32 2023
+    Info: Processing started: Thu Mar  2 15:16:29 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off simulation -c simulation
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -322,20 +347,25 @@ Warning (10236): Verilog HDL Implicit Net warning at control.v(19): created impl
 Warning (10227): Verilog HDL Port Declaration warning at simulation.v(15): data type declaration for "counter" declares packed dimensions but the port declaration declaration does not File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 15
 Info (10499): HDL info at simulation.v(11): see declaration for object "counter" File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 11
 Info (12127): Elaborating entity "simulation" for the top level hierarchy
-Warning (10755): Verilog HDL warning at simulation.v(32): assignments to clk create a combinational loop File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 32
-Warning (10175): Verilog HDL warning at simulation.v(76): ignoring unsupported system task File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 76
-Info (10648): Verilog HDL Display System Task info at simulation.v(91): interval 2 start = 150, pi start = 130, second pi_2 start= 170 File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 91
+Warning (10036): Verilog HDL or VHDL warning at simulation.v(21): object "pi_start" assigned a value but never read File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 21
+Warning (10036): Verilog HDL or VHDL warning at simulation.v(22): object "interval_2_start" assigned a value but never read File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 22
+Warning (10036): Verilog HDL or VHDL warning at simulation.v(24): object "end_time" assigned a value but never read File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 24
+Warning (10755): Verilog HDL warning at simulation.v(33): assignments to clk create a combinational loop File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 33
+Warning (10240): Verilog HDL Always Construct warning at simulation.v(33): inferring latch(es) for variable "rf", which holds its previous value in one or more paths through the always construct File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 33
+Warning (10175): Verilog HDL warning at simulation.v(83): ignoring unsupported system task File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 83
+Info (10648): Verilog HDL Display System Task info at simulation.v(98): interval 2 start = 60, pi start = 40, second pi_2 start= 80 File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 98
+Info (10041): Inferred latch for "rf" at simulation.v(33) File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 33
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 79 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 112 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 0 input pins
     Info (21059): Implemented 33 output pins
-    Info (21061): Implemented 46 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 6 warnings
+    Info (21061): Implemented 79 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 10 warnings
     Info: Peak virtual memory: 4762 megabytes
-    Info: Processing ended: Wed Feb 22 14:10:47 2023
-    Info: Elapsed time: 00:00:15
-    Info: Total CPU time (on all processors): 00:00:36
+    Info: Processing ended: Thu Mar  2 15:16:40 2023
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:31
 
 

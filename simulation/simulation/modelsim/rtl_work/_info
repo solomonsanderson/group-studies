@@ -9,13 +9,13 @@ z2
 cModel Technology
 Z0 dC:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation/modelsim
 vsimulation
-!s110 1677075144
+!s110 1677769750
 !i10b 1
-!s100 9RLD@KfL>6><T57@dkTU<1
-I^E`T]i>]4gk8gfLfWB0K[0
+!s100 NeiMjRj22=Z<>ZHmEnl1I3
+InR]7C;=WU]Jm`N>fR_nG83
 VDg1SIo80bB@j0V0VzS_@n1
 R0
-w1677075031
+w1677769636
 8C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v
 FC:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v
 L0 1
@@ -23,7 +23,7 @@ OV;L;10.5b;63
 r1
 !s85 0
 31
-!s108 1677075144.000000
+!s108 1677769750.000000
 !s107 C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Solom/OneDrive/Desktop/Control/simulation|C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v|
 !i113 1

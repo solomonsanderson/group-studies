@@ -77,7 +77,7 @@ module control_testbench;
 	//clock generation
 	//start at time 0ns and loop after every 5ns // https://www.chipverify.com/verilog/verilog-simulation
 	always #5 clk = ~clk;
-
+	
 	
 	initial begin 
 		$monitor("clk = %0d rf = %0d", clk, rf);
