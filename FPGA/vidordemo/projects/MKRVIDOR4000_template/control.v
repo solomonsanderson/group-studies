@@ -184,57 +184,65 @@ assign interval_counts = (interval / 5) * 333;*/
 	*/
 	
 	reg[3:0] state = 0;
-	reg[15:0] counter = 0;
+	reg[31:0] counter = 0; // need this to be at least 17 bit as wait for intervals is larger than 16 bit number 
 	
 	
 	always @(posedge clk) begin
 		counter <= counter + 1;
-
-		case (state)
-			0: begin // idle state
-				rf <= 0;
-				if (counter >= 1000) begin
-					counter <= 0;
-					state <= 1;
+		if (trig == 1) begin
+			case (state)
+				0: begin // idle state
+					rf <= 0;
+					if (counter >= 400) begin
+						counter <= 0;
+						state <= 1;
+					end
 				end
-			end
-			1: begin // first pulse state
-				rf <= 1;
-				if (counter >= 333) begin
-					counter <= 0;
-					state <= 2;
+				1: begin // first pulse state
+					rf <= 1;
+					if (counter >= 333) begin
+						counter <= 0;
+						state <= 2;
+					end
 				end
-			end
-			2: begin // pause state
-				rf <= 0;
-				if (counter >= 1000) begin
-					counter <= 0;
-					state <= 3;
+				2: begin // pause state
+					rf <= 0;
+					if (counter >= 66600) begin
+						counter <= 0;
+						state <= 3;
+					end
 				end
-			end
-			3: begin // second pulse state
-				rf <= 1;
-				if (counter >= 666) begin
-					counter <= 0;
-					state <= 4;
+				3: begin // second pulse state
+					rf <= 1;
+					if (counter >= 666) begin
+						counter <= 0;
+						state <= 4;
+					end
 				end
-			end
-			4: begin // third pulse state
-				rf <= 0;
-				if (counter >= 1000) begin
-					counter <= 0;
-					state <= 5;
+				4: begin // third pulse state
+					rf <= 0;
+					if (counter >= 66600) begin
+						counter <= 0;
+						state <= 5;
+					end
 				end
-			end
-			5: begin // final pulse state
-				rf <= 1;
-				if (counter >= 333) begin
-				  rf <= 0;
-				  state <= 0;
-				  counter <= 0;
-				end
-			end
-  endcase
+				5: begin // final pulse state
+					rf <= 1;
+					if (counter >= 333) begin
+					  rf <= 0;
+					  state <= 6;
+					  counter <= 0;
+					end
+					end
+				6: begin // end delay to allow arduino pin to change
+						if (counter >= 33300) begin
+							rf <= 0; 
+							state <= 0;
+							counter <= 0;
+						end
+					end
+	  endcase
+	 end
 end
 		
 	initial begin 
