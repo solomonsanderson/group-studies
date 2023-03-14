@@ -83,6 +83,7 @@ void setup() {
   pinMode(FPGA_INT, INPUT);
 
   pinMode(1, OUTPUT);
+  pinMode(2, OUTPUT);
   // digitalWrite(1, HIGH); // set trigger pin high
   // delayMicroseconds(1); // wait 3ms
   // digitalWrite(1, LOW);
