@@ -12,7 +12,7 @@
 		reg trig;
 		reg clk;
 		reg rf;
-		integer counter; 
+		//integer counter; 
 		integer pi_2;
 		integer interval;
 		integer pi;
@@ -26,36 +26,62 @@
 		
 		//reg[7:0] pi_start
 		
-		
+		reg[4:0] state = 0;
+		reg[16:0] counter = 0;
 		
 		
 		always begin 
 			#5000 clk = ~clk;  // flips the clock value every 5 counts to simulate clock 
-			//counter = counter + 1;
 			
-			/*
-			
-			if ((mz_start_time <= counter) & (counter < (pi_2 + mz_start_time))) begin // first pi/2 pulse
-				$display("pi/2 1");
-				rf = 1;
-			end
-		
+					counter <= counter + 1;
 
-			else if (( pi_start <= counter) & (counter < interval_2_start)) begin // pi pulse
-				$display("pi");
-				rf = 1; 
-			end
-			
-			
-			else if ((second_pi_2_start <= counter) & (counter < end_time)) begin// second pi/2 plse
-				$display("pi/2 2");
-				rf = 1;
-			end
-			
-			else begin 
-				rf = 0;
-			end
-			*/
+					case (state)
+						0: begin // idle state
+							rf <= 0;
+							if (counter >= 1000) begin
+								counter <= 0;
+								state <= 1;
+							end
+						end
+						1: begin // first pulse state
+							rf <= 1;
+							if (counter >= 333) begin
+								counter <= 0;
+								state <= 2;
+							end
+						end
+						2: begin // pause state
+							rf <= 0;
+							if (counter >= 1000) begin
+								counter <= 0;
+								state <= 3;
+							end
+						end
+						3: begin // second pulse state
+							rf <= 1;
+							if (counter >= 666) begin
+								counter <= 0;
+								state <= 4;
+							end
+						end
+						4: begin // third pulse state
+							rf <= 0;
+							if (counter >= 1000) begin
+								counter <= 0;
+								state <= 5;
+							end
+						end
+						5: begin // final pulse state
+							rf <= 1;
+							if (counter >= 333) begin
+							  counter <= 0;
+							  state <= 0;
+							end
+						end
+				endcase
+		end
+	
+			/*
 				counter <= counter + 1;
 				if (counter == PULSE_LENGTH - 2) begin
 					rf <= 1;
@@ -65,7 +91,7 @@
 					counter <= 0;
 				end
 			end 
-	
+	*/
 			
 			/*
 			$display((1 <= counter) & (counter <= pi_2));

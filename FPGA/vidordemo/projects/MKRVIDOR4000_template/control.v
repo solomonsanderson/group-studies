@@ -26,7 +26,7 @@ assign interval_counts = (interval / 5) * 333;*/
 // 		counter <= counter + 1; 
 // 	end 
 // 	// pi/2 pulse 
-// 	else if ( dead_counts < counter <= (pi_2 + dead_time)) begin 
+// 	else if ( dead_counts < counter <= (pi_2 + dead_counts)) begin 
 // 		$display("pi/2");
 // 		rf = 1;
 // 		counter <= counter + 1;
@@ -67,7 +67,7 @@ assign interval_counts = (interval / 5) * 333;*/
 	reg out;
 	
 	reg rf;
-	integer counter;
+	//integer counter;
 	integer long_counter;
 	//parameter pi_2 = 5;
 	parameter interval = 20;
@@ -88,8 +88,8 @@ assign interval_counts = (interval / 5) * 333;*/
 	
 	parameter PI = 666;
 	parameter PI_2 = 333;
-	parameter HALF_WAIT = 33333;
-	parameter WAIT = 66666;
+	parameter HALF_WAIT = 66666;
+	parameter WAIT = 133332;
 	parameter START = 66666;
 		//reg[7:0] pi_start
 	
@@ -155,31 +155,87 @@ assign interval_counts = (interval / 5) * 333;*/
 	end */ 
 	
 	//generating 5mus pulses every 1ms
-	always @(posedge clk) begin 
-		counter <= counter + 1;
-		if (counter == WAIT - PI) begin
-			rf <= 1;
-		end
-		else if (counter == WAIT) begin
-			rf <= 0;
-			counter <= 0;
-		end
+	/*
+	always @(posedge clk) begin
+		if (trig == 1) begin
+			counter <= counter + 1;
+			if (counter == WAIT - PI) begin
+				rf <= 1;
+			end
+			else if (counter == WAIT) begin
+				rf <= 0;
+				counter <= 0;
+			end
 
 	
-		long_counter <= long_counter + 1;
-		if (long_counter == WAIT - PI_2) begin
-			rf <= 1;
+			long_counter <= long_counter + 1;
+			if (long_counter == WAIT - PI_2) begin
+				rf <= 1;
+			end
+			else if (long_counter == WAIT) begin
+				rf <= 0;
+				long_counter <= 0;
+			end
 		end
-		else if (long_counter == WAIT) begin
-			rf <= 0;
-			long_counter <= 0;
-		end
-	end
-	
+	end*/
 	/*
 	always @(posedge clk) begin
 		counter <= counter + 1;
 	*/
+	
+	reg[3:0] state = 0;
+	reg[15:0] counter = 0;
+	
+	
+	always @(posedge clk) begin
+		counter <= counter + 1;
+
+		case (state)
+			0: begin // idle state
+				rf <= 0;
+				if (counter >= 1000) begin
+					counter <= 0;
+					state <= 1;
+				end
+			end
+			1: begin // first pulse state
+				rf <= 1;
+				if (counter >= 333) begin
+					counter <= 0;
+					state <= 2;
+				end
+			end
+			2: begin // pause state
+				rf <= 0;
+				if (counter >= 1000) begin
+					counter <= 0;
+					state <= 3;
+				end
+			end
+			3: begin // second pulse state
+				rf <= 1;
+				if (counter >= 666) begin
+					counter <= 0;
+					state <= 4;
+				end
+			end
+			4: begin // third pulse state
+				rf <= 0;
+				if (counter >= 1000) begin
+					counter <= 0;
+					state <= 5;
+				end
+			end
+			5: begin // final pulse state
+				rf <= 1;
+				if (counter >= 333) begin
+				  rf <= 0;
+				  state <= 0;
+				  counter <= 0;
+				end
+			end
+  endcase
+end
 		
 	initial begin 
 		//$monitor("Time =%0t clk = %0d rf = %0d counter = %0d", $time, clk, rf, counter);

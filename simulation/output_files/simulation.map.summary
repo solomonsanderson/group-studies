@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Thu Mar  2 15:16:40 2023
+Analysis & Synthesis Status : Successful - Tue Mar 14 14:05:40 2023
 Quartus Prime Version : 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 Revision Name : simulation
 Top-level Entity Name : simulation
 Family : Cyclone 10 LP
-Total logic elements : 79
-    Total combinational functions : 79
+Total logic elements : 59
+    Total combinational functions : 59
     Dedicated logic registers : 0
 Total registers : 0
-Total pins : 33
+Total pins : 18
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0

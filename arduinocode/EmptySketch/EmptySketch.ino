@@ -58,7 +58,7 @@ void setup() {
   uint32_t ptr[1];
 
   enableFpgaClock();
-
+  
   //Init Jtag Port
   ret = jtagInit();
   mbPinSet();
@@ -82,11 +82,34 @@ void setup() {
   // Configure other share pins as input too
   pinMode(FPGA_INT, INPUT);
 
+  pinMode(1, OUTPUT);
+  // digitalWrite(1, HIGH); // set trigger pin high
+  // delayMicroseconds(1); // wait 3ms
+  // digitalWrite(1, LOW);
+
+    // delay(500); // wait 0.5s 
+  // digitalWrite(1, LOW); // set trigger pin high
+  // delay(2000); // wait 3ms 
+  // digitalWrite(1, HIGH); // set trigger pin low
+  // delayMicroseconds(1);
+  // digitalWrite(1, LOW);
+  // delayMicroseconds(1000);
+  
+  // digitalWrite(1, HIGH); // set trigger pin low
+  // delayMicroseconds(10);
+  // digitalWrite(1, LOW);
+  // delayMicroseconds(1000);
+
+  // digitalWrite(1, HIGH); // set trigger pin low
+  // delayMicroseconds(5);
+  // digitalWrite(1, LOW);
+  // delayMicroseconds(10000);
 }
 
 
 // the loop function runs over and over again forever
 void loop() {
+  
 
-                     
+
 }

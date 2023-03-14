@@ -1,1 +1,1 @@
-Warning (10268): Verilog HDL information at control.v(22): always construct contains both blocking and non-blocking assignments File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/control.v Line: 22
+Warning (10268): Verilog HDL information at simulation.v(34): always construct contains both blocking and non-blocking assignments File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 34

@@ -74,66 +74,6 @@
 				{
 					"name" : "counter[16]",
 					"strict" : false
-				},
-				{
-					"name" : "counter[17]",
-					"strict" : false
-				},
-				{
-					"name" : "counter[18]",
-					"strict" : false
-				},
-				{
-					"name" : "counter[19]",
-					"strict" : false
-				},
-				{
-					"name" : "counter[20]",
-					"strict" : false
-				},
-				{
-					"name" : "counter[21]",
-					"strict" : false
-				},
-				{
-					"name" : "counter[22]",
-					"strict" : false
-				},
-				{
-					"name" : "counter[23]",
-					"strict" : false
-				},
-				{
-					"name" : "counter[24]",
-					"strict" : false
-				},
-				{
-					"name" : "counter[25]",
-					"strict" : false
-				},
-				{
-					"name" : "counter[26]",
-					"strict" : false
-				},
-				{
-					"name" : "counter[27]",
-					"strict" : false
-				},
-				{
-					"name" : "counter[28]",
-					"strict" : false
-				},
-				{
-					"name" : "counter[29]",
-					"strict" : false
-				},
-				{
-					"name" : "counter[30]",
-					"strict" : false
-				},
-				{
-					"name" : "counter[31]",
-					"strict" : false
 				}
 			]
 		}
