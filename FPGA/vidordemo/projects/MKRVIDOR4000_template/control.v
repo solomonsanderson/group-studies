@@ -98,18 +98,27 @@ assign interval_counts = (interval / 5) * 333;*/
 	
 	reg[31:0] r_counter;
 	reg[31:0] pulse_length = 66; // initial pulse length is 1mus
+	reg[7:0] r_state = 0; 
 	
-	
-	always @(posedge clk) begin 
-		r_counter <= r_counter + 1;
-		if (rabi_trig) begin 
-			if (pulse_release) begin
-				if (counter >= pulse_length) begin
-					counter <= 0; 
-					pulse_length <= pulse_length + 66;
-				end				
+	always @(posedge clk) begin // probably dont need a pin to select the rabi script, just use trigger pin 
+		case (r_state)
+			0: begin // idle state
+				rabi <= 0; 
+				if (rabi_trig) begin // when pulse release pin is trigd, should only need a fixed trigger pulse length as should run till pulse is ended 
+					r_state <= 1;
+				end
 			end
-		end
+			1: begin // pulse state 
+				r_counter <= r_counter + 1; // increment r_counter when trig pin is high
+				rabi <= 1; // set high 
+				if (r_counter >= pulse_length) begin
+					pulse_length <= pulse_length + 66; // increase pulse length with each pulse
+					r_counter <= 0; // reset counter
+					r_state <= 0; // reset state, change this to 2 if we add delay after
+				end
+			end
+			// could add 3rd state to add short interval after pulses to account for arduino delay in changing pin state.
+		endcase
 	end	
 	
 	
