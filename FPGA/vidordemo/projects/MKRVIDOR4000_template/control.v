@@ -188,12 +188,12 @@ assign interval_counts = (interval / 5) * 333;*/
 	
 	
 	always @(posedge clk) begin
-		counter <= counter + 1;
 		if (trig == 1) begin
+			counter <= counter + 1;
 			case (state)
 				0: begin // idle state
 					rf <= 0;
-					if (counter >= 400) begin
+					if (counter >= 33300) begin
 						counter <= 0;
 						state <= 1;
 					end
@@ -241,8 +241,10 @@ assign interval_counts = (interval / 5) * 333;*/
 							counter <= 0;
 						end
 					end
-	  endcase
-	 end
+			endcase
+	 //end else begin
+		//counter<=0;
+	end 
 end
 		
 	initial begin 
