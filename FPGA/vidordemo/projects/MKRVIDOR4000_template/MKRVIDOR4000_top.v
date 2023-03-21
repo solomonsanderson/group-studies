@@ -174,7 +174,7 @@ control control_seq
 .rabi_trig(bMKR_D[3]), //rabi trigger is pin 3 
 .clk(wOSC_CLK), // clock input is linked to the internal 80Mhz oscillator
 .rf(bMKR_D[6]), // rf output is linked to pin 6
-.rabi(bMKR_D[7])
+.rabi(bMKR_D[7]) // rabi outputs to 7
 );
 
 reg [5:0] rRESETCNT;

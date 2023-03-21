@@ -84,6 +84,7 @@ void setup() {
 
   pinMode(1, OUTPUT);
   pinMode(2, OUTPUT);
+  pinMode(3, OUTPUT);
   // digitalWrite(1, HIGH); // set trigger pin high
   // delayMicroseconds(1); // wait 3ms
   // digitalWrite(1, LOW);
@@ -111,9 +112,8 @@ void setup() {
 // the loop function runs over and over again forever
 void loop() {
   digitalWrite(3, HIGH);
-  delay(100); 
+  delayMicroseconds(1); 
   digitalWrite(3, LOW);
-  delay(100);
-
+  delayMicroseconds(100);
 }
 
