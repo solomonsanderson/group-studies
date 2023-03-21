@@ -1,6 +1,7 @@
 Info: Start Nativelink Simulation process
-Error: You haven't chosen a simulation tool to use. You can specify a simulation tool in the Simulation page of Settings dialog box.
-===========
+Info: NativeLink has detected Verilog design -- Verilog simulation models will be used
+
+========= EDA Simulation Settings =====================
 
 Sim Mode              :  RTL
 Family                :  cyclone10lp
@@ -17,5 +18,6 @@ Sim dir               :  simulation\modelsim
 
 Info: Starting NativeLink simulation with ModelSim software
 Sourced NativeLink script c:/intelfpga_lite/22.1std/quartus/common/tcl/internal/nativelink/modelsim.tcl
+Warning: File MKRVIDOR4000_run_msim_rtl_verilog.do already exists - backing up current file as MKRVIDOR4000_run_msim_rtl_verilog.do.bak
 Info: Spawning ModelSim Simulation software 
 Info: NativeLink simulation flow was successful

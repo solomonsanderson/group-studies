@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 dC:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation/modelsim
 vcyclone10lp_and1
-Z1 !s110 1678797962
+Z1 !s110 1679356520
 !i10b 1
 !s100 i6a=EE_<eMbfT:bO?;mk51
 IiYUX@nCWhEX<]>4RjfN1k0
@@ -23,7 +23,7 @@ Z6 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z7 !s108 1678797961.000000
+Z7 !s108 1679356519.000000
 Z8 !s107 c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/cyclone10lp_atoms.v|
 Z9 !s90 -reportprogress|300|-vlog01compat|-work|cyclone10lp_ver|c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/cyclone10lp_atoms.v|
 !i113 1

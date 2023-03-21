@@ -1,4 +1,4 @@
- 	module simulation(rf, counter);
+ 	module simulation(rf, rabi, counter);
 /*	initial begin
 		control_testbench(trig, clk, rf);
 	end
@@ -9,9 +9,12 @@
 */
 		output rf;
 		output counter;
+		output rabi;
+		reg rabi_trig = 0; 
 		reg trig;
 		reg clk;
 		reg rf;
+		reg rabi;
 		//integer counter; 
 		integer pi_2;
 		integer interval;
@@ -22,7 +25,7 @@
 		integer interval_2_start;
 		integer second_pi_2_start;
 		integer end_time;
-		parameter PULSE_LENGTH = 10;
+		//parameter PULSE_LENGTH = 10;
 		
 		//reg[7:0] pi_start
 		
@@ -81,29 +84,35 @@
 				endcase
 		end
 	
-			/*
-				counter <= counter + 1;
-				if (counter == PULSE_LENGTH - 2) begin
-					rf <= 1;
-				end
-				else if (counter == PULSE_LENGTH) begin
-					rf <= 0;
-					counter <= 0;
-				end
-			end 
-	*/
-			
-			/*
-			$display((1 <= counter) & (counter <= pi_2));
-			if ((1 <= counter) & (counter <= pi_2)) begin
-				$display("pi/2");
-				rf = 1;
-			end
-			else begin 
-				rf = 0;
-			end
-		end
-		*/
+
+		reg[7:0] r_state = 0;
+		reg[31:0] r_counter = 0;
+		reg[31:0] pulse_length = 10;
+
+		always begin // probably dont need a pin to select the rabi script, just use trigger pin 
+			#100000 rabi_trig = ~rabi_trig;
+				case (r_state)
+					0: begin // idle state
+						$display("rabi idle");
+						rabi <= 0; 
+						if (rabi_trig) begin // when pulse release pin is trigd, should only need a fixed trigger pulse length as should run till pulse is ended 
+							r_state <= 1;
+						end
+					end
+					1: begin // pulse state 
+						$display("rabi pulse");
+						r_counter <= r_counter + 1; // increment r_counter when trig pin is high
+						rabi <= 1; // set high 
+						if (r_counter >= (pulse_length - 10)) begin
+							pulse_length <= pulse_length + 10; // increase pulse length with each pulse
+							r_counter <= 0; // reset counter
+							r_state <= 0; // reset state, change this to 2 if we add delay after
+						end
+					end
+					// could add 3rd state to add short interval after pulses to account for arduino delay in changing pin state.
+				endcase
+		end	
+
 		
 	initial begin 
 		$monitor("Time =%0t clk = %0d rf = %0d counter = %0d", $time, clk, rf, counter);
@@ -122,7 +131,14 @@
 		second_pi_2_start = mz_start_time + pi_2 + pi + (2 * interval); // 70
 		end_time = second_pi_2_start + pi_2;
 		$display("interval 2 start = %0d, pi start = %0d, second pi_2 start= %0d", interval_2_start, pi_start, second_pi_2_start);
-
+		
+		
+		#100 rabi_trig = 1;
+		#1000 rabi_trig = 0;
+		#100 rabi_trig = 1;
+		#1000 rabi_trig = 0;
+		#100 rabi_trig = 1;
+		#1000 rabi_trig = 0;
 	end
 	
 

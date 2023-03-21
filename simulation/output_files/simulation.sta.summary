@@ -2,40 +2,76 @@
 Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow 1200mV 85C Model Setup 'state.00000_270'
-Slack : -5.431
-TNS   : -27.421
+Type  : Slow 1200mV 85C Model Setup 'pulse_length[10]'
+Slack : -13.439
+TNS   : -724.901
 
-Type  : Slow 1200mV 85C Model Hold 'state.00000_270'
-Slack : -4.105
-TNS   : -13.960
+Type  : Slow 1200mV 85C Model Setup 'state.00000_934'
+Slack : -6.549
+TNS   : -33.128
 
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'state.00000_270'
-Slack : -4.031
-TNS   : -218.714
+Type  : Slow 1200mV 85C Model Hold 'state.00000_934'
+Slack : -5.083
+TNS   : -18.190
 
-Type  : Slow 1200mV 0C Model Setup 'state.00000_270'
-Slack : -4.960
-TNS   : -25.143
+Type  : Slow 1200mV 85C Model Hold 'pulse_length[10]'
+Slack : -0.742
+TNS   : -2.577
 
-Type  : Slow 1200mV 0C Model Hold 'state.00000_270'
-Slack : -3.722
-TNS   : -12.871
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'state.00000_934'
+Slack : -5.421
+TNS   : -261.913
 
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'state.00000_270'
-Slack : -3.801
-TNS   : -209.780
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'pulse_length[10]'
+Slack : -3.444
+TNS   : -37.901
 
-Type  : Fast 1200mV 0C Model Setup 'state.00000_270'
-Slack : -1.752
-TNS   : -8.422
+Type  : Slow 1200mV 0C Model Setup 'pulse_length[10]'
+Slack : -12.507
+TNS   : -663.959
 
-Type  : Fast 1200mV 0C Model Hold 'state.00000_270'
-Slack : -1.537
-TNS   : -4.282
+Type  : Slow 1200mV 0C Model Setup 'state.00000_934'
+Slack : -5.884
+TNS   : -29.972
 
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'state.00000_270'
+Type  : Slow 1200mV 0C Model Hold 'state.00000_934'
+Slack : -4.523
+TNS   : -17.042
+
+Type  : Slow 1200mV 0C Model Hold 'pulse_length[10]'
+Slack : -0.703
+TNS   : -3.493
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'state.00000_934'
+Slack : -5.258
+TNS   : -250.244
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'pulse_length[10]'
+Slack : -3.444
+TNS   : -40.034
+
+Type  : Fast 1200mV 0C Model Setup 'pulse_length[10]'
+Slack : -5.600
+TNS   : -307.894
+
+Type  : Fast 1200mV 0C Model Setup 'state.00000_934'
+Slack : -2.362
+TNS   : -11.464
+
+Type  : Fast 1200mV 0C Model Hold 'state.00000_934'
+Slack : -2.055
+TNS   : -6.157
+
+Type  : Fast 1200mV 0C Model Hold 'pulse_length[10]'
+Slack : -0.318
+TNS   : -0.318
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'state.00000_934'
 Slack : -3.000
-TNS   : -125.655
+TNS   : -147.684
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'pulse_length[10]'
+Slack : -3.000
+TNS   : -3.000
 
 ------------------------------------------------------------

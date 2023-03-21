@@ -1,9 +1,12 @@
-module control(trig, clk, rf);
+module control(trig, rabi_trig, clk, rf, rabi);
   
 input trig; // trigger input
 input clk; // fpga clock as input
+input rabi_trig;
 output rf; // outputs to rf controller
+output rabi;
 reg rf;
+reg rabi;
 
 integer counter = 0; 
 integer pi_2 = 333;  // this changes the frequency, it is the number of clock cycles for which the pin is low or high. 
@@ -49,16 +52,10 @@ always @(posedge clk) begin
 end
 */
 
-always @(posedge clk) begin
-	if (counter == pi_2) begin
-		counter <= 0;
-		rf <= ~ rf;
-	end else begin 
-		counter <= counter + 1;
-	end
-end 
-	
-	// interval
+reg[7:0] r_state = 0;
+reg[31:0] r_counter = 0;
+reg[31:0] pulse_length;
+
 
 	
 	// pi/2 pulse
@@ -73,21 +70,25 @@ module control_testbench;
 	reg trig;
 	reg clk; 
  	reg rf; //output
+	reg rabi_trig = 0;
 	
 	//clock generation
 	//start at time 0ns and loop after every 5ns // https://www.chipverify.com/verilog/verilog-simulation
 	always #5 clk = ~clk;
-	
+	always #50000 rabi_trig = ~rabi_trig;
 	
 	initial begin 
 		$monitor("clk = %0d rf = %0d", clk, rf);
-		rf = 0;
+		/*rf = 0;
 		#5 clk = 0;
 		#15 rf = 1;
 		#20 rf = 0;
 		#15 rf = 1;
 		#10 rf = 0;
 		#10 $finish;
+		#10 rabi_trig = 0;
+		#50 rabi_trig = 1;
+		#10 rabi_trig = 0*/
 	end
 	
 	

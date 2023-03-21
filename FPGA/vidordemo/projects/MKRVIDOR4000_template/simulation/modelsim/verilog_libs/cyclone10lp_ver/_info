@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 dC:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/simulation/modelsim
 vcyclone10lp_and1
-Z1 !s110 1677011225
+Z1 !s110 1678987962
 !i10b 1
 !s100 i6a=EE_<eMbfT:bO?;mk51
 IiYUX@nCWhEX<]>4RjfN1k0
@@ -23,7 +23,7 @@ Z6 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z7 !s108 1677011224.000000
+Z7 !s108 1678987962.000000
 Z8 !s107 c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/cyclone10lp_atoms.v|
 Z9 !s90 -reportprogress|300|-vlog01compat|-work|cyclone10lp_ver|c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/cyclone10lp_atoms.v|
 !i113 1
@@ -702,7 +702,7 @@ R9
 R10
 R11
 UCYCLONE10LP_PRIM_DFFE
-!s110 1677011224
+R1
 !i10b 1
 !s100 AJQ1bJF?mZ?EJPB[kDo^;2
 I=M74:6S8Km4T1QM;df1I:0

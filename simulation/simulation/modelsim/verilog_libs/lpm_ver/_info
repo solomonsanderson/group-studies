@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 dC:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation/modelsim
 vlpm_abs
-Z1 !s110 1678797956
+Z1 !s110 1679356514
 !i10b 1
 !s100 O9i<YS?ECZC8XU2m2T>HQ0
 IOT4`adjVi1eW8UAal7SQL1
@@ -23,7 +23,7 @@ Z6 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z7 !s108 1678797955.000000
+Z7 !s108 1679356514.000000
 Z8 !s107 c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/220model.v|
 Z9 !s90 -reportprogress|300|-vlog01compat|-work|lpm_ver|c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/220model.v|
 !i113 1
@@ -72,7 +72,7 @@ R9
 R10
 R11
 vlpm_bipad
-R1
+Z12 !s110 1679356515
 !i10b 1
 !s100 2eZaafdWMNbm_oGJD`IS61
 IO_WSVo:nCZ7PZ`@3d0]dK2
@@ -304,7 +304,7 @@ R9
 R10
 R11
 vlpm_fifo_dc
-R1
+R12
 !i10b 1
 !s100 OX@8oU3SO:LJ;3_=8UL@^3
 IiWP`ZdiPzCAAXPUWR^hUf2
@@ -410,7 +410,7 @@ R10
 R11
 n@l@p@m_@h@i@n@t_@e@v@a@l@u@a@t@i@o@n
 vlpm_inpad
-R1
+R12
 !i10b 1
 !s100 V5b_N<Y1MO:^NFkHi2nm:1
 I3LKE0:?bOd>^Okn>L08Ki0
@@ -558,7 +558,7 @@ R9
 R10
 R11
 vlpm_outpad
-R1
+R12
 !i10b 1
 !s100 co;D>HcBWR;nkbnW:TU;e3
 I2I`0=i1i^FAgz?fXR7ggh3

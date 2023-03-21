@@ -1,21 +1,22 @@
 |simulation
-rf <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
-counter[0] <= counter[0].DB_MAX_OUTPUT_PORT_TYPE
-counter[1] <= Selector20.DB_MAX_OUTPUT_PORT_TYPE
-counter[2] <= Selector19.DB_MAX_OUTPUT_PORT_TYPE
-counter[3] <= Selector18.DB_MAX_OUTPUT_PORT_TYPE
-counter[4] <= Selector17.DB_MAX_OUTPUT_PORT_TYPE
-counter[5] <= Selector16.DB_MAX_OUTPUT_PORT_TYPE
-counter[6] <= Selector15.DB_MAX_OUTPUT_PORT_TYPE
-counter[7] <= Selector14.DB_MAX_OUTPUT_PORT_TYPE
-counter[8] <= Selector13.DB_MAX_OUTPUT_PORT_TYPE
-counter[9] <= Selector12.DB_MAX_OUTPUT_PORT_TYPE
-counter[10] <= Selector11.DB_MAX_OUTPUT_PORT_TYPE
-counter[11] <= Selector10.DB_MAX_OUTPUT_PORT_TYPE
-counter[12] <= Selector9.DB_MAX_OUTPUT_PORT_TYPE
-counter[13] <= Selector8.DB_MAX_OUTPUT_PORT_TYPE
-counter[14] <= counter[14].DB_MAX_OUTPUT_PORT_TYPE
-counter[15] <= counter[15].DB_MAX_OUTPUT_PORT_TYPE
-counter[16] <= counter[16].DB_MAX_OUTPUT_PORT_TYPE
+rf << WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+rabi << r_state.00000000_850.DB_MAX_OUTPUT_PORT_TYPE
+counter[0] << counter[0].DB_MAX_OUTPUT_PORT_TYPE
+counter[1] << Selector20.DB_MAX_OUTPUT_PORT_TYPE
+counter[2] << Selector19.DB_MAX_OUTPUT_PORT_TYPE
+counter[3] << Selector18.DB_MAX_OUTPUT_PORT_TYPE
+counter[4] << Selector17.DB_MAX_OUTPUT_PORT_TYPE
+counter[5] << Selector16.DB_MAX_OUTPUT_PORT_TYPE
+counter[6] << Selector15.DB_MAX_OUTPUT_PORT_TYPE
+counter[7] << Selector14.DB_MAX_OUTPUT_PORT_TYPE
+counter[8] << Selector13.DB_MAX_OUTPUT_PORT_TYPE
+counter[9] << Selector12.DB_MAX_OUTPUT_PORT_TYPE
+counter[10] << Selector11.DB_MAX_OUTPUT_PORT_TYPE
+counter[11] << Selector10.DB_MAX_OUTPUT_PORT_TYPE
+counter[12] << Selector9.DB_MAX_OUTPUT_PORT_TYPE
+counter[13] << Selector8.DB_MAX_OUTPUT_PORT_TYPE
+counter[14] << counter[14].DB_MAX_OUTPUT_PORT_TYPE
+counter[15] << counter[15].DB_MAX_OUTPUT_PORT_TYPE
+counter[16] << counter[16].DB_MAX_OUTPUT_PORT_TYPE
 
 

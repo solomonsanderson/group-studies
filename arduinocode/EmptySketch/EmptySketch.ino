@@ -110,8 +110,10 @@ void setup() {
 
 // the loop function runs over and over again forever
 void loop() {
-    digitalWrite(1, LOW);
-    delay(1000);
-    digitalWrite(1, HIGH);
-    delay(3);
+  digitalWrite(3, HIGH);
+  delay(100); 
+  digitalWrite(3, LOW);
+  delay(100);
+
 }
+

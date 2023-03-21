@@ -1,0 +1,5 @@
+
+State Machine - |simulation|r_state
+Name r_state.00000001 
+r_state.00000000 0 
+r_state.00000001 1 

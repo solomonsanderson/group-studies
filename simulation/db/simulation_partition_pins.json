@@ -8,6 +8,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "rabi",
+					"strict" : false
+				},
+				{
 					"name" : "counter[0]",
 					"strict" : false
 				},

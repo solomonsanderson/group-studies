@@ -1,12 +1,25 @@
-  int ci_pin = 1; // cooling intensity pin 
-  int cf_pin = 2; // cooling frequency pin
-  int repump_pin = 3;
-  int mc_pin = 0; //mot coils pin 
-  int output_max = 255; 
+
 
 void setup() {
   // put your setup code here, to run once:
+  int time_counter = 0; 
+  //we use pin 1 and 2 for triggering MZ so cannot use them 
   // we already use pin 6 for controlling the rf for the laser.
+  int ci_pin = 14; // cooling intensity pin 
+  int cf_pin = 13; // cooling frequency pin
+  int repump_pin = 12;
+  int mc_pin = 11; //mot coils pin 
+  int output_max = 255; 
+  int output_max_12 = 4095;
+
+  int dt = 10; // time interval per cycle
+  int f_ramp = 0; // fast ramp counter
+  int f_ramp_time = 1500; // total fast ramp time 
+  int f_delta = (dt/f_ramp_time) * 2000;   
+
+  int s_ramp = 2000; // slow ramp counter
+  int s_ramp_time = 11500;
+  int s_delta = (dt/s_ramp_time) * 3880;
 
 
   pinMode(ci_pin, OUTPUT);
@@ -21,34 +34,51 @@ void setup() {
 void loop() {
   // put your main code here, to run repeatedly:
   // set all pins to start values
-  analogWrite(ci_pin, output_max);
-  analogWrite(cf_pin, 0.17 * output_max); // starts at around 17%
-  analogWrite(repump_pin, output_max);
-  digitalWrite(mc_pin, HIGH);
+  analogueWriteResolution(12);
+  if (time_counter < 1750){ // delay for 1.75micros
+    analogWrite(ci_pin, output_max_12);
+    analogWrite(cf_pin, 0.17 * output_max_12); // starts at around 17%
+    analogWrite(repump_pin, output_max_12);
+    digitalWrite(mc_pin, HIGH);
+  }
   
-  delayMicroseconds(1750); // delay for 1.75ms
+  else if (1750 =< time_counter < 5000){ // delay for 3250 micros (5ms total)
+    analogWrite(ci_pin, 0);
+    analogWrite(repump_pin, 0);
+    digitalWrite(mc_pin, LOW);
+  }
 
-  analogWrite(ci_pin, 0);
-  analogWrite(repump_pin, 0);
-  digitalWrite(mc_pin, LOW);
+  else if (5000 <= time_counter < 6500){ //delay for 1500 micros (6.5ms total)
+    analogWrite(repump_pin, 0.45 * output_max_12);
+    analogWrite(ci_pin, 0.45 * output_max_12);
 
-  delayMicroseconds(3250);
+    // ramp cf
 
-  analogWrite(repump_pin, 0.45 * output_max);
-  analogWrite(ci_pin, 0.45 * output_max);
+    f_ramp += f_delta;
+    analogueWrite(cf_pin, f_ramp);
+  }
   // need to add ramp for cooling frequency
 
-  delayMicroseconds(1500);
+  else if (6500 <= time_counter < 18000){ //delat for 7500 micros (14ms total)
+    analogWrite(ci_pin, 0.3 * output_max);
+    if (time_counter >= 14000){
+      analogWrite(repump_pin, 0)
+    }
+    else {
+      analogWrite(repump_pin, 0.3 * output_max);
+    }
 
-  analogWrite(repump_pin, 0.3 * output_max);
-  analogWrite(ci_pin, 0.3 * output_max);
-  //need to add further ramp
+    s_ramp += s_delta;
+    analogueWrite(cf_pin, s_ramp)
+  }
 
-  delayMicroseconds(7500);
+  else if (18000 < time_counter < 18250){
+    analogWrite(ci_pin, 0);
+    analogWrite(cf_pin, 4095);
 
-  analogWrite(repump_pin, 0);
+  }
 
-  delayMicroseconds(4000);
 
-  analogWrite(ci_pin, 0);
+  time_count += dt; 
+  delayMicroseconds(dt);
 }

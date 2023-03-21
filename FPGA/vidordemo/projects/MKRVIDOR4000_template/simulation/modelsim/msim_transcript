@@ -5,6 +5,7 @@
 # }
 # 
 # vlib verilog_libs/altera_ver
+# ** Warning: (vlib-34) Library already exists at "verilog_libs/altera_ver".
 # vmap altera_ver ./verilog_libs/altera_ver
 # Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
 # vmap altera_ver ./verilog_libs/altera_ver 
@@ -12,7 +13,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work altera_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_primitives.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:27:01 on Feb 21,2023
+# Start time: 17:32:37 on Mar 16,2023
 # vlog -reportprogress 300 -vlog01compat -work altera_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_primitives.v 
 # -- Compiling module global
 # -- Compiling module carry
@@ -94,17 +95,18 @@
 # 	alt_iobuf_diff
 # 	alt_bidir_diff
 # 	alt_bidir_buf
-# End time: 20:27:02 on Feb 21,2023, Elapsed time: 0:00:01
+# End time: 17:32:38 on Mar 16,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/lpm_ver
+# ** Warning: (vlib-34) Library already exists at "verilog_libs/lpm_ver".
 # vmap lpm_ver ./verilog_libs/lpm_ver
 # Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
 # vmap lpm_ver ./verilog_libs/lpm_ver 
 # Modifying modelsim.ini
 # vlog -vlog01compat -work lpm_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/220model.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:27:02 on Feb 21,2023
+# Start time: 17:32:38 on Mar 16,2023
 # vlog -reportprogress 300 -vlog01compat -work lpm_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/220model.v 
 # -- Compiling module LPM_MEMORY_INITIALIZATION
 # -- Compiling module LPM_HINT_EVALUATION
@@ -168,17 +170,18 @@
 # 	lpm_inpad
 # 	lpm_outpad
 # 	lpm_bipad
-# End time: 20:27:02 on Feb 21,2023, Elapsed time: 0:00:00
+# End time: 17:32:39 on Mar 16,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/sgate_ver
+# ** Warning: (vlib-34) Library already exists at "verilog_libs/sgate_ver".
 # vmap sgate_ver ./verilog_libs/sgate_ver
 # Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
 # vmap sgate_ver ./verilog_libs/sgate_ver 
 # Modifying modelsim.ini
 # vlog -vlog01compat -work sgate_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/sgate.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:27:02 on Feb 21,2023
+# Start time: 17:32:39 on Mar 16,2023
 # vlog -reportprogress 300 -vlog01compat -work sgate_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/sgate.v 
 # -- Compiling module oper_add
 # -- Compiling module oper_addsub
@@ -220,17 +223,18 @@
 # 	oper_decoder
 # 	oper_bus_mux
 # 	oper_latch
-# End time: 20:27:02 on Feb 21,2023, Elapsed time: 0:00:00
+# End time: 17:32:39 on Mar 16,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/altera_mf_ver
+# ** Warning: (vlib-34) Library already exists at "verilog_libs/altera_mf_ver".
 # vmap altera_mf_ver ./verilog_libs/altera_mf_ver
 # Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
 # vmap altera_mf_ver ./verilog_libs/altera_mf_ver 
 # Modifying modelsim.ini
 # vlog -vlog01compat -work altera_mf_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_mf.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:27:02 on Feb 21,2023
+# Start time: 17:32:39 on Mar 16,2023
 # vlog -reportprogress 300 -vlog01compat -work altera_mf_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_mf.v 
 # -- Compiling module lcell
 # -- Compiling module ALTERA_MF_MEMORY_INITIALIZATION
@@ -360,17 +364,18 @@
 # 	alt_fault_injection
 # 	sld_virtual_jtag_basic
 # 	altsource_probe
-# End time: 20:27:04 on Feb 21,2023, Elapsed time: 0:00:02
+# End time: 17:32:41 on Mar 16,2023, Elapsed time: 0:00:02
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/altera_lnsim_ver
+# ** Warning: (vlib-34) Library already exists at "verilog_libs/altera_lnsim_ver".
 # vmap altera_lnsim_ver ./verilog_libs/altera_lnsim_ver
 # Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
 # vmap altera_lnsim_ver ./verilog_libs/altera_lnsim_ver 
 # Modifying modelsim.ini
 # vlog -sv -work altera_lnsim_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_lnsim.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:27:04 on Feb 21,2023
+# Start time: 17:32:41 on Mar 16,2023
 # vlog -reportprogress 300 -sv -work altera_lnsim_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_lnsim.sv 
 # -- Compiling package altera_lnsim_functions
 # -- Compiling package altera_generic_pll_functions
@@ -453,17 +458,18 @@
 # 	altera_iopll
 # 	fourteennm_altera_iopll
 # 	fourteennm_simple_iopll
-# End time: 20:27:04 on Feb 21,2023, Elapsed time: 0:00:00
+# End time: 17:32:42 on Mar 16,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/cyclone10lp_ver
+# ** Warning: (vlib-34) Library already exists at "verilog_libs/cyclone10lp_ver".
 # vmap cyclone10lp_ver ./verilog_libs/cyclone10lp_ver
 # Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
 # vmap cyclone10lp_ver ./verilog_libs/cyclone10lp_ver 
 # Modifying modelsim.ini
 # vlog -vlog01compat -work cyclone10lp_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/cyclone10lp_atoms.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:27:04 on Feb 21,2023
+# Start time: 17:32:42 on Mar 16,2023
 # vlog -reportprogress 300 -vlog01compat -work cyclone10lp_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/cyclone10lp_atoms.v 
 # -- Compiling UDP CYCLONE10LP_PRIM_DFFE
 # -- Compiling UDP CYCLONE10LP_PRIM_DFFEAS
@@ -541,7 +547,7 @@
 # 	cyclone10lp_jtag
 # 	cyclone10lp_crcblock
 # 	cyclone10lp_oscillator
-# End time: 20:27:05 on Feb 21,2023, Elapsed time: 0:00:01
+# End time: 17:32:42 on Mar 16,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # if {[file exists rtl_work]} {
@@ -555,330 +561,35 @@
 # 
 # vlog -sv -work work +incdir+C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/ip/SYSTEM_PLL {C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/ip/SYSTEM_PLL/SYSTEM_PLL.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:27:05 on Feb 21,2023
+# Start time: 17:32:43 on Mar 16,2023
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/ip/SYSTEM_PLL" C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/ip/SYSTEM_PLL/SYSTEM_PLL.v 
 # -- Compiling module SYSTEM_PLL
 # 
 # Top level modules:
 # 	SYSTEM_PLL
-# End time: 20:27:05 on Feb 21,2023, Elapsed time: 0:00:00
+# End time: 17:32:43 on Mar 16,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template {C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:27:05 on Feb 21,2023
+# Start time: 17:32:43 on Mar 16,2023
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template" C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v 
 # -- Compiling module MKRVIDOR4000_top
 # 
 # Top level modules:
 # 	MKRVIDOR4000_top
-# End time: 20:27:05 on Feb 21,2023, Elapsed time: 0:00:00
+# End time: 17:32:43 on Mar 16,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template {C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/control.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:27:05 on Feb 21,2023
+# Start time: 17:32:43 on Mar 16,2023
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template" C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/control.v 
 # -- Compiling module control
-# ** Error: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/control.v(26): (vlog-2110) Illegal reference to net "rf".
-# ** Error: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/control.v(32): (vlog-2110) Illegal reference to net "rf".
-# ** Error: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/control.v(38): (vlog-2110) Illegal reference to net "rf".
-# ** Error: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/control.v(44): (vlog-2110) Illegal reference to net "rf".
-# End time: 20:27:05 on Feb 21,2023, Elapsed time: 0:00:00
-# Errors: 4, Warnings: 0
+# ** Error: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/control.v(106): (vlog-2110) Illegal reference to net "rabi".
+# ** Error: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/control.v(113): (vlog-2110) Illegal reference to net "rabi".
+# End time: 17:32:43 on Mar 16,2023, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
 # ** Error: C:/intelFPGA/18.1/modelsim_ase/win32aloem/vlog failed.
 # Error in macro ./MKRVIDOR4000_run_msim_rtl_verilog.do line 38
 # C:/intelFPGA/18.1/modelsim_ase/win32aloem/vlog failed.
 #     while executing
 # "vlog -sv -work work +incdir+C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template {C:/Users/Solom/OneDrive/Desktop/Con..."
-vlog -reportprogress 300 -work work C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/control.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:29:31 on Feb 21,2023
-# vlog -reportprogress 300 -work work C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/control.v 
-# -- Compiling module control
-# ** Error: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/control.v(11): Register is illegal in left-hand side of continuous assignment
-# ** Error: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/control.v(26): (vlog-2110) Illegal reference to net "rf".
-# ** Error: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/control.v(32): (vlog-2110) Illegal reference to net "rf".
-# ** Error: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/control.v(38): (vlog-2110) Illegal reference to net "rf".
-# ** Error: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/control.v(44): (vlog-2110) Illegal reference to net "rf".
-# End time: 20:29:31 on Feb 21,2023, Elapsed time: 0:00:00
-# Errors: 5, Warnings: 0
-vlog -reportprogress 300 -work work C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/control.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:29:37 on Feb 21,2023
-# vlog -reportprogress 300 -work work C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/control.v 
-# -- Compiling module control
-# ** Error: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/control.v(11): Register is illegal in left-hand side of continuous assignment
-# ** Error: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/control.v(26): (vlog-2110) Illegal reference to net "rf".
-# ** Error: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/control.v(32): (vlog-2110) Illegal reference to net "rf".
-# ** Error: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/control.v(38): (vlog-2110) Illegal reference to net "rf".
-# ** Error: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/control.v(44): (vlog-2110) Illegal reference to net "rf".
-# End time: 20:29:37 on Feb 21,2023, Elapsed time: 0:00:00
-# Errors: 5, Warnings: 0
-vlog -reportprogress 300 -work work C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/control.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:29:38 on Feb 21,2023
-# vlog -reportprogress 300 -work work C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/control.v 
-# -- Compiling module control
-# ** Error: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/control.v(11): Register is illegal in left-hand side of continuous assignment
-# ** Error: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/control.v(26): (vlog-2110) Illegal reference to net "rf".
-# ** Error: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/control.v(32): (vlog-2110) Illegal reference to net "rf".
-# ** Error: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/control.v(38): (vlog-2110) Illegal reference to net "rf".
-# ** Error: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/control.v(44): (vlog-2110) Illegal reference to net "rf".
-# End time: 20:29:38 on Feb 21,2023, Elapsed time: 0:00:00
-# Errors: 5, Warnings: 0
-vlog -reportprogress 300 -work work C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:29:55 on Feb 21,2023
-# vlog -reportprogress 300 -work work C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v 
-# -- Compiling module MKRVIDOR4000_top
-# 
-# Top level modules:
-# 	MKRVIDOR4000_top
-# End time: 20:29:55 on Feb 21,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vsim work.MKRVIDOR4000_top
-# vsim work.MKRVIDOR4000_top 
-# Start time: 20:31:25 on Feb 21,2023
-# Loading work.MKRVIDOR4000_top
-# ** Error: (vsim-3033) C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v(146): Instantiation of 'cyclone10lp_oscillator' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /MKRVIDOR4000_top File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v
-#         Searched libraries:
-#             C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/simulation/modelsim/rtl_work
-# Loading sv_std.std
-# Loading work.SYSTEM_PLL
-# ** Error: (vsim-3033) C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/ip/SYSTEM_PLL/SYSTEM_PLL.v(83): Instantiation of 'altpll' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /MKRVIDOR4000_top/PLL_inst File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/ip/SYSTEM_PLL/SYSTEM_PLL.v
-#         Searched libraries:
-#             C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/simulation/modelsim/rtl_work
-# ** Error: (vsim-3033) C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v(171): Instantiation of 'control' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /MKRVIDOR4000_top File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v
-#         Searched libraries:
-#             C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/simulation/modelsim/rtl_work
-# Error loading design
-# End time: 20:31:25 on Feb 21,2023, Elapsed time: 0:00:00
-# Errors: 3, Warnings: 0
-vsim work.MKRVIDOR4000_top
-# vsim work.MKRVIDOR4000_top 
-# Start time: 20:31:34 on Feb 21,2023
-# Loading work.MKRVIDOR4000_top
-# ** Error: (vsim-3033) C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v(146): Instantiation of 'cyclone10lp_oscillator' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /MKRVIDOR4000_top File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v
-#         Searched libraries:
-#             C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/simulation/modelsim/rtl_work
-# Loading sv_std.std
-# Loading work.SYSTEM_PLL
-# ** Error: (vsim-3033) C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/ip/SYSTEM_PLL/SYSTEM_PLL.v(83): Instantiation of 'altpll' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /MKRVIDOR4000_top/PLL_inst File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/ip/SYSTEM_PLL/SYSTEM_PLL.v
-#         Searched libraries:
-#             C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/simulation/modelsim/rtl_work
-# ** Error: (vsim-3033) C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v(171): Instantiation of 'control' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /MKRVIDOR4000_top File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v
-#         Searched libraries:
-#             C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/simulation/modelsim/rtl_work
-# Error loading design
-# End time: 20:31:34 on Feb 21,2023, Elapsed time: 0:00:00
-# Errors: 3, Warnings: 0
-vsim work.MKRVIDOR4000_top
-# vsim work.MKRVIDOR4000_top 
-# Start time: 20:31:38 on Feb 21,2023
-# Loading work.MKRVIDOR4000_top
-# ** Error: (vsim-3033) C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v(146): Instantiation of 'cyclone10lp_oscillator' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /MKRVIDOR4000_top File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v
-#         Searched libraries:
-#             C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/simulation/modelsim/rtl_work
-# Loading sv_std.std
-# Loading work.SYSTEM_PLL
-# ** Error: (vsim-3033) C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/ip/SYSTEM_PLL/SYSTEM_PLL.v(83): Instantiation of 'altpll' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /MKRVIDOR4000_top/PLL_inst File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/ip/SYSTEM_PLL/SYSTEM_PLL.v
-#         Searched libraries:
-#             C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/simulation/modelsim/rtl_work
-# ** Error: (vsim-3033) C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v(171): Instantiation of 'control' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /MKRVIDOR4000_top File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v
-#         Searched libraries:
-#             C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/simulation/modelsim/rtl_work
-# Error loading design
-# End time: 20:31:39 on Feb 21,2023, Elapsed time: 0:00:01
-# Errors: 3, Warnings: 0
-dataset reload -f
-# Dataset not found: 
-dataset reload -f
-# Dataset not found: 
-vsim work.MKRVIDOR4000_top
-# vsim work.MKRVIDOR4000_top 
-# Start time: 20:38:27 on Feb 21,2023
-# Loading work.MKRVIDOR4000_top
-# ** Error: (vsim-3033) C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v(146): Instantiation of 'cyclone10lp_oscillator' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /MKRVIDOR4000_top File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v
-#         Searched libraries:
-#             C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/simulation/modelsim/rtl_work
-# Loading sv_std.std
-# Loading work.SYSTEM_PLL
-# ** Error: (vsim-3033) C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/ip/SYSTEM_PLL/SYSTEM_PLL.v(83): Instantiation of 'altpll' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /MKRVIDOR4000_top/PLL_inst File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/ip/SYSTEM_PLL/SYSTEM_PLL.v
-#         Searched libraries:
-#             C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/simulation/modelsim/rtl_work
-# ** Error: (vsim-3033) C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v(171): Instantiation of 'control' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /MKRVIDOR4000_top File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v
-#         Searched libraries:
-#             C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/simulation/modelsim/rtl_work
-# Error loading design
-# End time: 20:38:27 on Feb 21,2023, Elapsed time: 0:00:00
-# Errors: 3, Warnings: 0
-vsim work.MKRVIDOR4000_top
-# vsim work.MKRVIDOR4000_top 
-# Start time: 20:38:29 on Feb 21,2023
-# Loading work.MKRVIDOR4000_top
-# ** Error: (vsim-3033) C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v(146): Instantiation of 'cyclone10lp_oscillator' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /MKRVIDOR4000_top File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v
-#         Searched libraries:
-#             C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/simulation/modelsim/rtl_work
-# Loading sv_std.std
-# Loading work.SYSTEM_PLL
-# ** Error: (vsim-3033) C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/ip/SYSTEM_PLL/SYSTEM_PLL.v(83): Instantiation of 'altpll' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /MKRVIDOR4000_top/PLL_inst File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/ip/SYSTEM_PLL/SYSTEM_PLL.v
-#         Searched libraries:
-#             C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/simulation/modelsim/rtl_work
-# ** Error: (vsim-3033) C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v(171): Instantiation of 'control' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /MKRVIDOR4000_top File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v
-#         Searched libraries:
-#             C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/simulation/modelsim/rtl_work
-# Error loading design
-# End time: 20:38:30 on Feb 21,2023, Elapsed time: 0:00:01
-# Errors: 3, Warnings: 0
-vlog -reportprogress 300 -work work C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/control.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:38:35 on Feb 21,2023
-# vlog -reportprogress 300 -work work C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/control.v 
-# -- Compiling module control
-# ** Error: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/control.v(11): Register is illegal in left-hand side of continuous assignment
-# ** Error: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/control.v(26): (vlog-2110) Illegal reference to net "rf".
-# ** Error: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/control.v(32): (vlog-2110) Illegal reference to net "rf".
-# ** Error: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/control.v(38): (vlog-2110) Illegal reference to net "rf".
-# ** Error: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/control.v(44): (vlog-2110) Illegal reference to net "rf".
-# -- Compiling module control_testbench
-# ** Error: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/control.v(72): (vlog-2110) Illegal reference to net "rf".
-# ** Error: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/control.v(73): (vlog-2110) Illegal reference to net "rf".
-# ** Error: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/control.v(74): (vlog-2110) Illegal reference to net "rf".
-# ** Error: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/control.v(75): (vlog-2110) Illegal reference to net "rf".
-# ** Error: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/control.v(76): (vlog-2110) Illegal reference to net "rf".
-# ** Error: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/control.v(77): (vlog-2110) Illegal reference to net "rf".
-# ** Error: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/control.v(78): (vlog-2110) Illegal reference to net "rf".
-# ** Error: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/control.v(79): (vlog-2110) Illegal reference to net "rf".
-# End time: 20:38:35 on Feb 21,2023, Elapsed time: 0:00:00
-# Errors: 13, Warnings: 0
-vsim work.MKRVIDOR4000_top
-# vsim work.MKRVIDOR4000_top 
-# Start time: 20:39:52 on Feb 21,2023
-# Loading work.MKRVIDOR4000_top
-# ** Error: (vsim-3033) C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v(146): Instantiation of 'cyclone10lp_oscillator' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /MKRVIDOR4000_top File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v
-#         Searched libraries:
-#             C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/simulation/modelsim/rtl_work
-# Loading sv_std.std
-# Loading work.SYSTEM_PLL
-# ** Error: (vsim-3033) C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/ip/SYSTEM_PLL/SYSTEM_PLL.v(83): Instantiation of 'altpll' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /MKRVIDOR4000_top/PLL_inst File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/ip/SYSTEM_PLL/SYSTEM_PLL.v
-#         Searched libraries:
-#             C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/simulation/modelsim/rtl_work
-# ** Error: (vsim-3033) C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v(171): Instantiation of 'control' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /MKRVIDOR4000_top File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v
-#         Searched libraries:
-#             C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/simulation/modelsim/rtl_work
-# Error loading design
-# End time: 20:39:52 on Feb 21,2023, Elapsed time: 0:00:00
-# Errors: 3, Warnings: 0
-vsim work.MKRVIDOR4000_top
-# vsim work.MKRVIDOR4000_top 
-# Start time: 21:01:31 on Feb 21,2023
-# Loading work.MKRVIDOR4000_top
-# ** Error: (vsim-3033) C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v(146): Instantiation of 'cyclone10lp_oscillator' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /MKRVIDOR4000_top File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v
-#         Searched libraries:
-#             C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/simulation/modelsim/rtl_work
-# Loading sv_std.std
-# Loading work.SYSTEM_PLL
-# ** Error: (vsim-3033) C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/ip/SYSTEM_PLL/SYSTEM_PLL.v(83): Instantiation of 'altpll' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /MKRVIDOR4000_top/PLL_inst File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/ip/SYSTEM_PLL/SYSTEM_PLL.v
-#         Searched libraries:
-#             C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/simulation/modelsim/rtl_work
-# ** Error: (vsim-3033) C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v(171): Instantiation of 'control' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /MKRVIDOR4000_top File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v
-#         Searched libraries:
-#             C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/simulation/modelsim/rtl_work
-# Error loading design
-# End time: 21:01:31 on Feb 21,2023, Elapsed time: 0:00:00
-# Errors: 3, Warnings: 0
-vsim work.MKRVIDOR4000_top
-# vsim work.MKRVIDOR4000_top 
-# Start time: 21:01:36 on Feb 21,2023
-# Loading work.MKRVIDOR4000_top
-# ** Error: (vsim-3033) C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v(146): Instantiation of 'cyclone10lp_oscillator' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /MKRVIDOR4000_top File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v
-#         Searched libraries:
-#             C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/simulation/modelsim/rtl_work
-# Loading sv_std.std
-# Loading work.SYSTEM_PLL
-# ** Error: (vsim-3033) C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/ip/SYSTEM_PLL/SYSTEM_PLL.v(83): Instantiation of 'altpll' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /MKRVIDOR4000_top/PLL_inst File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/ip/SYSTEM_PLL/SYSTEM_PLL.v
-#         Searched libraries:
-#             C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/simulation/modelsim/rtl_work
-# ** Error: (vsim-3033) C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v(171): Instantiation of 'control' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /MKRVIDOR4000_top File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v
-#         Searched libraries:
-#             C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/simulation/modelsim/rtl_work
-# Error loading design
-# End time: 21:01:36 on Feb 21,2023, Elapsed time: 0:00:00
-# Errors: 3, Warnings: 0
-vlog -reportprogress 300 -work work C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/control.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:02:17 on Feb 21,2023
-# vlog -reportprogress 300 -work work C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/control.v 
-# -- Compiling module control
-# ** Error: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/control.v(11): Register is illegal in left-hand side of continuous assignment
-# ** Error: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/control.v(26): (vlog-2110) Illegal reference to net "rf".
-# ** Error: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/control.v(32): (vlog-2110) Illegal reference to net "rf".
-# ** Error: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/control.v(38): (vlog-2110) Illegal reference to net "rf".
-# ** Error: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/control.v(44): (vlog-2110) Illegal reference to net "rf".
-# -- Compiling module control_testbench
-# ** Error: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/control.v(72): (vlog-2110) Illegal reference to net "rf".
-# ** Error: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/control.v(73): (vlog-2110) Illegal reference to net "rf".
-# ** Error: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/control.v(74): (vlog-2110) Illegal reference to net "rf".
-# ** Error: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/control.v(75): (vlog-2110) Illegal reference to net "rf".
-# ** Error: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/control.v(76): (vlog-2110) Illegal reference to net "rf".
-# ** Error: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/control.v(77): (vlog-2110) Illegal reference to net "rf".
-# ** Error: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/control.v(78): (vlog-2110) Illegal reference to net "rf".
-# ** Error: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/control.v(79): (vlog-2110) Illegal reference to net "rf".
-# End time: 21:02:17 on Feb 21,2023, Elapsed time: 0:00:00
-# Errors: 13, Warnings: 0
-vsim work.SYSTEM_PLL
-# vsim work.SYSTEM_PLL 
-# Start time: 22:56:16 on Feb 21,2023
-# Loading sv_std.std
-# Loading work.SYSTEM_PLL
-# ** Error: (vsim-3033) C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/ip/SYSTEM_PLL/SYSTEM_PLL.v(83): Instantiation of 'altpll' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /SYSTEM_PLL File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/ip/SYSTEM_PLL/SYSTEM_PLL.v
-#         Searched libraries:
-#             C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/simulation/modelsim/rtl_work
-# Error loading design
-# End time: 22:56:17 on Feb 21,2023, Elapsed time: 0:00:01
-# Errors: 1, Warnings: 0
-vsim work.MKRVIDOR4000_top
-# vsim work.MKRVIDOR4000_top 
-# Start time: 22:56:24 on Feb 21,2023
-# Loading work.MKRVIDOR4000_top
-# ** Error: (vsim-3033) C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v(146): Instantiation of 'cyclone10lp_oscillator' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /MKRVIDOR4000_top File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v
-#         Searched libraries:
-#             C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/simulation/modelsim/rtl_work
-# Loading sv_std.std
-# Loading work.SYSTEM_PLL
-# ** Error: (vsim-3033) C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/ip/SYSTEM_PLL/SYSTEM_PLL.v(83): Instantiation of 'altpll' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /MKRVIDOR4000_top/PLL_inst File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/ip/SYSTEM_PLL/SYSTEM_PLL.v
-#         Searched libraries:
-#             C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/simulation/modelsim/rtl_work
-# ** Error: (vsim-3033) C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v(171): Instantiation of 'control' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /MKRVIDOR4000_top File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v
-#         Searched libraries:
-#             C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/simulation/modelsim/rtl_work
-# Error loading design
-# End time: 22:56:24 on Feb 21,2023, Elapsed time: 0:00:00
-# Errors: 3, Warnings: 0
