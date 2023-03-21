@@ -13,7 +13,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work altera_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_primitives.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:55:13 on Mar 20,2023
+# Start time: 00:53:06 on Mar 21,2023
 # vlog -reportprogress 300 -vlog01compat -work altera_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_primitives.v 
 # -- Compiling module global
 # -- Compiling module carry
@@ -95,7 +95,7 @@
 # 	alt_iobuf_diff
 # 	alt_bidir_diff
 # 	alt_bidir_buf
-# End time: 23:55:14 on Mar 20,2023, Elapsed time: 0:00:01
+# End time: 00:53:07 on Mar 21,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/lpm_ver
@@ -106,7 +106,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work lpm_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/220model.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:55:14 on Mar 20,2023
+# Start time: 00:53:07 on Mar 21,2023
 # vlog -reportprogress 300 -vlog01compat -work lpm_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/220model.v 
 # -- Compiling module LPM_MEMORY_INITIALIZATION
 # -- Compiling module LPM_HINT_EVALUATION
@@ -170,7 +170,7 @@
 # 	lpm_inpad
 # 	lpm_outpad
 # 	lpm_bipad
-# End time: 23:55:15 on Mar 20,2023, Elapsed time: 0:00:01
+# End time: 00:53:08 on Mar 21,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/sgate_ver
@@ -181,7 +181,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work sgate_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/sgate.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:55:15 on Mar 20,2023
+# Start time: 00:53:08 on Mar 21,2023
 # vlog -reportprogress 300 -vlog01compat -work sgate_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/sgate.v 
 # -- Compiling module oper_add
 # -- Compiling module oper_addsub
@@ -223,7 +223,7 @@
 # 	oper_decoder
 # 	oper_bus_mux
 # 	oper_latch
-# End time: 23:55:15 on Mar 20,2023, Elapsed time: 0:00:00
+# End time: 00:53:08 on Mar 21,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/altera_mf_ver
@@ -234,7 +234,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work altera_mf_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_mf.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:55:15 on Mar 20,2023
+# Start time: 00:53:09 on Mar 21,2023
 # vlog -reportprogress 300 -vlog01compat -work altera_mf_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_mf.v 
 # -- Compiling module lcell
 # -- Compiling module ALTERA_MF_MEMORY_INITIALIZATION
@@ -364,7 +364,7 @@
 # 	alt_fault_injection
 # 	sld_virtual_jtag_basic
 # 	altsource_probe
-# End time: 23:55:18 on Mar 20,2023, Elapsed time: 0:00:03
+# End time: 00:53:11 on Mar 21,2023, Elapsed time: 0:00:02
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/altera_lnsim_ver
@@ -375,7 +375,7 @@
 # Modifying modelsim.ini
 # vlog -sv -work altera_lnsim_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_lnsim.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:55:18 on Mar 20,2023
+# Start time: 00:53:11 on Mar 21,2023
 # vlog -reportprogress 300 -sv -work altera_lnsim_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_lnsim.sv 
 # -- Compiling package altera_lnsim_functions
 # -- Compiling package altera_generic_pll_functions
@@ -458,7 +458,7 @@
 # 	altera_iopll
 # 	fourteennm_altera_iopll
 # 	fourteennm_simple_iopll
-# End time: 23:55:19 on Mar 20,2023, Elapsed time: 0:00:01
+# End time: 00:53:13 on Mar 21,2023, Elapsed time: 0:00:02
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/cyclone10lp_ver
@@ -469,7 +469,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work cyclone10lp_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/cyclone10lp_atoms.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:55:19 on Mar 20,2023
+# Start time: 00:53:13 on Mar 21,2023
 # vlog -reportprogress 300 -vlog01compat -work cyclone10lp_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/cyclone10lp_atoms.v 
 # -- Compiling UDP CYCLONE10LP_PRIM_DFFE
 # -- Compiling UDP CYCLONE10LP_PRIM_DFFEAS
@@ -547,7 +547,7 @@
 # 	cyclone10lp_jtag
 # 	cyclone10lp_crcblock
 # 	cyclone10lp_oscillator
-# End time: 23:55:20 on Mar 20,2023, Elapsed time: 0:00:01
+# End time: 00:53:14 on Mar 21,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
 # if {[file exists rtl_work]} {
@@ -561,25 +561,25 @@
 # 
 # vlog -vlog01compat -work work +incdir+C:/Users/Solom/OneDrive/Desktop/Control/simulation {C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:55:21 on Mar 20,2023
+# Start time: 00:53:14 on Mar 21,2023
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Solom/OneDrive/Desktop/Control/simulation" C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v 
 # -- Compiling module simulation
 # 
 # Top level modules:
 # 	simulation
-# End time: 23:55:21 on Mar 20,2023, Elapsed time: 0:00:00
+# End time: 00:53:14 on Mar 21,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 vsim work.simulation
 # vsim work.simulation 
-# Start time: 23:55:39 on Mar 20,2023
+# Start time: 00:53:42 on Mar 21,2023
 # Loading work.simulation
 add wave -position insertpoint sim:/simulation/*
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: Solom  Hostname: SOLOMONS-LAPTOP  ProcessID: 18240
-#           Attempting to use alternate WLF file "./wlft1rdanx".
+#           Attempting to use alternate WLF file "./wlft2t2ct5".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlft1rdanx
+#           Using alternate file: ./wlft2t2ct5
 run
 # interval 2 start = 60, pi start = 40, second pi_2 start= 80
 # Time =0 clk = 0 rf = 0 counter = 0
@@ -646,7 +646,6 @@ run
 # Time =285000 clk = 1 rf = 0 counter = 57
 # Time =290000 clk = 0 rf = 0 counter = 58
 # Time =295000 clk = 1 rf = 0 counter = 59
-# rabi idle
 run
 # Time =300000 clk = 0 rf = 0 counter = 60
 # Time =305000 clk = 1 rf = 0 counter = 61
@@ -668,7 +667,6 @@ run
 # Time =385000 clk = 1 rf = 0 counter = 77
 # Time =390000 clk = 0 rf = 0 counter = 78
 # Time =395000 clk = 1 rf = 0 counter = 79
-# rabi pulse
 run
 # Time =400000 clk = 0 rf = 0 counter = 80
 # Time =405000 clk = 1 rf = 0 counter = 81
@@ -690,7 +688,7 @@ run
 # Time =485000 clk = 1 rf = 0 counter = 97
 # Time =490000 clk = 0 rf = 0 counter = 98
 # Time =495000 clk = 1 rf = 0 counter = 99
-# rabi pulse
+# rabi idle
 run
 # Time =500000 clk = 0 rf = 0 counter = 100
 # Time =505000 clk = 1 rf = 0 counter = 101
@@ -910,7 +908,7 @@ run
 # Time =1485000 clk = 1 rf = 0 counter = 297
 # Time =1490000 clk = 0 rf = 0 counter = 298
 # Time =1495000 clk = 1 rf = 0 counter = 299
-# rabi idle
+# rabi pulse
 run
 # Time =1500000 clk = 0 rf = 0 counter = 300
 # Time =1505000 clk = 1 rf = 0 counter = 301
@@ -932,7 +930,6 @@ run
 # Time =1585000 clk = 1 rf = 0 counter = 317
 # Time =1590000 clk = 0 rf = 0 counter = 318
 # Time =1595000 clk = 1 rf = 0 counter = 319
-# rabi pulse
 run
 # Time =1600000 clk = 0 rf = 0 counter = 320
 # Time =1605000 clk = 1 rf = 0 counter = 321
@@ -954,7 +951,7 @@ run
 # Time =1685000 clk = 1 rf = 0 counter = 337
 # Time =1690000 clk = 0 rf = 0 counter = 338
 # Time =1695000 clk = 1 rf = 0 counter = 339
-# rabi pulse
+# rabi idle
 run
 # Time =1700000 clk = 0 rf = 0 counter = 340
 # Time =1705000 clk = 1 rf = 0 counter = 341
@@ -977,5 +974,5 @@ run
 # Time =1790000 clk = 0 rf = 0 counter = 358
 # Time =1795000 clk = 1 rf = 0 counter = 359
 # rabi pulse
-# End time: 00:02:13 on Mar 21,2023, Elapsed time: 0:06:34
+# End time: 00:55:04 on Mar 21,2023, Elapsed time: 0:01:22
 # Errors: 0, Warnings: 2

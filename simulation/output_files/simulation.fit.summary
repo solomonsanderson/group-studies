@@ -1,12 +1,12 @@
-Fitter Status : Successful - Mon Mar 20 23:54:37 2023
+Fitter Status : Successful - Tue Mar 21 00:52:10 2023
 Quartus Prime Version : 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 Revision Name : simulation
 Top-level Entity Name : simulation
 Family : Cyclone 10 LP
 Device : 10CL016YU256C8G
 Timing Models : Final
-Total logic elements : 280 / 15,408 ( 2 % )
-    Total combinational functions : 280 / 15,408 ( 2 % )
+Total logic elements : 284 / 15,408 ( 2 % )
+    Total combinational functions : 284 / 15,408 ( 2 % )
     Dedicated logic registers : 0 / 15,408 ( 0 % )
 Total registers : 0
 Total pins : 19 / 163 ( 12 % )

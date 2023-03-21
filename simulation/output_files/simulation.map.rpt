@@ -1,5 +1,5 @@
 Analysis & Synthesis report for simulation
-Mon Mar 20 23:54:25 2023
+Tue Mar 21 00:51:57 2023
 Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 
 
@@ -46,13 +46,13 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Mar 20 23:54:25 2023          ;
+; Analysis & Synthesis Status        ; Successful - Tue Mar 21 00:51:57 2023          ;
 ; Quartus Prime Version              ; 22.1std.0 Build 915 10/25/2022 SC Lite Edition ;
 ; Revision Name                      ; simulation                                     ;
 ; Top-level Entity Name              ; simulation                                     ;
 ; Family                             ; Cyclone 10 LP                                  ;
-; Total logic elements               ; 280                                            ;
-;     Total combinational functions  ; 280                                            ;
+; Total logic elements               ; 284                                            ;
+;     Total combinational functions  ; 284                                            ;
 ;     Dedicated logic registers      ; 0                                              ;
 ; Total registers                    ; 0                                              ;
 ; Total pins                         ; 19                                             ;
@@ -157,12 +157,12 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.01        ;
+; Average used               ; 1.00        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.4%      ;
+;     Processors 2-4         ;   0.2%      ;
 +----------------------------+-------------+
 
 
@@ -175,36 +175,36 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------+-----------------+------------------------+-----------------------------------------------------------------+---------+
 
 
-+----------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                          ;
-+---------------------------------------------+------------------------+
-; Resource                                    ; Usage                  ;
-+---------------------------------------------+------------------------+
-; Estimated Total logic elements              ; 280                    ;
-;                                             ;                        ;
-; Total combinational functions               ; 280                    ;
-; Logic element usage by number of LUT inputs ;                        ;
-;     -- 4 input functions                    ; 13                     ;
-;     -- 3 input functions                    ; 118                    ;
-;     -- <=2 input functions                  ; 149                    ;
-;                                             ;                        ;
-; Logic elements by mode                      ;                        ;
-;     -- normal mode                          ; 144                    ;
-;     -- arithmetic mode                      ; 136                    ;
-;                                             ;                        ;
-; Total registers                             ; 0                      ;
-;     -- Dedicated logic registers            ; 0                      ;
-;     -- I/O registers                        ; 0                      ;
-;                                             ;                        ;
-; I/O pins                                    ; 19                     ;
-;                                             ;                        ;
-; Embedded Multiplier 9-bit elements          ; 0                      ;
-;                                             ;                        ;
-; Maximum fan-out node                        ; r_state.00000000_850~0 ;
-; Maximum fan-out                             ; 36                     ;
-; Total fan-out                               ; 737                    ;
-; Average fan-out                             ; 2.32                   ;
-+---------------------------------------------+------------------------+
++--------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                        ;
++---------------------------------------------+----------------------+
+; Resource                                    ; Usage                ;
++---------------------------------------------+----------------------+
+; Estimated Total logic elements              ; 284                  ;
+;                                             ;                      ;
+; Total combinational functions               ; 284                  ;
+; Logic element usage by number of LUT inputs ;                      ;
+;     -- 4 input functions                    ; 13                   ;
+;     -- 3 input functions                    ; 155                  ;
+;     -- <=2 input functions                  ; 116                  ;
+;                                             ;                      ;
+; Logic elements by mode                      ;                      ;
+;     -- normal mode                          ; 148                  ;
+;     -- arithmetic mode                      ; 136                  ;
+;                                             ;                      ;
+; Total registers                             ; 0                    ;
+;     -- Dedicated logic registers            ; 0                    ;
+;     -- I/O registers                        ; 0                    ;
+;                                             ;                      ;
+; I/O pins                                    ; 19                   ;
+;                                             ;                      ;
+; Embedded Multiplier 9-bit elements          ; 0                    ;
+;                                             ;                      ;
+; Maximum fan-out node                        ; r_state.00000010_949 ;
+; Maximum fan-out                             ; 36                   ;
+; Total fan-out                               ; 781                  ;
+; Average fan-out                             ; 2.43                 ;
++---------------------------------------------+----------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -212,7 +212,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; |simulation                ; 280 (280)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 19   ; 0            ; |simulation         ; simulation  ; work         ;
+; |simulation                ; 284 (284)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 19   ; 0            ; |simulation         ; simulation  ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -222,77 +222,80 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------------------------+----------------------+------------------------+
 ; Latch Name                                          ; Latch Enable Signal  ; Free of Timing Hazards ;
 +-----------------------------------------------------+----------------------+------------------------+
-; state.00100_878                                     ; Selector23           ; yes                    ;
-; state.00010_906                                     ; Selector23           ; yes                    ;
-; state.00000_934                                     ; Selector23           ; yes                    ;
-; r_state.00000000_850                                ; r_state.00000000     ; yes                    ;
-; state.00101_864                                     ; Selector23           ; yes                    ;
-; state.00001_920                                     ; Selector23           ; yes                    ;
-; state.00011_892                                     ; Selector23           ; yes                    ;
-; r_counter[31]                                       ; r_state.00000000_850 ; yes                    ;
-; pulse_length[31]                                    ; pulse_length[2]      ; yes                    ;
-; pulse_length[30]                                    ; pulse_length[2]      ; yes                    ;
-; pulse_length[29]                                    ; pulse_length[2]      ; yes                    ;
-; pulse_length[28]                                    ; pulse_length[2]      ; yes                    ;
-; pulse_length[27]                                    ; pulse_length[2]      ; yes                    ;
-; pulse_length[26]                                    ; pulse_length[2]      ; yes                    ;
-; pulse_length[25]                                    ; pulse_length[2]      ; yes                    ;
-; pulse_length[24]                                    ; pulse_length[2]      ; yes                    ;
-; pulse_length[23]                                    ; pulse_length[2]      ; yes                    ;
-; pulse_length[22]                                    ; pulse_length[2]      ; yes                    ;
-; pulse_length[21]                                    ; pulse_length[2]      ; yes                    ;
-; pulse_length[20]                                    ; pulse_length[2]      ; yes                    ;
-; pulse_length[19]                                    ; pulse_length[2]      ; yes                    ;
-; pulse_length[18]                                    ; pulse_length[2]      ; yes                    ;
-; pulse_length[17]                                    ; pulse_length[2]      ; yes                    ;
-; pulse_length[16]                                    ; pulse_length[2]      ; yes                    ;
-; pulse_length[15]                                    ; pulse_length[2]      ; yes                    ;
-; pulse_length[14]                                    ; pulse_length[2]      ; yes                    ;
-; pulse_length[13]                                    ; pulse_length[2]      ; yes                    ;
-; pulse_length[12]                                    ; pulse_length[2]      ; yes                    ;
-; pulse_length[11]                                    ; pulse_length[2]      ; yes                    ;
-; pulse_length[10]                                    ; pulse_length[2]      ; yes                    ;
-; pulse_length[9]                                     ; pulse_length[2]      ; yes                    ;
-; pulse_length[8]                                     ; pulse_length[2]      ; yes                    ;
-; pulse_length[7]                                     ; pulse_length[2]      ; yes                    ;
-; pulse_length[6]                                     ; pulse_length[2]      ; yes                    ;
-; pulse_length[5]                                     ; pulse_length[2]      ; yes                    ;
-; pulse_length[4]                                     ; pulse_length[2]      ; yes                    ;
-; pulse_length[3]                                     ; pulse_length[2]      ; yes                    ;
-; pulse_length[2]                                     ; pulse_length[2]      ; yes                    ;
-; pulse_length[1]                                     ; pulse_length[2]      ; yes                    ;
-; r_counter[30]                                       ; r_state.00000000_850 ; yes                    ;
-; r_counter[29]                                       ; r_state.00000000_850 ; yes                    ;
-; r_counter[28]                                       ; r_state.00000000_850 ; yes                    ;
-; r_counter[27]                                       ; r_state.00000000_850 ; yes                    ;
-; r_counter[26]                                       ; r_state.00000000_850 ; yes                    ;
-; r_counter[25]                                       ; r_state.00000000_850 ; yes                    ;
-; r_counter[24]                                       ; r_state.00000000_850 ; yes                    ;
-; r_counter[23]                                       ; r_state.00000000_850 ; yes                    ;
-; r_counter[22]                                       ; r_state.00000000_850 ; yes                    ;
-; r_counter[21]                                       ; r_state.00000000_850 ; yes                    ;
-; r_counter[20]                                       ; r_state.00000000_850 ; yes                    ;
-; r_counter[19]                                       ; r_state.00000000_850 ; yes                    ;
-; r_counter[18]                                       ; r_state.00000000_850 ; yes                    ;
-; r_counter[17]                                       ; r_state.00000000_850 ; yes                    ;
-; r_counter[16]                                       ; r_state.00000000_850 ; yes                    ;
-; r_counter[15]                                       ; r_state.00000000_850 ; yes                    ;
-; r_counter[14]                                       ; r_state.00000000_850 ; yes                    ;
-; r_counter[13]                                       ; r_state.00000000_850 ; yes                    ;
-; r_counter[12]                                       ; r_state.00000000_850 ; yes                    ;
-; r_counter[11]                                       ; r_state.00000000_850 ; yes                    ;
-; r_counter[10]                                       ; r_state.00000000_850 ; yes                    ;
-; r_counter[9]                                        ; r_state.00000000_850 ; yes                    ;
-; r_counter[8]                                        ; r_state.00000000_850 ; yes                    ;
-; r_counter[7]                                        ; r_state.00000000_850 ; yes                    ;
-; r_counter[6]                                        ; r_state.00000000_850 ; yes                    ;
-; r_counter[5]                                        ; r_state.00000000_850 ; yes                    ;
-; r_counter[4]                                        ; r_state.00000000_850 ; yes                    ;
-; r_counter[3]                                        ; r_state.00000000_850 ; yes                    ;
-; r_counter[2]                                        ; r_state.00000000_850 ; yes                    ;
-; r_counter[1]                                        ; r_state.00000000_850 ; yes                    ;
-; r_counter[0]                                        ; r_state.00000000_850 ; yes                    ;
-; Number of user-specified and inferred latches = 70  ;                      ;                        ;
+; state.00100_1006                                    ; Selector62           ; yes                    ;
+; state.00010_1034                                    ; Selector62           ; yes                    ;
+; state.00000_1062                                    ; Selector62           ; yes                    ;
+; rabi$latch                                          ; r_state.00000010_949 ; yes                    ;
+; state.00101_992                                     ; Selector62           ; yes                    ;
+; state.00001_1048                                    ; Selector62           ; yes                    ;
+; state.00011_1020                                    ; Selector62           ; yes                    ;
+; r_state.00000001_960                                ; Selector57           ; yes                    ;
+; r_state.00000010_949                                ; Selector57           ; yes                    ;
+; r_state.00000000_971                                ; Selector57           ; yes                    ;
+; r_counter[31]                                       ; Selector24           ; yes                    ;
+; pulse_length[31]                                    ; pulse_length[5]      ; yes                    ;
+; pulse_length[30]                                    ; pulse_length[5]      ; yes                    ;
+; pulse_length[29]                                    ; pulse_length[5]      ; yes                    ;
+; pulse_length[28]                                    ; pulse_length[5]      ; yes                    ;
+; pulse_length[27]                                    ; pulse_length[5]      ; yes                    ;
+; pulse_length[26]                                    ; pulse_length[5]      ; yes                    ;
+; pulse_length[25]                                    ; pulse_length[5]      ; yes                    ;
+; pulse_length[24]                                    ; pulse_length[5]      ; yes                    ;
+; pulse_length[23]                                    ; pulse_length[5]      ; yes                    ;
+; pulse_length[22]                                    ; pulse_length[5]      ; yes                    ;
+; pulse_length[21]                                    ; pulse_length[5]      ; yes                    ;
+; pulse_length[20]                                    ; pulse_length[5]      ; yes                    ;
+; pulse_length[19]                                    ; pulse_length[5]      ; yes                    ;
+; pulse_length[18]                                    ; pulse_length[5]      ; yes                    ;
+; pulse_length[17]                                    ; pulse_length[5]      ; yes                    ;
+; pulse_length[16]                                    ; pulse_length[5]      ; yes                    ;
+; pulse_length[15]                                    ; pulse_length[5]      ; yes                    ;
+; pulse_length[14]                                    ; pulse_length[5]      ; yes                    ;
+; pulse_length[13]                                    ; pulse_length[5]      ; yes                    ;
+; pulse_length[12]                                    ; pulse_length[5]      ; yes                    ;
+; pulse_length[11]                                    ; pulse_length[5]      ; yes                    ;
+; pulse_length[10]                                    ; pulse_length[5]      ; yes                    ;
+; pulse_length[9]                                     ; pulse_length[5]      ; yes                    ;
+; pulse_length[8]                                     ; pulse_length[5]      ; yes                    ;
+; pulse_length[7]                                     ; pulse_length[5]      ; yes                    ;
+; pulse_length[6]                                     ; pulse_length[5]      ; yes                    ;
+; pulse_length[5]                                     ; pulse_length[5]      ; yes                    ;
+; pulse_length[4]                                     ; pulse_length[5]      ; yes                    ;
+; pulse_length[3]                                     ; pulse_length[5]      ; yes                    ;
+; pulse_length[2]                                     ; pulse_length[5]      ; yes                    ;
+; pulse_length[1]                                     ; pulse_length[5]      ; yes                    ;
+; r_counter[30]                                       ; Selector24           ; yes                    ;
+; r_counter[29]                                       ; Selector24           ; yes                    ;
+; r_counter[28]                                       ; Selector24           ; yes                    ;
+; r_counter[27]                                       ; Selector24           ; yes                    ;
+; r_counter[26]                                       ; Selector24           ; yes                    ;
+; r_counter[25]                                       ; Selector24           ; yes                    ;
+; r_counter[24]                                       ; Selector24           ; yes                    ;
+; r_counter[23]                                       ; Selector24           ; yes                    ;
+; r_counter[22]                                       ; Selector24           ; yes                    ;
+; r_counter[21]                                       ; Selector24           ; yes                    ;
+; r_counter[20]                                       ; Selector24           ; yes                    ;
+; r_counter[19]                                       ; Selector24           ; yes                    ;
+; r_counter[18]                                       ; Selector24           ; yes                    ;
+; r_counter[17]                                       ; Selector24           ; yes                    ;
+; r_counter[16]                                       ; Selector24           ; yes                    ;
+; r_counter[15]                                       ; Selector24           ; yes                    ;
+; r_counter[14]                                       ; Selector24           ; yes                    ;
+; r_counter[13]                                       ; Selector24           ; yes                    ;
+; r_counter[12]                                       ; Selector24           ; yes                    ;
+; r_counter[11]                                       ; Selector24           ; yes                    ;
+; r_counter[10]                                       ; Selector24           ; yes                    ;
+; r_counter[9]                                        ; Selector24           ; yes                    ;
+; r_counter[8]                                        ; Selector24           ; yes                    ;
+; r_counter[7]                                        ; Selector24           ; yes                    ;
+; r_counter[6]                                        ; Selector24           ; yes                    ;
+; r_counter[5]                                        ; Selector24           ; yes                    ;
+; r_counter[4]                                        ; Selector24           ; yes                    ;
+; r_counter[3]                                        ; Selector24           ; yes                    ;
+; r_counter[2]                                        ; Selector24           ; yes                    ;
+; r_counter[1]                                        ; Selector24           ; yes                    ;
+; r_counter[0]                                        ; Selector24           ; yes                    ;
+; Number of user-specified and inferred latches = 73  ;                      ;                        ;
 +-----------------------------------------------------+----------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
@@ -322,7 +325,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; counter[14]~36                                         ;    ;
 ; counter[15]~37                                         ;    ;
 ; counter[16]~38                                         ;    ;
-; r_state.00000000~1                                     ;    ;
+; Selector24~0                                           ;    ;
 ; Number of logic cells representing combinational loops ; 21 ;
 +--------------------------------------------------------+----+
 Note: All cells listed above may not be present at the end of synthesis due to various synthesis optimizations.
@@ -348,6 +351,7 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |simulation|Selector41     ;
 ; 6:1                ; 17 bits   ; 68 LEs        ; 17 LEs               ; 51 LEs                 ; No         ; |simulation|Selector20     ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
@@ -358,17 +362,17 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 19                          ;
-; cycloneiii_lcell_comb ; 282                         ;
+; cycloneiii_lcell_comb ; 285                         ;
 ;     arith             ; 136                         ;
 ;         2 data inputs ; 92                          ;
 ;         3 data inputs ; 44                          ;
-;     normal            ; 146                         ;
-;         1 data inputs ; 6                           ;
-;         2 data inputs ; 53                          ;
-;         3 data inputs ; 74                          ;
+;     normal            ; 149                         ;
+;         1 data inputs ; 5                           ;
+;         2 data inputs ; 20                          ;
+;         3 data inputs ; 111                         ;
 ;         4 data inputs ; 13                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 7.00                        ;
+; Max LUT depth         ; 8.00                        ;
 ; Average LUT depth     ; 4.35                        ;
 +-----------------------+-----------------------------+
 
@@ -388,7 +392,7 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
-    Info: Processing started: Mon Mar 20 23:54:01 2023
+    Info: Processing started: Tue Mar 21 00:51:39 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off simulation -c simulation
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -409,11 +413,12 @@ Warning (10230): Verilog HDL assignment warning at simulation.v(39): truncated v
 Warning (10755): Verilog HDL warning at simulation.v(37): assignments to clk create a combinational loop File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 37
 Warning (10240): Verilog HDL Always Construct warning at simulation.v(37): inferring latch(es) for variable "state", which holds its previous value in one or more paths through the always construct File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 37
 Warning (10755): Verilog HDL warning at simulation.v(93): assignments to rabi_trig create a combinational loop File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 93
+Warning (10240): Verilog HDL Always Construct warning at simulation.v(93): inferring latch(es) for variable "rabi", which holds its previous value in one or more paths through the always construct File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 93
 Warning (10240): Verilog HDL Always Construct warning at simulation.v(93): inferring latch(es) for variable "r_state", which holds its previous value in one or more paths through the always construct File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 93
 Warning (10240): Verilog HDL Always Construct warning at simulation.v(93): inferring latch(es) for variable "r_counter", which holds its previous value in one or more paths through the always construct File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 93
 Warning (10240): Verilog HDL Always Construct warning at simulation.v(93): inferring latch(es) for variable "pulse_length", which holds its previous value in one or more paths through the always construct File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 93
-Warning (10175): Verilog HDL warning at simulation.v(118): ignoring unsupported system task File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 118
-Info (10648): Verilog HDL Display System Task info at simulation.v(133): interval 2 start = 60, pi start = 40, second pi_2 start= 80 File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 133
+Warning (10175): Verilog HDL warning at simulation.v(126): ignoring unsupported system task File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 126
+Info (10648): Verilog HDL Display System Task info at simulation.v(141): interval 2 start = 60, pi start = 40, second pi_2 start= 80 File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 141
 Info (10041): Inferred latch for "pulse_length[1]" at simulation.v(93) File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 93
 Info (10041): Inferred latch for "pulse_length[2]" at simulation.v(93) File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 93
 Info (10041): Inferred latch for "pulse_length[3]" at simulation.v(93) File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 93
@@ -477,37 +482,105 @@ Info (10041): Inferred latch for "r_counter[28]" at simulation.v(93) File: C:/Us
 Info (10041): Inferred latch for "r_counter[29]" at simulation.v(93) File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 93
 Info (10041): Inferred latch for "r_counter[30]" at simulation.v(93) File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 93
 Info (10041): Inferred latch for "r_counter[31]" at simulation.v(93) File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 93
+Info (10041): Inferred latch for "r_state.00000010" at simulation.v(93) File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 93
 Info (10041): Inferred latch for "r_state.00000001" at simulation.v(93) File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 93
 Info (10041): Inferred latch for "r_state.00000000" at simulation.v(93) File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 93
+Info (10041): Inferred latch for "rabi" at simulation.v(93) File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 93
 Info (10041): Inferred latch for "state.00101" at simulation.v(37) File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 37
 Info (10041): Inferred latch for "state.00100" at simulation.v(37) File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 37
 Info (10041): Inferred latch for "state.00011" at simulation.v(37) File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 37
 Info (10041): Inferred latch for "state.00010" at simulation.v(37) File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 37
 Info (10041): Inferred latch for "state.00001" at simulation.v(37) File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 37
 Info (10041): Inferred latch for "state.00000" at simulation.v(37) File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 37
-Warning (13012): Latch state.00100_878 has unsafe behavior File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 37
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.00011_892 File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 37
-Warning (13012): Latch state.00010_906 has unsafe behavior File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 37
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.00001_920 File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 37
-Warning (13012): Latch state.00000_934 has unsafe behavior File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 37
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.00101_864 File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 37
-Warning (13012): Latch state.00101_864 has unsafe behavior File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 37
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.00100_878 File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 37
-Warning (13012): Latch state.00001_920 has unsafe behavior File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 37
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.00000_934 File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 37
-Warning (13012): Latch state.00011_892 has unsafe behavior File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 37
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.00010_906 File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 37
+Warning (13012): Latch state.00100_1006 has unsafe behavior File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 37
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.00011_1020 File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 37
+Warning (13012): Latch state.00010_1034 has unsafe behavior File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 37
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.00001_1048 File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 37
+Warning (13012): Latch state.00000_1062 has unsafe behavior File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 37
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.00101_992 File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 37
+Warning (13012): Latch state.00101_992 has unsafe behavior File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 37
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.00100_1006 File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 37
+Warning (13012): Latch state.00001_1048 has unsafe behavior File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 37
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.00000_1062 File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 37
+Warning (13012): Latch state.00011_1020 has unsafe behavior File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 37
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.00010_1034 File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 37
+Warning (13012): Latch r_state.00000010_949 has unsafe behavior File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 93
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal r_state.00000001_960 File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 93
+Warning (13012): Latch r_counter[31] has unsafe behavior File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 93
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal r_state.00000010_949 File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 93
+Warning (13012): Latch r_counter[30] has unsafe behavior File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 93
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal r_state.00000010_949 File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 93
+Warning (13012): Latch r_counter[29] has unsafe behavior File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 93
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal r_state.00000010_949 File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 93
+Warning (13012): Latch r_counter[28] has unsafe behavior File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 93
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal r_state.00000010_949 File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 93
+Warning (13012): Latch r_counter[27] has unsafe behavior File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 93
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal r_state.00000010_949 File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 93
+Warning (13012): Latch r_counter[26] has unsafe behavior File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 93
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal r_state.00000010_949 File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 93
+Warning (13012): Latch r_counter[25] has unsafe behavior File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 93
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal r_state.00000010_949 File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 93
+Warning (13012): Latch r_counter[24] has unsafe behavior File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 93
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal r_state.00000010_949 File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 93
+Warning (13012): Latch r_counter[23] has unsafe behavior File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 93
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal r_state.00000010_949 File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 93
+Warning (13012): Latch r_counter[22] has unsafe behavior File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 93
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal r_state.00000010_949 File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 93
+Warning (13012): Latch r_counter[21] has unsafe behavior File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 93
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal r_state.00000010_949 File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 93
+Warning (13012): Latch r_counter[20] has unsafe behavior File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 93
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal r_state.00000010_949 File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 93
+Warning (13012): Latch r_counter[19] has unsafe behavior File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 93
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal r_state.00000010_949 File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 93
+Warning (13012): Latch r_counter[18] has unsafe behavior File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 93
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal r_state.00000010_949 File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 93
+Warning (13012): Latch r_counter[17] has unsafe behavior File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 93
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal r_state.00000010_949 File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 93
+Warning (13012): Latch r_counter[16] has unsafe behavior File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 93
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal r_state.00000010_949 File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 93
+Warning (13012): Latch r_counter[15] has unsafe behavior File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 93
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal r_state.00000010_949 File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 93
+Warning (13012): Latch r_counter[14] has unsafe behavior File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 93
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal r_state.00000010_949 File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 93
+Warning (13012): Latch r_counter[13] has unsafe behavior File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 93
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal r_state.00000010_949 File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 93
+Warning (13012): Latch r_counter[12] has unsafe behavior File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 93
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal r_state.00000010_949 File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 93
+Warning (13012): Latch r_counter[11] has unsafe behavior File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 93
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal r_state.00000010_949 File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 93
+Warning (13012): Latch r_counter[10] has unsafe behavior File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 93
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal r_state.00000010_949 File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 93
+Warning (13012): Latch r_counter[9] has unsafe behavior File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 93
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal r_state.00000010_949 File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 93
+Warning (13012): Latch r_counter[8] has unsafe behavior File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 93
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal r_state.00000010_949 File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 93
+Warning (13012): Latch r_counter[7] has unsafe behavior File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 93
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal r_state.00000010_949 File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 93
+Warning (13012): Latch r_counter[6] has unsafe behavior File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 93
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal r_state.00000010_949 File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 93
+Warning (13012): Latch r_counter[5] has unsafe behavior File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 93
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal r_state.00000010_949 File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 93
+Warning (13012): Latch r_counter[4] has unsafe behavior File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 93
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal r_state.00000010_949 File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 93
+Warning (13012): Latch r_counter[3] has unsafe behavior File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 93
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal r_state.00000010_949 File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 93
+Warning (13012): Latch r_counter[2] has unsafe behavior File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 93
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal r_state.00000010_949 File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 93
+Warning (13012): Latch r_counter[1] has unsafe behavior File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 93
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal r_state.00000010_949 File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 93
+Warning (13012): Latch r_counter[0] has unsafe behavior File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 93
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal r_state.00000010_949 File: C:/Users/Solom/OneDrive/Desktop/Control/simulation/simulation.v Line: 93
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 299 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 303 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 0 input pins
     Info (21059): Implemented 19 output pins
-    Info (21061): Implemented 280 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 27 warnings
-    Info: Peak virtual memory: 4769 megabytes
-    Info: Processing ended: Mon Mar 20 23:54:25 2023
-    Info: Elapsed time: 00:00:24
-    Info: Total CPU time (on all processors): 00:00:45
+    Info (21061): Implemented 284 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 94 warnings
+    Info: Peak virtual memory: 4766 megabytes
+    Info: Processing ended: Tue Mar 21 00:51:57 2023
+    Info: Elapsed time: 00:00:18
+    Info: Total CPU time (on all processors): 00:00:39
 
 

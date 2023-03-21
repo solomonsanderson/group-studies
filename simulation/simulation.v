@@ -106,9 +106,17 @@
 						if (r_counter >= (pulse_length - 10)) begin
 							pulse_length <= pulse_length + 10; // increase pulse length with each pulse
 							r_counter <= 0; // reset counter
-							r_state <= 0; // reset state, change this to 2 if we add delay after
+							r_state <= 2; // reset state, change this to 2 if we add delay after
 						end
 					end
+					2: begin // wait state
+						if (rabi_trig == 0) begin 
+							r_state <= 0; // only go back to state 0 when trig is off
+						end 
+						else begin
+							r_counter <= r_counter + 1;
+						end
+					end 
 					// could add 3rd state to add short interval after pulses to account for arduino delay in changing pin state.
 				endcase
 		end	

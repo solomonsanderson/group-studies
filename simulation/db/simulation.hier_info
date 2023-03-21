@@ -1,6 +1,6 @@
 |simulation
 rf << WideOr0.DB_MAX_OUTPUT_PORT_TYPE
-rabi << r_state.00000000_850.DB_MAX_OUTPUT_PORT_TYPE
+rabi << rabi$latch.DB_MAX_OUTPUT_PORT_TYPE
 counter[0] << counter[0].DB_MAX_OUTPUT_PORT_TYPE
 counter[1] << Selector20.DB_MAX_OUTPUT_PORT_TYPE
 counter[2] << Selector19.DB_MAX_OUTPUT_PORT_TYPE
