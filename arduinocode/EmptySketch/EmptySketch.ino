@@ -114,6 +114,6 @@ void loop() {
   digitalWrite(3, HIGH);
   delayMicroseconds(1); 
   digitalWrite(3, LOW);
-  delayMicroseconds(100);
+  delayMicroseconds(10000);
 }
 
