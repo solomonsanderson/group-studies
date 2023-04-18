@@ -1,0 +1,16 @@
+Fitter Status : Successful - Thu Mar 23 17:52:13 2023
+Quartus Prime Version : 22.1std.0 Build 915 10/25/2022 SC Lite Edition
+Revision Name : MKRVIDOR4000
+Top-level Entity Name : MKRVIDOR4000_top
+Family : Cyclone 10 LP
+Device : 10CL016YU256C8G
+Timing Models : Final
+Total logic elements : 46 / 15,408 ( < 1 % )
+    Total combinational functions : 46 / 15,408 ( < 1 % )
+    Dedicated logic registers : 33 / 15,408 ( < 1 % )
+Total registers : 33
+Total pins : 138 / 163 ( 85 % )
+Total virtual pins : 0
+Total memory bits : 0 / 516,096 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 112 ( 0 % )
+Total PLLs : 1 / 4 ( 25 % )
