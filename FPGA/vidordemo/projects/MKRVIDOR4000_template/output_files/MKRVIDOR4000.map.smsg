@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at control.v(129): always construct contains both blocking and non-blocking assignments File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/control.v Line: 129
