@@ -1,4 +1,7 @@
 # solomonsanderson/group-studies/Analysis
+
+* `data`- contains all of the data from the project
+
 * `arduino_char.py` - the python script for analysing the data for the Arduino
 characterisation.
 * `fpga_char.py` - the python script for analysing the data for the Arduino

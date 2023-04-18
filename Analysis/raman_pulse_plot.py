@@ -12,9 +12,6 @@ import matplotlib.ticker as ticker
 
 fig, axs = plt.subplots(4, 5, sharey=True)
 fig1, ax1 = plt.subplots(1, figsize=(5,2))
-# print(axs.flatten())
-
-
 path = r"Analysis\data\mach_zehnder\rabi_pulse_data.csv"
 
 
@@ -60,11 +57,8 @@ def get_range(arr1, arr2, ll, ul):
 
 data = get_range(*get_data(path), 0.0, 0.020)
 
-# ax.plot(*get_data(path))
-
 
 for count, ax in enumerate(axs.flatten()):
-    #print(count, ax)
     if count >= 0:
         ax.plot(*get_range(*data, count/1000 - 0.0001, count/1000 +  0.0004 ))
 
@@ -89,7 +83,6 @@ def get_line(x1, y1, x2, y2):
     points = [(x1,y1), (x2,y2)]
     x_coords, y_coords = zip(*points)
     x_coords = np.array(x_coords).flatten()
-    # print( np.ones(len(x_coords)))
     A = np.vstack([x_coords, np.ones(len(x_coords))]).T
     m, c = np.linalg.lstsq(A, y_coords, rcond=None)[0]
     return m, c
@@ -123,8 +116,6 @@ def get_widths(data, height):
 
         if len(x_points) == 1:
             index = index[0]
-            print(index)
-            # print(x_data)
             l_point_x = x_data[index - 1]
             l_point_y = y_data[index - 1]
             r_point_x = x_data[index + 1]
@@ -151,7 +142,6 @@ def get_widths(data, height):
             ax.plot([l_x, r_x],[half_y, half_y], color="black", alpha = 0.5)
 
         if len(x_points) >= 2:
-            # print("wide")
             index = index[0]
             left_index,right_index = index[0], index[-1]
 
