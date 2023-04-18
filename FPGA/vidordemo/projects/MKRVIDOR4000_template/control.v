@@ -186,7 +186,16 @@ assign interval_counts = (interval / 5) * 333;*/
 	reg[3:0] state = 0;
 	reg[31:0] counter = 0; // need this to be at least 17 bit as wait for intervals is larger than 16 bit number 
 	
+	always @(posedge clk) begin
+    if (counter == 33) begin
+        counter <= 0;
+        rf <= ~ rf;
+    end else begin
+        counter <= counter + 1;
+    end
+	end
 	
+	/*
 	always @(posedge clk) begin
 		if (trig == 1) begin
 			counter <= counter + 1;
@@ -200,42 +209,42 @@ assign interval_counts = (interval / 5) * 333;*/
 				end
 				1: begin // first pulse state
 					rf <= 1;
-					if (counter >= 333) begin
+					if (counter >= 240) begin
 						counter <= 0;
 						state <= 2;
 					end
 				end
 				2: begin // pause state
 					rf <= 0;
-					if (counter >= 66600) begin
+					if (counter >= 48000) begin
 						counter <= 0;
 						state <= 3;
 					end
 				end
 				3: begin // second pulse state
 					rf <= 1;
-					if (counter >= 666) begin
+					if (counter >= 480) begin
 						counter <= 0;
 						state <= 4;
 					end
 				end
 				4: begin // third pulse state
 					rf <= 0;
-					if (counter >= 66600) begin
+					if (counter >= 48000) begin
 						counter <= 0;
 						state <= 5;
 					end
 				end
 				5: begin // final pulse state
 					rf <= 1;
-					if (counter >= 333) begin
+					if (counter >= 240) begin
 					  rf <= 0;
 					  state <= 6;
 					  counter <= 0;
 					end
 					end
 				6: begin // end delay to allow arduino pin to change
-						if (counter >= 33300) begin
+						if (counter >= 24000) begin
 							rf <= 0; 
 							state <= 0;
 							counter <= 0;
@@ -246,7 +255,7 @@ assign interval_counts = (interval / 5) * 333;*/
 		//counter<=0;
 	end 
 end
-		
+*/	
 	initial begin 
 		//$monitor("Time =%0t clk = %0d rf = %0d counter = %0d", $time, clk, rf, counter);
 		rf <= 0;
