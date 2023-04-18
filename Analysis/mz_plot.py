@@ -1,3 +1,11 @@
+'''
+mz_plot.py
+
+A python script to plot the output of the Arduino MKR Vidor Mach Zehnder pulses.
+'''
+
+
+
 import matplotlib.pyplot as plt
 import pandas as pd 
 import numpy as np
@@ -8,21 +16,27 @@ import matplotlib.ticker as ticker
 
 fig, ax = plt.subplots(2,2, sharey=True, figsize=(7,3.5))
 print(ax)
-
-pulse_path = "3 pulse repitition.csv"# good sample rate, correct order, has extra pulses
-path3 = "tek0003ALL.csv" # bad sample rate. 3 pulses
-path4 = "tek0004CH1.csv" # bad sample rate. 3 pulses
-path5 = "tek0005CH1.csv" # bad sample rate. 3 pulses
-path10 = "tek0010CH1.csv" # wrong order, sample rate good
-path11 = "tek0011CH1.csv" # good sample rate, 3 pulses
-path12 = "tek0012CH1.csv" # wrong order, sample rate good
-path13 = "tek0013CH1.csv" # has repeated waves, use for getting interval data
-path15 = "tek0015CH1.csv" # has repeated waves, use for getting interval data
+path3 =  r"Analysis\data\mach_zehnder\tek0003ALL.csv" # bad sample rate. 3 pulses
+path4 =  r"Analysis\data\mach_zehnder\tek0004CH1.csv" # bad sample rate. 3 pulses
+path5 =  r"Analysis\data\mach_zehnder\tek0005CH1.csv" # bad sample rate. 3 pulses
+path10 = r"Analysis\data\mach_zehnder\tek0010CH1.csv" # wrong order, sample rate good
+path11 = r"Analysis\data\mach_zehnder\tek0011CH1.csv" # good sample rate, 3 pulses
+path12 = r"Analysis\data\mach_zehnder\tek0012CH1.csv" # wrong order, sample rate good
+path13 = r"Analysis\data\mach_zehnder\tek0013CH1.csv" # has repeated waves, use for getting interval data
+path15 = r"Analysis\data\mach_zehnder\tek0015CH1.csv" # has repeated waves, use for getting interval data
 path3 = path11
-# path3 = "tek0018CH1.csv"
-# path3 = "tek0006CH1.csv"
+
 
 def get_data(path):
+    '''
+    Args:
+        path, string - the path of the data file to be loaded
+    Returns:
+        times, numpy array - array of times of data points
+        ch1, numpy array - array of y values
+    '''
+
+
     df = pd.read_csv(path)
     col1= df.iloc[19:, 0].values
     times = np.array(list(map(float, col1)))
@@ -32,7 +46,17 @@ def get_data(path):
 
     return times, ch1
 
+
 def get_range(arr1, arr2, ll, ul):
+    '''
+    Gets the x or y values in between 2 limits
+
+    Args:
+        arr1, array - array of values to search within
+        arr2, array - array to get values of
+        ll, float - lower limit of search
+        ul, float - upper limit of search
+    '''
     time_index = np.where((ll < arr1) & (arr1 < ul))
     ch_index = np.where((ll < arr1) & (arr1 < ul))
 
@@ -41,7 +65,7 @@ def get_range(arr1, arr2, ll, ul):
     return time_data, ch_data
 
 
-data = get_data(pulse_path)
+# data = get_data(pulse_path)
 # print(data)
 data3 = get_data(path3)
 data4 = get_data(path4)
@@ -54,15 +78,6 @@ full_range = get_range(data3[0], data3[1], lo, hi)
 pi_2_1 = get_range(data3[0], data3[1], -0.001027 - 0.0001, -0.00102735 + 0.0001) # 0.00011
 pi = get_range(data3[0], data3[1], -5.49986e-6 - 0.0001,-5.49986e-6 + 0.0001 )
 pi_2_2 = get_range(data3[0], data3[1], 0.00101619 - 0.0001, 0.00101619 + 0.0001)
-
-# pi_2_1 = get_range(data3[0], data3[1], -0.001027 - 0.0001-2e-3, -0.00102735 + 0.0001-2e-3) # 0.00011
-# pi = get_range(data3[0], data3[1], -5.49986e-6 - 0.0001-2e-3,-5.49986e-6 + 0.0001 -2e-3)
-# pi_2_2 = get_range(data3[0], data3[1], 0.00101619 - 0.0001 - 2e-3, 0.00101619 + 0.0001- 2e-3)
-
-# ax.plot(*data)
-# ax.plot(*data3)
-# ax.plot(*data4)
-# ax.plot(*data5)
 
 ### for data "tek0011CH1.csv"
 ax[0,0].plot(*full_range, label="full sequence", color="blue")
@@ -144,7 +159,7 @@ lo_widths = np.delete(widths, del_index)[:-1]
 print(f"interval widths = {lo_widths}")
 print(f"mean widths = {np.mean([1.0144e-03,  1.0148e-03])}")
 
-x, y = data3[0], data[1]
+# x, y = data3[0], data[1]
 # print(x, y)
 scale_x = 1e-3
 ticks_x= ticker.FuncFormatter(lambda x, pos: '{0:g}'.format(x/scale_x))

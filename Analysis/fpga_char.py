@@ -1,4 +1,8 @@
-'''python script to plot and characterise the Intel Cylcone 10 FPGA using sqyuare waves'''
+'''
+fpga_char.py
+
+python script to plot and characterise the Intel Cylcone 10 FPGA using square waves'''
+
 
 import matplotlib.pyplot as plt
 import numpy as np
@@ -7,6 +11,15 @@ import matplotlib.ticker as ticker
 
 
 def get_data(path):
+    '''
+    Args:
+        path, string - the path of the data file to be loaded
+    Returns:
+        times, numpy array - array of times of data points
+        ch1, numpy array - array of y values
+    '''
+
+
     df = pd.read_csv(path)
     col1= df.iloc[19:, 0].values
     times = np.array(list(map(float, col1)))
