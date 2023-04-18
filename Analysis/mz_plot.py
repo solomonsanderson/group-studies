@@ -57,6 +57,8 @@ def get_range(arr1, arr2, ll, ul):
         ll, float - lower limit of search
         ul, float - upper limit of search
     '''
+
+    
     time_index = np.where((ll < arr1) & (arr1 < ul))
     ch_index = np.where((ll < arr1) & (arr1 < ul))
 
@@ -104,21 +106,6 @@ ax[1,1].hlines(0, xmin=-1.06075e-5 + 1e-3 + 5e-6, xmax=1.11e-3, color="red")
 ax[1,1].hlines(0, xmin=0.91e-3, xmax=-1.06075e-5 + 1e-3, color="red")
 
 
-# 
-# ax[0,1].vlines([-1e-3 - 10e-6 - 2e-3, -1e-3 - 15e-6 - 2e-3], ymin = 0, ymax=3.3, alpha=0.9, color="r",label="expected")
-# ax[0,1].hlines([3.3], xmin=-1e-3 - 10e-6, xmax=-1e-3 - 15e-6, alpha =0.9, color="r")
-# ax[0,1].hlines([0], xmin=-5e-5+5e-6, xmax=0, alpha = 0.9, color="r")
-# ax[0,1].hlines([0], xmin=5e-6, xmax=5e-5+5e-6, alpha=0.9, color="r")
-
-# ax[1,0].vlines([-10e-6 - 2e-3, 0 - 2e-3], ymin = 0, ymax=3.3, alpha=0.9, color="r", label="expected")
-# ax[1,0].hlines([3.3], xmin=-10e-6, xmax=0, alpha =0.9, color="r")
-# ax[1,0].hlines([0], xmin=-5e-5+5e-6, xmax=0, alpha = 0.9, color="r")
-# ax[1,0].hlines([0], xmin=5e-6, xmax=5e-5+5e-6, alpha=0.9, color="r")
-
-# ax[1,1].vlines([1e-3 + 10e-6 - 2e-3, 1e-3 + 15e-6 - 2e-3], ymin = 0, ymax=3.3, alpha=0.9, color="r", label="expected")
-# ax[1,1].hlines([3.3], xmin=1e-3 + 10e-6, xmax=1e-3 + 15e-6, alpha =0.9, color="r")
-# ax[1,1].hlines([0], xmin=2e-3 - 1e-6, xmax=2e-3 + 15e-6, alpha = 0.9, color="r")
-# ax[1,1].hlines([0], xmin=2e-3 + 15e-6 + 5e-6, xmax= 2e-3 + 15e-6 + 5e-5+5e-6, alpha=0.9, color="r")
 
 for a in ax.flatten():
     a.legend(loc="upper right")
@@ -126,10 +113,6 @@ for a in ax.flatten():
     # a.set_ylabel("Output (V)")
     a.ticklabel_format(axis="x", style="scientific", scilimits=[-3,6])
 
-# print(ax[0:].flatten()[0:1])
-# print(ax[:1])
-
-# [ a.set_xlabel("time (s)") for a in ax[1:].flatten()[0:2]]
 ax[0,0].set_ylabel("Output (V)")
 ax[1,0].set_ylabel("Output (V)")
 
@@ -137,16 +120,13 @@ hi_ll = 3.3 - 0.1
 hi_ul = 3.3 + 0.1
 
 hi_index = np.where((hi_ll <= data3[1]) & (data3[1] <= hi_ul))
-# print(f"\n lo 0.5mus index{lo_index}")n
-# ax[1,0].plot(data3[0][hi_index], data3[1][hi_index], color="orange", marker="o")
 
 widths = np.diff(data3[0][hi_index])
 del_index = np.where( widths <= 2e-6)
-# print(del_index)
 
 
 indicies = [list(map(itemgetter(1), g)) for k, g in groupby(enumerate(del_index[0]), lambda x: x[0]-x[1])]
-# print(indicies)
+
 pws = []
 for i in indicies:
     pw = np.sum(widths[i]) + 1e-6
@@ -159,15 +139,14 @@ lo_widths = np.delete(widths, del_index)[:-1]
 print(f"interval widths = {lo_widths}")
 print(f"mean widths = {np.mean([1.0144e-03,  1.0148e-03])}")
 
-# x, y = data3[0], data[1]
-# print(x, y)
+
 scale_x = 1e-3
 ticks_x= ticker.FuncFormatter(lambda x, pos: '{0:g}'.format(x/scale_x))
 for ax in ax.flatten():
     ax.xaxis.set_major_formatter(ticks_x)
 
 
-
+# sort this atrocity if there is time 
 path13_los = np.array([0.000989, 0.001015, 0.001001, 0.000989, 0.001015, 0.001, 0.000989])
 path15_los = np.array([0.001015, 0.001, 0.000989, 0.0010151, 0.0009999, 0.000989, 0.001015])
 path11_los = np.array([0.0010144, 0.0010148])
@@ -177,8 +156,6 @@ avg_low_widths = np.mean(low_widths)
 std_dev = np.std(low_widths)
 print(f" average interval = {avg_low_widths} s, \n standard deviation of lo widths = {std_dev * 1000} ms ")
 
-# path13_his = np.array([1.0000000000000328e-05, 5.000000000000097e-06, 5.000000000000097e-06, 9.999999999999894e-06, 4.9999999999999996e-06, 5.000000000000097e-06, 9.999999999999894e-06, 5.000000000000097e-06, 4.999999999999663e-06])
-# path15_his = np.array([5.000000000000531e-06, 4.999999999999663e-06, 1.0000000000000328e-05, 4.99999999999988e-06, 4.9999999999999996e-06, 1.1000000000000027e-05, 5.000000000000097e-06, 5.000000000000097e-06, 1.0000000000000328e-05])
 
 path12_his = np.array([1.1000000000000027e-05, 5.7999999999999995e-06, 5.7999999999998996e-06])
 path11_his = np.array([5.7999999999998996e-06, 1.06e-05, 5.39999999999989e-06])

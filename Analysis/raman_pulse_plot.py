@@ -1,3 +1,9 @@
+'''raman_pulse_plot.py
+
+A script to find the width of the pulses generated in the Raman pulse scan by 
+the Arduino MKR Vidor'''
+
+
 import matplotlib.pyplot as plt
 import numpy as np 
 import pandas as pd 
@@ -9,10 +15,19 @@ fig1, ax1 = plt.subplots(1, figsize=(5,2))
 # print(axs.flatten())
 
 
-path = "rabi_pulse_data.csv"
+path = r"Analysis\data\mach_zehnder\rabi_pulse_data.csv"
 
 
 def get_data(path):
+    '''
+    Args:
+        path, string - the path of the data file to be loaded
+    Returns:
+        times, numpy array - array of times of data points
+        ch1, numpy array - array of y values
+    '''
+
+
     df = pd.read_csv(path)
     col1= df.iloc[19:, 0].values
     times = np.array(list(map(float, col1)))
@@ -24,6 +39,17 @@ def get_data(path):
 
 
 def get_range(arr1, arr2, ll, ul):
+    '''
+    Gets the x or y values in between 2 limits
+
+    Args:
+        arr1, array - array of values to search within
+        arr2, array - array to get values of
+        ll, float - lower limit of search
+        ul, float - upper limit of search
+    '''
+
+
     time_index = np.where((ll < arr1) & (arr1 < ul))
     ch_index = np.where((ll < arr1) & (arr1 < ul))
 
@@ -48,7 +74,18 @@ fig.text(0.04, 0.5, 'Voltage (V)', va='center', rotation='vertical')
 
 
 def get_line(x1, y1, x2, y2):
-    ''''''
+    '''
+    calculates the equation of a line for finding the full width at half maximum
+    for the raman pulses.
+
+    Args: 
+    x1, float - first x point
+    y1, float - y value at x1
+    x2, float - second x point
+    y2, float - y value at x2
+    '''
+
+
     points = [(x1,y1), (x2,y2)]
     x_coords, y_coords = zip(*points)
     x_coords = np.array(x_coords).flatten()
@@ -59,7 +96,18 @@ def get_line(x1, y1, x2, y2):
 
 
 def get_widths(data, height):
-    ''' '''
+    '''
+    gets the widths between pulses, or widths of pulses
+
+    Args: 
+        data, array - data for the pulses to be found in. 
+
+    height, float - the height at which points should be looked for, for length
+    of high pulses this should be approx 3.3V for low pulses this should be
+    approx 0V
+    '''
+
+
     widths = []
 
     for i, ax in enumerate(axs.flatten()):
@@ -97,15 +145,11 @@ def get_widths(data, height):
             l_x = (half_y - l_c) / l_m
             r_x = (half_y - r_c) / r_m
 
-            # print(f"l_m {l_m}, l_c {l_c}") 
-            # print(f"r_m {r_m}, r_c {r_c}")
+
             width = r_x - l_x
             widths.append(width)
-            # print(f"width {width}")
             ax.plot([l_x, r_x],[half_y, half_y], color="black", alpha = 0.5)
-            # ax.plot(r_x, half_y, color="green", marker = "o") # right side is fine
 
-        # print(len(x_points))
         if len(x_points) >= 2:
             # print("wide")
             index = index[0]
@@ -131,7 +175,6 @@ def get_widths(data, height):
 
             width = r_x - l_x
             widths.append(width)
-            # print(f"width {width}")
 
             ax.plot([l_x, r_x],[half_y, half_y], color="black", alpha = 0.5)
     widths=widths[1:]
@@ -140,27 +183,20 @@ def get_widths(data, height):
 widths = get_widths(data, 3.3)
 print(f"widths = {widths}")
 x = range(1, len(widths) + 1)
-# print(np.arange(0.4, 2.2, 0.2))
-# print(np.array(x))
-# print(w)
-# ax1.plot(x, widths, color="blue", label="Measured")
+
 ax1.errorbar(x, widths, yerr=4e-6, color="blue", ecolor="black", capsize = 2, label="actual")
 ax1.plot([4,8,12,16],[4e-6,8e-6,12e-6,16e-6], marker = "o", color="none", mfc="green", mec="green")
 ax1.grid()
 ax1.set_xticks(x)
-# ax1.set_yticklabels(np.around(np.arange(0, 24, 2), decimals = 1))
 ax1.set_xlabel("Pulse number")
 ax1.set_ylabel("Pulse Length ($\mu s$)")
-# print(widths)
 expected_y = np.array(range(1,20))/1e+6
 ax1.plot(x, expected_y, color="red", label="expected")
 
-# ax1.plot(x, expected_y/1000000)
 fig.tight_layout()
 
 scale_y = 1e-6
 ticks_y= ticker.FuncFormatter(lambda y, pos: '{0:g}'.format(y/scale_y))
-# print(list(ticks_y)
 ax1.yaxis.set_major_formatter(ticks_y)
 
 y_ticks = []
@@ -172,8 +208,5 @@ y_tick_arr = np.array(y_ticks)/1e+6
 ax1.set_yticks(y_tick_arr)
 
 ax1.legend()
-
-
-
 
 plt.show()
