@@ -5,19 +5,19 @@ import numpy as np
 from scipy import signal 
 
 
-mus_loc = "microsecond\A0002CH1.CSV"
-mus_zoom_loc = "microsecondzoom\A0003CH1.CSV"
-ms_loc = "onemillisecond\A0000CH1.CSV"
-ten_mus_loc = "tenms\A0000CH1.CSV"
-ten_zoom_loc = "tenmszoom\A0001CH1.CSV"
+mus_loc = r"Analysis\data\arduino_square\microsecond\A0002CH1.CSV"
+# mus_zoom_loc = "microsecondzoom\A0003CH1.CSV"
+ms_loc = r"Analysis\data\arduino_square\onemillisecond\A0000CH1.CSV"
+ten_mus_loc = r"Analysis\data\arduino_square\tenms\A0000CH1.CSV"
+# ten_zoom_loc = "tenmszoom\A0001CH1.CSV"
 
-fpga_5 = "5musecondFPGA\A0000CH1.CSV"
-fpga_alt = "alternating\A0000CH1.CSV"
+# fpga_5 = "5musecondFPGA\A0000CH1.CSV"
+# fpga_alt = "alternating\A0000CH1.CSV"
+# 
+# fpga_3_pulse = "mz_3_pulse\A0001CH1.CSV"
+# fpga_3_pulse_zoom = "mz_3_pulse_zoomed\A0002CH1.CSV"
 
-fpga_3_pulse = "mz_3_pulse\A0001CH1.CSV"
-fpga_3_pulse_zoom = "mz_3_pulse_zoomed\A0002CH1.CSV"
-
-ard_3_pulse = "ALL0004\A0004CH1.CSV"
+# ard_3_pulse = "ALL0004\A0004CH1.CSV"
 
 def square_wave(sp, period, duration):
     '''Generates data points for a given sample period, period and duration.'''
@@ -254,7 +254,7 @@ axs[2].get_yaxis().set_ticks([0])
 
 fig.tight_layout()
 
-x_alt, y_alt, alt_ticks, sp=get_data(pd.read_csv(fpga_alt))
-x_pulse, y_pulse, pulse_ticks, sp = get_data(pd.read_csv(ard_3_pulse))
+# x_alt, y_alt, alt_ticks, sp=get_data(pd.read_csv(fpga_alt))
+# x_pulse, y_pulse, pulse_ticks, sp = get_data(pd.read_csv(ard_3_pulse))
 
 plt.show()
