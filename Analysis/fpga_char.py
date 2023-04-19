@@ -153,6 +153,8 @@ hi_y_avg = np.mean(y_1[hi_index])
 hi_y_std_err = np.std(y_1[hi_index])/np.sqrt(len(y_1[hi_index]))
 
 print(f"0.5 mus height = {hi_y_avg} +/- {hi_y_std_err} V")
+print(f"std_dev 0.5mus {np.std(widths)}")
+
 
 # 1 microsecodn
 
@@ -184,6 +186,9 @@ print(f"hi lo diff = {np.mean(hi_corrected_widths) - np.mean(lo_corrected_widths
 avg_pulse_1mus = np.mean([np.mean(lo_corrected_widths), np.mean(hi_corrected_widths)])
 print(f"mean pulse widths 1 mus = {avg_pulse_1mus}")
 print(f"percentage error {((avg_pulse_1mus - 1e-6)/1e-6) * 100} %")
+
+
+print(f"std dev 1mus = {np.std(widths)}")
 
 lo_y_avg = np.mean(y_2[lo_index])
 lo_y_std_err = np.std(y_2[lo_index])/np.sqrt(len(y_2[lo_index]))

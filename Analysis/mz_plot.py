@@ -58,7 +58,7 @@ def get_range(arr1, arr2, ll, ul):
         ul, float - upper limit of search
     '''
 
-    
+
     time_index = np.where((ll < arr1) & (arr1 < ul))
     ch_index = np.where((ll < arr1) & (arr1 < ul))
 
@@ -83,9 +83,9 @@ pi_2_2 = get_range(data3[0], data3[1], 0.00101619 - 0.0001, 0.00101619 + 0.0001)
 
 ### for data "tek0011CH1.csv"
 ax[0,0].plot(*full_range, label="full sequence", color="blue")
-ax[0,1].plot(*pi_2_1, label="$\\frac{\pi}{2}$", color="blue")
-ax[1,0].plot(*pi, label="$\\pi$", color="blue")
-ax[1,1].plot(*pi_2_2, label="$\\frac{\pi}{2}$", color="blue")
+ax[0,1].plot(*pi_2_1, label="$\\frac{\pi}{2}$ at ~-1 ms", color="blue")
+ax[1,0].plot(*pi, label="$\\pi$ at ~0 ms", color="blue")
+ax[1,1].plot(*pi_2_2, label="$\\frac{\pi}{2}$ at ~1 ms", color="blue")
 
 ax[0,1].vlines([-1.06075e-5 - 1e-3,-1.06075e-5 - 1e-3 - 5e-6], ymin= 0, ymax=3.3, color="red")
 ax[0,1].hlines(0, xmin = -0.00112702, xmax = -1.06075e-5 - 1e-3 - 5e-6, color="red")
@@ -105,6 +105,10 @@ ax[1,1].vlines([-1.06075e-5 + 1e-3,-1.06075e-5 + 1e-3 + 5e-6], ymin= 0, ymax=3.3
 ax[1,1].hlines(0, xmin=-1.06075e-5 + 1e-3 + 5e-6, xmax=1.11e-3, color="red")
 ax[1,1].hlines(0, xmin=0.91e-3, xmax=-1.06075e-5 + 1e-3, color="red")
 
+
+ax[0,0].text(-1.25e-3,1.5, "$\\frac{\pi}{2}$", fontsize=12)
+ax[0,0].text(-0.25e-3,1.5, "$\\pi$", fontsize=12)
+ax[0,0].text(0.8e-3,1.5, "$\\frac{\pi}{2}$", fontsize=12)
 
 
 for a in ax.flatten():

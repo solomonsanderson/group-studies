@@ -96,6 +96,7 @@ ll,ul = avg - 10, avg + 20
 
 
 widths, avg_lo_t, avg_hi_t = get_widths(x, y, ll, ul ,del_lim=5e-7)
+print(widths)
 print(f"1 mus standard deviation {np.std(widths)}")
 # print(widths)
 print(f"avg_lo_t {avg_lo_t}")
@@ -110,8 +111,10 @@ print(f"percentage error {((avg_pulse - 1e-6)/1e-6) * 100} %")
 # getting the average pulse height 
 top_index = np.where(y > 78)
 avg_hi = np.mean(y[top_index])
-print(f"average high height = {avg_hi} \n")  # need to figure out the conversion for this because current units are useless. 
-
+multi = 3.3/82.5
+hi_y_std_err = np.std(y[top_index] * multi)/np.sqrt(len(y[top_index]))
+print(f"average high height = {avg_hi * multi} \n")  # need to figure out the conversion for this because current units are useless. 
+print(f"high error = {hi_y_std_err}")
 # plotting expected square wave in red
 verticals = np.linspace(0, 7.5e-5, 76) * 1e+6
 tops = []
@@ -144,6 +147,7 @@ avg = np.mean(y)
 ll,ul = avg - 20, avg + 20
 
 widths, avg_lo_t, avg_hi_t = get_widths(x_10, y_10, ll, ul, del_lim = 5e-7)
+print(widths)
 print(f"10 mus standard deviation {np.std(widths)}")
 print(f"avg_lo_t {avg_lo_t}")
 print(f"avg_hi_t{avg_hi_t}")
