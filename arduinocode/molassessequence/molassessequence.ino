@@ -1,7 +1,7 @@
 int time_counter = 0;
 int ci_pin = DAC0;      // analogue
-int cf_pin = DAC1;      // cooling frequency pin , analogue
-int repump_pin = DAC0;  // analogue
+int cf_pin = 2;      // cooling frequency pin , analogue
+int repump_pin = DAC1;  // analogue
 int mc_pin = 53;        //mot coils pin, digital
 int output_max = 255;
 int output_max_12 = 4095;
@@ -35,80 +35,74 @@ void setup() {
   pinMode(mc_pin, OUTPUT);
   Serial.println("intialised...");
 
-  Serial.println(0.45 * output_max_12);
+  // Serial.println(0.45 * output_max_12);
 }
 
-// void loop() {
-//   // Serial.println("looping...");
-//   // Serial.println(time_counter);
-//   // put your main code here, to run repeatedly:
-//   // set all pins to start values
-//   analogWriteResolution(12);
-//   if (time_counter < 1750) {  // delay for 1.75ms
-//     analogWrite(ci_pin, 4000);
-//     analogWrite(cf_pin, int(0.17 * output_max_12));  // starts at around 17%
-//     analogWrite(repump_pin, output_max_12);
-//     digitalWrite(mc_pin, HIGH);
-//   }
-
-//   else if ((1750 <= time_counter) && (time_counter < 5000)) {  // delay for 3250 micros (5ms total)
-//     analogWrite(ci_pin, 0);
-//     analogWrite(repump_pin, 0);
-//     digitalWrite(mc_pin, LOW);
-//   }
-
-
-//   else if ((5000 <= time_counter) && (time_counter < 6500)) {  //delay for 1500 micros (6.5ms total)
-//     analogWrite(repump_pin, int(0.45 * output_max_12));
-//     analogWrite(ci_pin, int(0.45 * output_max_12));
-
-//     // ramp cf
-//     Serial.print("framp");
-//     // Serial.println(f_ramp);
-//     // Serial.println(f_delta);
-//     f_ramp = f_ramp + f_delta;
-//     analogWrite(cf_pin, f_ramp);
-//   }
-//   // need to add ramp for cooling frequency
-
-//   else if ((6500 <= time_counter) && (time_counter < 18000)) {  //delat for 7500 micros (14ms total)
-
-//     f_ramp = 0;
-//     // Serial.println(s_ramp);
-//     // Serial.println(s_delta);
-//     s_ramp = s_ramp + s_delta;
-//     // Serial.print("sramp");
-//     // Serial.println(s_ramp);
-//     // analogWrite(cf_pin, s_ramp);
-
-//     analogWrite(ci_pin, int(0.3 * output_max_12));
-//     if (time_counter >= 14000) {
-//       analogWrite(repump_pin, 0);
-//     } else {
-//       analogWrite(repump_pin, int(0.3 * output_max_12));
-//     }
-
-//   }
-
-//   else if ((18000 < time_counter) && (time_counter < 18250)) {
-//     s_ramp = 2000;
-//     analogWrite(ci_pin, 0);
-//     analogWrite(cf_pin, 4095);
-//   }
-
-//   if (time_counter == 20000) {
-//     time_counter = 0;
-//   }
-//   time_counter += dt;
-//   delayMicroseconds(dt);
-// }
-
-void loop(){
-  if (ramp < 1984){ // fast
-    analogWrite(cf_pin, ramp);
-    ramp += 
+void loop() {
+  // Serial.println("looping...");
+  // Serial.println(time_counter);
+  // put your main code here, to run repeatedly:
+  // set all pins to start values
+  analogWriteResolution(12);
+  if (time_counter < (600)) {  // delay for 1.75ms
+    analogWrite(ci_pin, output_max_12);
+    analogWrite(cf_pin, int(0.17 * output_max_12));  // starts at around 17%
+    analogWrite(repump_pin, output_max_12);
+    digitalWrite(mc_pin, HIGH);
   }
-  else if (ramp < 2111){ // slow
+
+  else if ((600<= time_counter) && (time_counter < 2050)) {  // delay for 3250 micros (5ms total)
+    analogWrite(ci_pin, 0);
+    analogWrite(repump_pin, 0);
+    digitalWrite(mc_pin, LOW);
+  }
+
+
+  else if (( 2050 <= time_counter) && (time_counter < 2625)) {  //delay for 1500 micros (6.5ms total)
+    analogWrite(repump_pin, int(0.45 * output_max_12));
+    analogWrite(ci_pin, int(0.45 * output_max_12));
+
+    // ramp cf
+    // Serial.print("framp");
+    // // Serial.println(f_ramp);
+    // // Serial.println(f_delta);
+    // f_ramp = f_ramp + f_delta;
+    // analogWrite(cf_pin, f_ramp);
+  }
+  // need to add ramp for cooling frequency
+
+  else if ((2625<= time_counter) && (time_counter < 5480)) {  //delat for 7500 micros (14ms total)
+
+    // f_ramp = 0;
+    // Serial.println(s_ramp);
+    // Serial.println(s_delta);
+    // s_ramp = s_ramp + s_delta;
+    // Serial.print("sramp");
+    // Serial.println(s_ramp);
+    // analogWrite(cf_pin, s_ramp);
+
+    // analogWrite(ci_pin, int(0.3 * output_max_12));
+    // if (time_counter >= 14000) {
+    //   analogWrite(repump_pin, 0);
+    // } else {
+    //   analogWrite(repump_pin, int(0.3 * output_max_12));
+    // }
+    analogWrite(repump_pin, int(0.3 * output_max_12));
+    analogWrite(ci_pin, int(0.3 * output_max_12));
 
   }
+
+  else if ((5480 < time_counter) && (time_counter < 18250 * 0.34)) {
+    // s_ramp = 2000;
+    analogWrite(repump_pin, 0);
+    analogWrite(cf_pin, 4095);
+  }
+
+  if (time_counter == 20000) {
+    time_counter = 0;
+  }
+  time_counter += dt;
+  delayMicroseconds(dt);
 }
+
+
