@@ -2,6 +2,8 @@ module control(trig, rabi_trig, clk, rf, rabi);
 /* a module for generion of a raman pulse scan and pi and pi/2 pulses with an arduino MKR Vidor development board in a TE2V atom interferometer
 -> when digital pin 1 is high the mach zehnder pulses are released.
 -> when digital pin 3 is high the raman pulse scan is released
+-> the rabi output is the raman scan and is output to digital pin 7
+-> the rf output is the mach zehnder output and is output to digital pin 6
  */
 
 	output rf;
@@ -142,9 +144,6 @@ module control(trig, rabi_trig, clk, rf, rabi);
 		counter <= 0;
 		pi_2_pulse <= pi_pulse/2;
 		
-		// rabi initial state
-		
-		 
 		
 	end
 endmodule
