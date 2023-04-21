@@ -1,5 +1,5 @@
 Assembler report for MKRVIDOR4000
-Thu Mar 23 17:52:19 2023
+Fri Apr 21 23:35:39 2023
 Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 
 
@@ -43,7 +43,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Thu Mar 23 17:52:18 2023 ;
+; Assembler Status      ; Successful - Fri Apr 21 23:35:39 2023 ;
 ; Revision Name         ; MKRVIDOR4000                          ;
 ; Top-level Entity Name ; MKRVIDOR4000_top                      ;
 ; Family                ; Cyclone 10 LP                         ;
@@ -77,8 +77,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------+------------------------------------------------------------------------------------------------------------------------------+
 ; Option         ; Setting                                                                                                                      ;
 +----------------+------------------------------------------------------------------------------------------------------------------------------+
-; JTAG usercode  ; 0x000E949C                                                                                                                   ;
-; Checksum       ; 0x000E949C                                                                                                                   ;
+; JTAG usercode  ; 0x000EEF41                                                                                                                   ;
+; Checksum       ; 0x000EEF41                                                                                                                   ;
 +----------------+------------------------------------------------------------------------------------------------------------------------------+
 
 
@@ -106,7 +106,7 @@ https://fpgasoftware.intel.com/eula.
 ; Option             ; Setting                                                                                                                  ;
 +--------------------+--------------------------------------------------------------------------------------------------------------------------+
 ; JTAG usercode      ; 0x00000000                                                                                                               ;
-; Checksum           ; 0x1DC8AC10                                                                                                               ;
+; Checksum           ; 0x1DC7EC62                                                                                                               ;
 ; Compression Ratio  ; 3                                                                                                                        ;
 +--------------------+--------------------------------------------------------------------------------------------------------------------------+
 
@@ -136,7 +136,7 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
-    Info: Processing started: Thu Mar 23 17:52:15 2023
+    Info: Processing started: Fri Apr 21 23:35:37 2023
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off MKRVIDOR4000 -c MKRVIDOR4000
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115031): Writing out detailed assembly data for power analysis
@@ -146,9 +146,9 @@ Device 1 (10CL016YU256; C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/p
 Info (210117): Created JAM or JBC file for the specified chain: 
 Device 1 (10CL016YU256; C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/output_files/MKRVIDOR4000.sof)
 Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4703 megabytes
-    Info: Processing ended: Thu Mar 23 17:52:19 2023
-    Info: Elapsed time: 00:00:04
-    Info: Total CPU time (on all processors): 00:00:04
+    Info: Peak virtual memory: 4700 megabytes
+    Info: Processing ended: Fri Apr 21 23:35:39 2023
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
 
 

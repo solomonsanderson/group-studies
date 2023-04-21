@@ -153,6 +153,7 @@ hi_y_avg = np.mean(y_1[hi_index])
 hi_y_std_err = np.std(y_1[hi_index])/np.sqrt(len(y_1[hi_index]))
 
 print(f"0.5 mus height = {hi_y_avg} +/- {hi_y_std_err} V")
+print(widths)
 print(f"std_dev 0.5mus {np.std(widths)}")
 
 

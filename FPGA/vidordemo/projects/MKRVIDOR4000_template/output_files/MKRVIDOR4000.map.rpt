@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MKRVIDOR4000
-Thu Mar 23 17:52:01 2023
+Fri Apr 21 23:35:28 2023
 Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 
 
@@ -14,14 +14,18 @@ Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis IP Cores Summary
-  9. General Register Statistics
- 10. Parameter Settings for User Entity Instance: SYSTEM_PLL:PLL_inst|altpll:altpll_component
- 11. Parameter Settings for User Entity Instance: control:control_seq
- 12. altpll Parameter Settings by Entity Instance
- 13. Port Connectivity Checks: "SYSTEM_PLL:PLL_inst"
- 14. Post-Synthesis Netlist Statistics for Top Partition
- 15. Elapsed Time Per Partition
- 16. Analysis & Synthesis Messages
+  9. State Machine - |MKRVIDOR4000_top|control:control_seq|r_state
+ 10. State Machine - |MKRVIDOR4000_top|control:control_seq|state
+ 11. Registers Removed During Synthesis
+ 12. Removed Registers Triggering Further Register Optimizations
+ 13. General Register Statistics
+ 14. Multiplexer Restructuring Statistics (No Restructuring Performed)
+ 15. Parameter Settings for User Entity Instance: SYSTEM_PLL:PLL_inst|altpll:altpll_component
+ 16. altpll Parameter Settings by Entity Instance
+ 17. Port Connectivity Checks: "SYSTEM_PLL:PLL_inst"
+ 18. Post-Synthesis Netlist Statistics for Top Partition
+ 19. Elapsed Time Per Partition
+ 20. Analysis & Synthesis Messages
 
 
 
@@ -48,15 +52,15 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Mar 23 17:52:01 2023          ;
+; Analysis & Synthesis Status        ; Successful - Fri Apr 21 23:35:28 2023          ;
 ; Quartus Prime Version              ; 22.1std.0 Build 915 10/25/2022 SC Lite Edition ;
 ; Revision Name                      ; MKRVIDOR4000                                   ;
 ; Top-level Entity Name              ; MKRVIDOR4000_top                               ;
 ; Family                             ; Cyclone 10 LP                                  ;
-; Total logic elements               ; 46                                             ;
-;     Total combinational functions  ; 46                                             ;
-;     Dedicated logic registers      ; 33                                             ;
-; Total registers                    ; 33                                             ;
+; Total logic elements               ; 90                                             ;
+;     Total combinational functions  ; 90                                             ;
+;     Dedicated logic registers      ; 40                                             ;
+; Total registers                    ; 40                                             ;
 ; Total pins                         ; 131                                            ;
 ; Total virtual pins                 ; 0                                              ;
 ; Total memory bits                  ; 0                                              ;
@@ -191,20 +195,20 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+----------+
 ; Resource                                    ; Usage    ;
 +---------------------------------------------+----------+
-; Estimated Total logic elements              ; 46       ;
+; Estimated Total logic elements              ; 90       ;
 ;                                             ;          ;
-; Total combinational functions               ; 46       ;
+; Total combinational functions               ; 90       ;
 ; Logic element usage by number of LUT inputs ;          ;
-;     -- 4 input functions                    ; 10       ;
-;     -- 3 input functions                    ; 0        ;
+;     -- 4 input functions                    ; 48       ;
+;     -- 3 input functions                    ; 6        ;
 ;     -- <=2 input functions                  ; 36       ;
 ;                                             ;          ;
 ; Logic elements by mode                      ;          ;
-;     -- normal mode                          ; 15       ;
+;     -- normal mode                          ; 59       ;
 ;     -- arithmetic mode                      ; 31       ;
 ;                                             ;          ;
-; Total registers                             ; 33       ;
-;     -- Dedicated logic registers            ; 33       ;
+; Total registers                             ; 40       ;
+;     -- Dedicated logic registers            ; 40       ;
 ;     -- I/O registers                        ; 0        ;
 ;                                             ;          ;
 ; I/O pins                                    ; 131      ;
@@ -215,9 +219,9 @@ https://fpgasoftware.intel.com/eula.
 ;     -- PLLs                                 ; 1        ;
 ;                                             ;          ;
 ; Maximum fan-out node                        ; wOSC_CLK ;
-; Maximum fan-out                             ; 33       ;
-; Total fan-out                               ; 399      ;
-; Average fan-out                             ; 0.93     ;
+; Maximum fan-out                             ; 40       ;
+; Total fan-out                               ; 622      ;
+; Average fan-out                             ; 1.29     ;
 +---------------------------------------------+----------+
 
 
@@ -226,11 +230,11 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------+-------------------+--------------+
 ; Compilation Hierarchy Node                  ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                            ; Entity Name       ; Library Name ;
 +---------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------+-------------------+--------------+
-; |MKRVIDOR4000_top                           ; 46 (0)              ; 33 (0)                    ; 0           ; 0            ; 0       ; 0         ; 131  ; 0            ; |MKRVIDOR4000_top                                                                              ; MKRVIDOR4000_top  ; work         ;
+; |MKRVIDOR4000_top                           ; 90 (0)              ; 40 (0)                    ; 0           ; 0            ; 0       ; 0         ; 131  ; 0            ; |MKRVIDOR4000_top                                                                              ; MKRVIDOR4000_top  ; work         ;
 ;    |SYSTEM_PLL:PLL_inst|                    ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MKRVIDOR4000_top|SYSTEM_PLL:PLL_inst                                                          ; SYSTEM_PLL        ; work         ;
 ;       |altpll:altpll_component|             ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MKRVIDOR4000_top|SYSTEM_PLL:PLL_inst|altpll:altpll_component                                  ; altpll            ; work         ;
 ;          |SYSTEM_PLL_altpll:auto_generated| ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MKRVIDOR4000_top|SYSTEM_PLL:PLL_inst|altpll:altpll_component|SYSTEM_PLL_altpll:auto_generated ; SYSTEM_PLL_altpll ; work         ;
-;    |control:control_seq|                    ; 46 (46)             ; 33 (33)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MKRVIDOR4000_top|control:control_seq                                                          ; control           ; work         ;
+;    |control:control_seq|                    ; 90 (90)             ; 40 (40)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MKRVIDOR4000_top|control:control_seq                                                          ; control           ; work         ;
 +---------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------+-------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -244,19 +248,126 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------+--------------+---------+--------------+--------------+---------------------------------------+----------------------------------+
 
 
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------+
+; State Machine - |MKRVIDOR4000_top|control:control_seq|r_state             ;
++------------------+------------------+------------------+------------------+
+; Name             ; r_state.00000000 ; r_state.00000010 ; r_state.00000001 ;
++------------------+------------------+------------------+------------------+
+; r_state.00000000 ; 0                ; 0                ; 0                ;
+; r_state.00000001 ; 1                ; 0                ; 1                ;
+; r_state.00000010 ; 1                ; 1                ; 0                ;
++------------------+------------------+------------------+------------------+
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------------------------------+
+; State Machine - |MKRVIDOR4000_top|control:control_seq|state                                           ;
++------------+------------+------------+------------+------------+------------+------------+------------+
+; Name       ; state.0110 ; state.0101 ; state.0100 ; state.0011 ; state.0010 ; state.0001 ; state.0000 ;
++------------+------------+------------+------------+------------+------------+------------+------------+
+; state.0000 ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ;
+; state.0001 ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 1          ;
+; state.0010 ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 1          ;
+; state.0011 ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 1          ;
+; state.0100 ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 1          ;
+; state.0101 ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 1          ;
+; state.0110 ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ;
++------------+------------+------------+------------+------------+------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                    ;
++-----------------------------------------+---------------------------------------------+
+; Register name                           ; Reason for Removal                          ;
++-----------------------------------------+---------------------------------------------+
+; control:control_seq|rabi                ; Stuck at GND due to stuck port data_in      ;
+; control:control_seq|pulse_length[2,3]   ; Stuck at GND due to stuck port clock_enable ;
+; control:control_seq|pulse_length[1]     ; Stuck at VCC due to stuck port clock_enable ;
+; control:control_seq|pulse_length[4,5]   ; Stuck at GND due to stuck port clock_enable ;
+; control:control_seq|pulse_length[6]     ; Stuck at VCC due to stuck port clock_enable ;
+; control:control_seq|pulse_length[7..31] ; Stuck at GND due to stuck port clock_enable ;
+; control:control_seq|r_counter[0..31]    ; Stuck at GND due to stuck port clock_enable ;
+; control:control_seq|r_state~7           ; Lost fanout                                 ;
+; control:control_seq|r_state~8           ; Lost fanout                                 ;
+; control:control_seq|r_state~9           ; Lost fanout                                 ;
+; control:control_seq|r_state~10          ; Lost fanout                                 ;
+; control:control_seq|r_state~11          ; Lost fanout                                 ;
+; control:control_seq|r_state~12          ; Lost fanout                                 ;
+; control:control_seq|state~9             ; Lost fanout                                 ;
+; control:control_seq|state~10            ; Lost fanout                                 ;
+; control:control_seq|state~11            ; Lost fanout                                 ;
+; control:control_seq|state~12            ; Lost fanout                                 ;
+; control:control_seq|r_state.00000001    ; Lost fanout                                 ;
+; control:control_seq|r_state.00000010    ; Lost fanout                                 ;
+; control:control_seq|r_state.00000000    ; Lost fanout                                 ;
+; Total Number of Removed Registers = 77  ;                                             ;
++-----------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                        ;
++--------------------------+---------------------------+-----------------------------------------------------------------------------+
+; Register name            ; Reason for Removal        ; Registers Removed due to This Register                                      ;
++--------------------------+---------------------------+-----------------------------------------------------------------------------+
+; control:control_seq|rabi ; Stuck at GND              ; control:control_seq|pulse_length[3], control:control_seq|pulse_length[2],   ;
+;                          ; due to stuck port data_in ; control:control_seq|pulse_length[1], control:control_seq|pulse_length[4],   ;
+;                          ;                           ; control:control_seq|pulse_length[5], control:control_seq|pulse_length[6],   ;
+;                          ;                           ; control:control_seq|pulse_length[7], control:control_seq|pulse_length[8],   ;
+;                          ;                           ; control:control_seq|pulse_length[9], control:control_seq|pulse_length[10],  ;
+;                          ;                           ; control:control_seq|pulse_length[11], control:control_seq|pulse_length[12], ;
+;                          ;                           ; control:control_seq|pulse_length[13], control:control_seq|pulse_length[14], ;
+;                          ;                           ; control:control_seq|pulse_length[15], control:control_seq|pulse_length[16], ;
+;                          ;                           ; control:control_seq|pulse_length[17], control:control_seq|pulse_length[18], ;
+;                          ;                           ; control:control_seq|pulse_length[19], control:control_seq|pulse_length[20], ;
+;                          ;                           ; control:control_seq|pulse_length[21], control:control_seq|pulse_length[22], ;
+;                          ;                           ; control:control_seq|pulse_length[23], control:control_seq|pulse_length[24], ;
+;                          ;                           ; control:control_seq|pulse_length[25], control:control_seq|pulse_length[26], ;
+;                          ;                           ; control:control_seq|pulse_length[27], control:control_seq|pulse_length[28], ;
+;                          ;                           ; control:control_seq|pulse_length[29], control:control_seq|pulse_length[30], ;
+;                          ;                           ; control:control_seq|pulse_length[31], control:control_seq|r_counter[0],     ;
+;                          ;                           ; control:control_seq|r_counter[1], control:control_seq|r_counter[2],         ;
+;                          ;                           ; control:control_seq|r_counter[3], control:control_seq|r_counter[4],         ;
+;                          ;                           ; control:control_seq|r_counter[5], control:control_seq|r_counter[6],         ;
+;                          ;                           ; control:control_seq|r_counter[7], control:control_seq|r_counter[8],         ;
+;                          ;                           ; control:control_seq|r_counter[9], control:control_seq|r_counter[10],        ;
+;                          ;                           ; control:control_seq|r_counter[11], control:control_seq|r_counter[12],       ;
+;                          ;                           ; control:control_seq|r_counter[13], control:control_seq|r_counter[14],       ;
+;                          ;                           ; control:control_seq|r_counter[15], control:control_seq|r_counter[16],       ;
+;                          ;                           ; control:control_seq|r_counter[17], control:control_seq|r_counter[18],       ;
+;                          ;                           ; control:control_seq|r_counter[19], control:control_seq|r_counter[20],       ;
+;                          ;                           ; control:control_seq|r_counter[21], control:control_seq|r_counter[22],       ;
+;                          ;                           ; control:control_seq|r_counter[23], control:control_seq|r_counter[24],       ;
+;                          ;                           ; control:control_seq|r_counter[25], control:control_seq|r_counter[26],       ;
+;                          ;                           ; control:control_seq|r_counter[27], control:control_seq|r_counter[28],       ;
+;                          ;                           ; control:control_seq|r_counter[29], control:control_seq|r_counter[30],       ;
+;                          ;                           ; control:control_seq|r_counter[31]                                           ;
++--------------------------+---------------------------+-----------------------------------------------------------------------------+
+
+
 +------------------------------------------------------+
 ; General Register Statistics                          ;
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 33    ;
+; Total registers                              ; 40    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 39    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (No Restructuring Performed)                                                                                              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------+
+; 6:1                ; 32 bits   ; 128 LEs       ; 32 LEs               ; 96 LEs                 ; Yes        ; |MKRVIDOR4000_top|control:control_seq|counter[5] ;
+; 7:1                ; 3 bits    ; 12 LEs        ; 9 LEs                ; 3 LEs                  ; No         ; |MKRVIDOR4000_top|control:control_seq|state      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------+
@@ -633,22 +744,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: control:control_seq ;
-+----------------+--------+----------------------------------------+
-; Parameter Name ; Value  ; Type                                   ;
-+----------------+--------+----------------------------------------+
-; interval       ; 20     ; Signed Integer                         ;
-; mz_start_time  ; 0      ; Signed Integer                         ;
-; PI             ; 666    ; Signed Integer                         ;
-; PI_2           ; 333    ; Signed Integer                         ;
-; HALF_WAIT      ; 66666  ; Signed Integer                         ;
-; WAIT           ; 133332 ; Signed Integer                         ;
-; START          ; 66666  ; Signed Integer                         ;
-+----------------+--------+----------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
 +-----------------------------------------------------------------------------+
 ; altpll Parameter Settings by Entity Instance                                ;
 +-------------------------------+---------------------------------------------+
@@ -686,22 +781,24 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 131                         ;
-; cycloneiii_ff         ; 33                          ;
-;     plain             ; 33                          ;
+; cycloneiii_ff         ; 40                          ;
+;     ENA               ; 39                          ;
+;     plain             ; 1                           ;
 ; cycloneiii_io_obuf    ; 87                          ;
-; cycloneiii_lcell_comb ; 47                          ;
+; cycloneiii_lcell_comb ; 91                          ;
 ;     arith             ; 31                          ;
 ;         2 data inputs ; 31                          ;
-;     normal            ; 16                          ;
+;     normal            ; 60                          ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 1                           ;
 ;         2 data inputs ; 4                           ;
-;         4 data inputs ; 10                          ;
+;         3 data inputs ; 6                           ;
+;         4 data inputs ; 48                          ;
 ; cycloneiii_oscillator ; 1                           ;
 ; cycloneiii_pll        ; 1                           ;
 ;                       ;                             ;
-; Max LUT depth         ; 4.10                        ;
-; Average LUT depth     ; 1.90                        ;
+; Max LUT depth         ; 5.10                        ;
+; Average LUT depth     ; 2.58                        ;
 +-----------------------+-----------------------------+
 
 
@@ -710,7 +807,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -720,7 +817,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
-    Info: Processing started: Thu Mar 23 17:51:40 2023
+    Info: Processing started: Fri Apr 21 23:35:18 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MKRVIDOR4000 -c MKRVIDOR4000
 Info (16303): Aggressive Performance optimization mode selected -- timing performance will be prioritized at the potential cost of increased logic area and compilation time
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -735,7 +832,7 @@ Warning (10236): Verilog HDL Implicit Net warning at MKRVIDOR4000_top.v(159): cr
 Info (12127): Elaborating entity "MKRVIDOR4000_top" for the top level hierarchy
 Warning (10036): Verilog HDL or VHDL warning at MKRVIDOR4000_top.v(138): object "wVID_CLK" assigned a value but never read File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v Line: 138
 Warning (10036): Verilog HDL or VHDL warning at MKRVIDOR4000_top.v(138): object "wVID_CLKx5" assigned a value but never read File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v Line: 138
-Warning (10230): Verilog HDL assignment warning at MKRVIDOR4000_top.v(186): truncated value with size 32 to match size of target (6) File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v Line: 186
+Warning (10230): Verilog HDL assignment warning at MKRVIDOR4000_top.v(188): truncated value with size 32 to match size of target (6) File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v Line: 188
 Warning (10034): Output port "oSDRAM_ADDR" at MKRVIDOR4000_top.v(33) has no driver File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v Line: 33
 Warning (10034): Output port "oSDRAM_BA" at MKRVIDOR4000_top.v(34) has no driver File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v Line: 34
 Warning (10034): Output port "oSDRAM_DQM" at MKRVIDOR4000_top.v(39) has no driver File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v Line: 39
@@ -827,16 +924,15 @@ Info (12133): Instantiated megafunction "SYSTEM_PLL:PLL_inst|altpll:altpll_compo
 Info (12021): Found 1 design units, including 1 entities, in source file db/system_pll_altpll.v
     Info (12023): Found entity 1: SYSTEM_PLL_altpll File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/db/system_pll_altpll.v Line: 31
 Info (12128): Elaborating entity "SYSTEM_PLL_altpll" for hierarchy "SYSTEM_PLL:PLL_inst|altpll:altpll_component|SYSTEM_PLL_altpll:auto_generated" File: c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altpll.tdf Line: 898
-Info (12128): Elaborating entity "control" for hierarchy "control:control_seq" File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v Line: 176
-Warning (10036): Verilog HDL or VHDL warning at control.v(71): object "long_counter" assigned a value but never read File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/control.v Line: 71
-Warning (10036): Verilog HDL or VHDL warning at control.v(76): object "pi_start" assigned a value but never read File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/control.v Line: 76
-Warning (10036): Verilog HDL or VHDL warning at control.v(77): object "interval_2_start" assigned a value but never read File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/control.v Line: 77
-Warning (10036): Verilog HDL or VHDL warning at control.v(79): object "end_time" assigned a value but never read File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/control.v Line: 79
-Warning (10036): Verilog HDL or VHDL warning at control.v(186): object "state" assigned a value but never read File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/control.v Line: 186
+Info (12128): Elaborating entity "control" for hierarchy "control:control_seq" File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v Line: 178
+Warning (10036): Verilog HDL or VHDL warning at control.v(49): object "pulse_increment" assigned a value but never read File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/control.v Line: 49
+Warning (10855): Verilog HDL warning at control.v(139): initial value for variable pi_2_pulse should be constant File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/control.v Line: 139
+Warning (10030): Net "pi_2_pulse" at control.v(43) has no driver or initial value, using a default initial value '0' File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/control.v Line: 43
 Warning (13034): The following nodes have both tri-state and non-tri-state drivers
     Warning (13035): Inserted always-enabled tri-state buffer between "bMKR_D[6]" and its non-tri-state driver. File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v Line: 46
 Warning (13039): The following bidirectional pins have no drivers
     Warning (13040): bidirectional pin "bMKR_D[1]" has no driver File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v Line: 46
+    Warning (13040): bidirectional pin "bMKR_D[3]" has no driver File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v Line: 46
     Warning (13040): bidirectional pin "bSDRAM_DQ[0]" has no driver File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v Line: 38
     Warning (13040): bidirectional pin "bSDRAM_DQ[1]" has no driver File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v Line: 38
     Warning (13040): bidirectional pin "bSDRAM_DQ[2]" has no driver File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v Line: 38
@@ -863,10 +959,8 @@ Warning (13039): The following bidirectional pins have no drivers
     Warning (13040): bidirectional pin "bMKR_A[6]" has no driver File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v Line: 45
     Warning (13040): bidirectional pin "bMKR_D[0]" has no driver File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v Line: 46
     Warning (13040): bidirectional pin "bMKR_D[2]" has no driver File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v Line: 46
-    Warning (13040): bidirectional pin "bMKR_D[3]" has no driver File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v Line: 46
     Warning (13040): bidirectional pin "bMKR_D[4]" has no driver File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v Line: 46
     Warning (13040): bidirectional pin "bMKR_D[5]" has no driver File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v Line: 46
-    Warning (13040): bidirectional pin "bMKR_D[7]" has no driver File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v Line: 46
     Warning (13040): bidirectional pin "bMKR_D[8]" has no driver File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v Line: 46
     Warning (13040): bidirectional pin "bMKR_D[9]" has no driver File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v Line: 46
     Warning (13040): bidirectional pin "bMKR_D[10]" has no driver File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v Line: 46
@@ -922,6 +1016,8 @@ Warning (13039): The following bidirectional pins have no drivers
     Warning (13040): bidirectional pin "iFLASH_MISO" has no driver File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v Line: 118
     Warning (13040): bidirectional pin "oFLASH_HOLD" has no driver File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v Line: 119
     Warning (13040): bidirectional pin "oFLASH_WP" has no driver File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v Line: 122
+Warning (13032): The following tri-state nodes are fed by constants
+    Warning (13033): The pin "bMKR_D[7]" is fed by GND File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v Line: 46
 Warning (13009): TRI or OPNDRN buffers permanently enabled
     Warning (13010): Node "bMKR_D[6]~synth" File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v Line: 46
 Warning (13024): Output pins are stuck at VCC or GND
@@ -954,6 +1050,7 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "oFLASH_SCK" is stuck at GND File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v Line: 115
     Warning (13410): Pin "oFLASH_CS" is stuck at GND File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v Line: 116
 Info (286030): Timing-Driven Synthesis is running
+Info (17049): 13 registers lost all their fanouts during netlist optimizations.
 Warning (15897): PLL "SYSTEM_PLL:PLL_inst|altpll:altpll_component|SYSTEM_PLL_altpll:auto_generated|pll1" has parameter compensate_clock set to clock0 but port CLK[0] is not connected File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/db/system_pll_altpll.v Line: 51
 Warning (15899): PLL "SYSTEM_PLL:PLL_inst|altpll:altpll_component|SYSTEM_PLL_altpll:auto_generated|pll1" has parameters clk0_multiply_by and clk0_divide_by specified but port CLK[0] is not connected File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/db/system_pll_altpll.v Line: 51
 Info (128000): Starting physical synthesis optimizations for speed
@@ -1020,16 +1117,16 @@ Warning (21074): Design contains 14 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "iMIPI_D[0]" File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v Line: 108
     Warning (15610): No output dependent on input pin "iMIPI_D[1]" File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v Line: 108
     Warning (15610): No output dependent on input pin "iMIPI_CLK" File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v Line: 109
-Info (21057): Implemented 179 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 223 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 15 input pins
     Info (21059): Implemented 29 output pins
     Info (21060): Implemented 87 bidirectional pins
-    Info (21061): Implemented 46 logic cells
+    Info (21061): Implemented 90 logic cells
     Info (21065): Implemented 1 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 180 warnings
-    Info: Peak virtual memory: 4813 megabytes
-    Info: Processing ended: Thu Mar 23 17:52:01 2023
-    Info: Elapsed time: 00:00:21
-    Info: Total CPU time (on all processors): 00:00:46
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 179 warnings
+    Info: Peak virtual memory: 4823 megabytes
+    Info: Processing ended: Fri Apr 21 23:35:28 2023
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:25
 
 

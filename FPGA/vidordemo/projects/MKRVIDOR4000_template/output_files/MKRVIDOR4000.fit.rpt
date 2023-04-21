@@ -1,5 +1,5 @@
 Fitter report for MKRVIDOR4000
-Thu Mar 23 17:52:13 2023
+Fri Apr 21 23:35:35 2023
 Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 
 
@@ -70,17 +70,17 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                      ;
 +------------------------------------+------------------------------------------------+
-; Fitter Status                      ; Successful - Thu Mar 23 17:52:13 2023          ;
+; Fitter Status                      ; Successful - Fri Apr 21 23:35:35 2023          ;
 ; Quartus Prime Version              ; 22.1std.0 Build 915 10/25/2022 SC Lite Edition ;
 ; Revision Name                      ; MKRVIDOR4000                                   ;
 ; Top-level Entity Name              ; MKRVIDOR4000_top                               ;
 ; Family                             ; Cyclone 10 LP                                  ;
 ; Device                             ; 10CL016YU256C8G                                ;
 ; Timing Models                      ; Final                                          ;
-; Total logic elements               ; 46 / 15,408 ( < 1 % )                          ;
-;     Total combinational functions  ; 46 / 15,408 ( < 1 % )                          ;
-;     Dedicated logic registers      ; 33 / 15,408 ( < 1 % )                          ;
-; Total registers                    ; 33                                             ;
+; Total logic elements               ; 90 / 15,408 ( < 1 % )                          ;
+;     Total combinational functions  ; 90 / 15,408 ( < 1 % )                          ;
+;     Dedicated logic registers      ; 40 / 15,408 ( < 1 % )                          ;
+; Total registers                    ; 40                                             ;
 ; Total pins                         ; 138 / 163 ( 85 % )                             ;
 ; Total virtual pins                 ; 0                                              ;
 ; Total memory bits                  ; 0 / 516,096 ( 0 % )                            ;
@@ -157,12 +157,12 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.02        ;
+; Average used               ; 1.03        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.7%      ;
+;     Processors 2-4         ;   0.9%      ;
 +----------------------------+-------------+
 
 
@@ -211,8 +211,8 @@ https://fpgasoftware.intel.com/eula.
 ; Type                ; Total [A + B]      ; From Design Partitions [A] ; From Rapid Recompile [B] ;
 +---------------------+--------------------+----------------------------+--------------------------+
 ; Placement (by node) ;                    ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 440 ) ; 0.00 % ( 0 / 440 )         ; 0.00 % ( 0 / 440 )       ;
-;     -- Achieved     ; 0.00 % ( 0 / 440 ) ; 0.00 % ( 0 / 440 )         ; 0.00 % ( 0 / 440 )       ;
+;     -- Requested    ; 0.00 % ( 0 / 491 ) ; 0.00 % ( 0 / 491 )         ; 0.00 % ( 0 / 491 )       ;
+;     -- Achieved     ; 0.00 % ( 0 / 491 ) ; 0.00 % ( 0 / 491 )         ; 0.00 % ( 0 / 491 )       ;
 ;                     ;                    ;                            ;                          ;
 ; Routing (by net)    ;                    ;                            ;                          ;
 ;     -- Requested    ; 0.00 % ( 0 / 0 )   ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
@@ -235,7 +235,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Top                            ; 0.00 % ( 0 / 438 )    ; N/A                     ; Source File       ; N/A                 ;       ;
+; Top                            ; 0.00 % ( 0 / 489 )    ; N/A                     ; Source File       ; N/A                 ;       ;
 ; hard_block:auto_generated_inst ; 0.00 % ( 0 / 2 )      ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
@@ -251,26 +251,26 @@ The pin-out file can be found in C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vi
 +---------------------------------------------+-----------------------+
 ; Resource                                    ; Usage                 ;
 +---------------------------------------------+-----------------------+
-; Total logic elements                        ; 46 / 15,408 ( < 1 % ) ;
-;     -- Combinational with no register       ; 13                    ;
+; Total logic elements                        ; 90 / 15,408 ( < 1 % ) ;
+;     -- Combinational with no register       ; 50                    ;
 ;     -- Register only                        ; 0                     ;
-;     -- Combinational with a register        ; 33                    ;
+;     -- Combinational with a register        ; 40                    ;
 ;                                             ;                       ;
 ; Logic element usage by number of LUT inputs ;                       ;
-;     -- 4 input functions                    ; 10                    ;
-;     -- 3 input functions                    ; 0                     ;
+;     -- 4 input functions                    ; 48                    ;
+;     -- 3 input functions                    ; 6                     ;
 ;     -- <=2 input functions                  ; 36                    ;
 ;     -- Register only                        ; 0                     ;
 ;                                             ;                       ;
 ; Logic elements by mode                      ;                       ;
-;     -- normal mode                          ; 15                    ;
+;     -- normal mode                          ; 59                    ;
 ;     -- arithmetic mode                      ; 31                    ;
 ;                                             ;                       ;
-; Total registers*                            ; 33 / 16,148 ( < 1 % ) ;
-;     -- Dedicated logic registers            ; 33 / 15,408 ( < 1 % ) ;
+; Total registers*                            ; 40 / 16,148 ( < 1 % ) ;
+;     -- Dedicated logic registers            ; 40 / 15,408 ( < 1 % ) ;
 ;     -- I/O registers                        ; 0 / 740 ( 0 % )       ;
 ;                                             ;                       ;
-; Total LABs:  partially or completely used   ; 5 / 963 ( < 1 % )     ;
+; Total LABs:  partially or completely used   ; 7 / 963 ( < 1 % )     ;
 ; Virtual pins                                ; 0                     ;
 ; I/O pins                                    ; 138 / 163 ( 85 % )    ;
 ;     -- Clock pins                           ; 7 / 8 ( 88 % )        ;
@@ -288,12 +288,12 @@ The pin-out file can be found in C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vi
 ; ASMI blocks                                 ; 0 / 1 ( 0 % )         ;
 ; Oscillator blocks                           ; 1 / 1 ( 100 % )       ;
 ; Impedance control blocks                    ; 0 / 4 ( 0 % )         ;
-; Average interconnect usage (total/H/V)      ; 0.0% / 0.0% / 0.0%    ;
-; Peak interconnect usage (total/H/V)         ; 0.1% / 0.1% / 0.1%    ;
-; Maximum fan-out                             ; 33                    ;
-; Highest non-global fan-out                  ; 3                     ;
-; Total fan-out                               ; 408                   ;
-; Average fan-out                             ; 0.93                  ;
+; Average interconnect usage (total/H/V)      ; 0.1% / 0.1% / 0.0%    ;
+; Peak interconnect usage (total/H/V)         ; 0.4% / 0.5% / 0.2%    ;
+; Maximum fan-out                             ; 40                    ;
+; Highest non-global fan-out                  ; 40                    ;
+; Total fan-out                               ; 631                   ;
+; Average fan-out                             ; 1.29                  ;
 +---------------------------------------------+-----------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -306,26 +306,26 @@ The pin-out file can be found in C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vi
 +---------------------------------------------+----------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low                  ; Low                            ;
 ;                                             ;                      ;                                ;
-; Total logic elements                        ; 46 / 15408 ( < 1 % ) ; 0 / 15408 ( 0 % )              ;
-;     -- Combinational with no register       ; 13                   ; 0                              ;
+; Total logic elements                        ; 90 / 15408 ( < 1 % ) ; 0 / 15408 ( 0 % )              ;
+;     -- Combinational with no register       ; 50                   ; 0                              ;
 ;     -- Register only                        ; 0                    ; 0                              ;
-;     -- Combinational with a register        ; 33                   ; 0                              ;
+;     -- Combinational with a register        ; 40                   ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Logic element usage by number of LUT inputs ;                      ;                                ;
-;     -- 4 input functions                    ; 10                   ; 0                              ;
-;     -- 3 input functions                    ; 0                    ; 0                              ;
+;     -- 4 input functions                    ; 48                   ; 0                              ;
+;     -- 3 input functions                    ; 6                    ; 0                              ;
 ;     -- <=2 input functions                  ; 36                   ; 0                              ;
 ;     -- Register only                        ; 0                    ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Logic elements by mode                      ;                      ;                                ;
-;     -- normal mode                          ; 15                   ; 0                              ;
+;     -- normal mode                          ; 59                   ; 0                              ;
 ;     -- arithmetic mode                      ; 31                   ; 0                              ;
 ;                                             ;                      ;                                ;
-; Total registers                             ; 33                   ; 0                              ;
-;     -- Dedicated logic registers            ; 33 / 15408 ( < 1 % ) ; 0 / 15408 ( 0 % )              ;
+; Total registers                             ; 40                   ; 0                              ;
+;     -- Dedicated logic registers            ; 40 / 15408 ( < 1 % ) ; 0 / 15408 ( 0 % )              ;
 ;     -- I/O registers                        ; 0                    ; 0                              ;
 ;                                             ;                      ;                                ;
-; Total LABs:  partially or completely used   ; 5 / 963 ( < 1 % )    ; 0 / 963 ( 0 % )                ;
+; Total LABs:  partially or completely used   ; 7 / 963 ( < 1 % )    ; 0 / 963 ( 0 % )                ;
 ;                                             ;                      ;                                ;
 ; Virtual pins                                ; 0                    ; 0                              ;
 ; I/O pins                                    ; 138                  ; 0                              ;
@@ -343,8 +343,8 @@ The pin-out file can be found in C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vi
 ;     -- Registered Output Connections        ; 0                    ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Internal Connections                        ;                      ;                                ;
-;     -- Total Connections                    ; 406                  ; 4                              ;
-;     -- Registered Connections               ; 66                   ; 0                              ;
+;     -- Total Connections                    ; 629                  ; 4                              ;
+;     -- Registered Connections               ; 92                   ; 0                              ;
 ;                                             ;                      ;                                ;
 ; External Connections                        ;                      ;                                ;
 ;     -- Top                                  ; 174                  ; 2                              ;
@@ -463,7 +463,7 @@ The pin-out file can be found in C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vi
 ; bMKR_D[12]    ; B16   ; 6        ; 41           ; 19           ; 0            ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off                               ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
 ; bMKR_D[13]    ; C11   ; 7        ; 37           ; 29           ; 14           ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off                               ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
 ; bMKR_D[14]    ; A13   ; 7        ; 28           ; 29           ; 7            ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off                               ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
-; bMKR_D[1]     ; N3    ; 3        ; 1            ; 0            ; 0            ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off                               ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
+; bMKR_D[1]     ; N3    ; 3        ; 1            ; 0            ; 0            ; 40                    ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off                               ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
 ; bMKR_D[2]     ; P3    ; 3        ; 3            ; 0            ; 28           ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off                               ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
 ; bMKR_D[3]     ; R3    ; 3        ; 3            ; 0            ; 14           ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off                               ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
 ; bMKR_D[4]     ; T3    ; 3        ; 3            ; 0            ; 7            ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off                               ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
@@ -953,10 +953,8 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ; bMKR_A[6]       ; Missing drive strength               ;
 ; bMKR_D[0]       ; Missing drive strength               ;
 ; bMKR_D[2]       ; Missing drive strength               ;
-; bMKR_D[3]       ; Missing drive strength               ;
 ; bMKR_D[4]       ; Missing drive strength               ;
 ; bMKR_D[5]       ; Missing drive strength               ;
-; bMKR_D[7]       ; Missing drive strength               ;
 ; bMKR_D[8]       ; Missing drive strength               ;
 ; bMKR_D[9]       ; Missing drive strength               ;
 ; bMKR_D[10]      ; Missing drive strength               ;
@@ -1013,7 +1011,9 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ; oFLASH_HOLD     ; Missing drive strength               ;
 ; oFLASH_WP       ; Missing drive strength               ;
 ; bMKR_D[1]       ; Missing drive strength               ;
+; bMKR_D[3]       ; Missing drive strength               ;
 ; bMKR_D[6]       ; Missing drive strength               ;
+; bMKR_D[7]       ; Missing drive strength               ;
 +-----------------+--------------------------------------+
 
 
@@ -1022,11 +1022,11 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +---------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------------------------------------------------------------------------------------------+-------------------+--------------+
 ; Compilation Hierarchy Node                  ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                                                            ; Entity Name       ; Library Name ;
 +---------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------------------------------------------------------------------------------------------+-------------------+--------------+
-; |MKRVIDOR4000_top                           ; 46 (0)      ; 33 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 138  ; 0            ; 13 (0)       ; 0 (0)             ; 33 (0)           ; |MKRVIDOR4000_top                                                                              ; MKRVIDOR4000_top  ; work         ;
+; |MKRVIDOR4000_top                           ; 90 (0)      ; 40 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 138  ; 0            ; 50 (0)       ; 0 (0)             ; 40 (0)           ; |MKRVIDOR4000_top                                                                              ; MKRVIDOR4000_top  ; work         ;
 ;    |SYSTEM_PLL:PLL_inst|                    ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |MKRVIDOR4000_top|SYSTEM_PLL:PLL_inst                                                          ; SYSTEM_PLL        ; work         ;
 ;       |altpll:altpll_component|             ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |MKRVIDOR4000_top|SYSTEM_PLL:PLL_inst|altpll:altpll_component                                  ; altpll            ; work         ;
 ;          |SYSTEM_PLL_altpll:auto_generated| ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |MKRVIDOR4000_top|SYSTEM_PLL:PLL_inst|altpll:altpll_component|SYSTEM_PLL_altpll:auto_generated ; SYSTEM_PLL_altpll ; work         ;
-;    |control:control_seq|                    ; 46 (46)     ; 33 (33)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 13 (13)      ; 0 (0)             ; 33 (33)          ; |MKRVIDOR4000_top|control:control_seq                                                          ; control           ; work         ;
+;    |control:control_seq|                    ; 90 (90)     ; 40 (40)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 50 (50)      ; 0 (0)             ; 40 (40)          ; |MKRVIDOR4000_top|control:control_seq                                                          ; control           ; work         ;
 +---------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------------------------------------------------------------------------------------------+-------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -1105,10 +1105,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; bMKR_A[6]       ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
 ; bMKR_D[0]       ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
 ; bMKR_D[2]       ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
-; bMKR_D[3]       ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
 ; bMKR_D[4]       ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
 ; bMKR_D[5]       ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
-; bMKR_D[7]       ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
 ; bMKR_D[8]       ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
 ; bMKR_D[9]       ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
 ; bMKR_D[10]      ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
@@ -1164,8 +1162,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; iFLASH_MISO     ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
 ; oFLASH_HOLD     ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
 ; oFLASH_WP       ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
-; bMKR_D[1]       ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
+; bMKR_D[1]       ; Bidir    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; bMKR_D[3]       ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
 ; bMKR_D[6]       ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
+; bMKR_D[7]       ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
 ; iCLK            ; Input    ; --            ; --            ; --                    ; --  ; --   ;
 ; oHDMI_TX[0](n)  ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; oHDMI_TX[1](n)  ; Output   ; --            ; --            ; --                    ; --  ; --   ;
@@ -1177,127 +1177,168 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------+----------+---------------+---------------+-----------------------+-----+------+
 
 
-+---------------------------------------------------+
-; Pad To Core Delay Chain Fanout                    ;
-+---------------------+-------------------+---------+
-; Source Pin / Fanout ; Pad To Core Index ; Setting ;
-+---------------------+-------------------+---------+
-; iRESETn             ;                   ;         ;
-; iSAM_INT            ;                   ;         ;
-; iPEX_PIN11          ;                   ;         ;
-; iPEX_PIN13          ;                   ;         ;
-; iPEX_PIN23          ;                   ;         ;
-; iPEX_PIN25          ;                   ;         ;
-; iPEX_PIN31          ;                   ;         ;
-; iPEX_PIN33          ;                   ;         ;
-; iWM_PIO32           ;                   ;         ;
-; iWM_TX              ;                   ;         ;
-; iHDMI_HPD           ;                   ;         ;
-; iMIPI_D[0]          ;                   ;         ;
-; iMIPI_D[1]          ;                   ;         ;
-; iMIPI_CLK           ;                   ;         ;
-; bSDRAM_DQ[0]        ;                   ;         ;
-; bSDRAM_DQ[1]        ;                   ;         ;
-; bSDRAM_DQ[2]        ;                   ;         ;
-; bSDRAM_DQ[3]        ;                   ;         ;
-; bSDRAM_DQ[4]        ;                   ;         ;
-; bSDRAM_DQ[5]        ;                   ;         ;
-; bSDRAM_DQ[6]        ;                   ;         ;
-; bSDRAM_DQ[7]        ;                   ;         ;
-; bSDRAM_DQ[8]        ;                   ;         ;
-; bSDRAM_DQ[9]        ;                   ;         ;
-; bSDRAM_DQ[10]       ;                   ;         ;
-; bSDRAM_DQ[11]       ;                   ;         ;
-; bSDRAM_DQ[12]       ;                   ;         ;
-; bSDRAM_DQ[13]       ;                   ;         ;
-; bSDRAM_DQ[14]       ;                   ;         ;
-; bSDRAM_DQ[15]       ;                   ;         ;
-; bMKR_AREF           ;                   ;         ;
-; bMKR_A[0]           ;                   ;         ;
-; bMKR_A[1]           ;                   ;         ;
-; bMKR_A[2]           ;                   ;         ;
-; bMKR_A[3]           ;                   ;         ;
-; bMKR_A[4]           ;                   ;         ;
-; bMKR_A[5]           ;                   ;         ;
-; bMKR_A[6]           ;                   ;         ;
-; bMKR_D[0]           ;                   ;         ;
-; bMKR_D[2]           ;                   ;         ;
-; bMKR_D[3]           ;                   ;         ;
-; bMKR_D[4]           ;                   ;         ;
-; bMKR_D[5]           ;                   ;         ;
-; bMKR_D[7]           ;                   ;         ;
-; bMKR_D[8]           ;                   ;         ;
-; bMKR_D[9]           ;                   ;         ;
-; bMKR_D[10]          ;                   ;         ;
-; bMKR_D[11]          ;                   ;         ;
-; bMKR_D[12]          ;                   ;         ;
-; bMKR_D[13]          ;                   ;         ;
-; bMKR_D[14]          ;                   ;         ;
-; bPEX_RST            ;                   ;         ;
-; bPEX_PIN6           ;                   ;         ;
-; bPEX_PIN8           ;                   ;         ;
-; bPEX_PIN10          ;                   ;         ;
-; bPEX_PIN12          ;                   ;         ;
-; bPEX_PIN14          ;                   ;         ;
-; bPEX_PIN16          ;                   ;         ;
-; bPEX_PIN20          ;                   ;         ;
-; bPEX_PIN28          ;                   ;         ;
-; bPEX_PIN30          ;                   ;         ;
-; bPEX_PIN32          ;                   ;         ;
-; bPEX_PIN42          ;                   ;         ;
-; bPEX_PIN44          ;                   ;         ;
-; bPEX_PIN45          ;                   ;         ;
-; bPEX_PIN46          ;                   ;         ;
-; bPEX_PIN47          ;                   ;         ;
-; bPEX_PIN48          ;                   ;         ;
-; bPEX_PIN49          ;                   ;         ;
-; bPEX_PIN51          ;                   ;         ;
-; bWM_PIO1            ;                   ;         ;
-; bWM_PIO2            ;                   ;         ;
-; bWM_PIO3            ;                   ;         ;
-; bWM_PIO4            ;                   ;         ;
-; bWM_PIO5            ;                   ;         ;
-; bWM_PIO7            ;                   ;         ;
-; bWM_PIO8            ;                   ;         ;
-; bWM_PIO18           ;                   ;         ;
-; bWM_PIO20           ;                   ;         ;
-; bWM_PIO21           ;                   ;         ;
-; bWM_PIO27           ;                   ;         ;
-; bWM_PIO28           ;                   ;         ;
-; bWM_PIO29           ;                   ;         ;
-; bWM_PIO31           ;                   ;         ;
-; bWM_PIO34           ;                   ;         ;
-; bWM_PIO35           ;                   ;         ;
-; bWM_PIO36           ;                   ;         ;
-; oWM_RX              ;                   ;         ;
-; oWM_RESET           ;                   ;         ;
-; bHDMI_SDA           ;                   ;         ;
-; bHDMI_SCL           ;                   ;         ;
-; bMIPI_SDA           ;                   ;         ;
-; bMIPI_SCL           ;                   ;         ;
-; bMIPI_GP[0]         ;                   ;         ;
-; bMIPI_GP[1]         ;                   ;         ;
-; oFLASH_MOSI         ;                   ;         ;
-; iFLASH_MISO         ;                   ;         ;
-; oFLASH_HOLD         ;                   ;         ;
-; oFLASH_WP           ;                   ;         ;
-; bMKR_D[1]           ;                   ;         ;
-; bMKR_D[6]           ;                   ;         ;
-; iCLK                ;                   ;         ;
-; iMIPI_D[0](n)       ;                   ;         ;
-; iMIPI_D[1](n)       ;                   ;         ;
-; iMIPI_CLK(n)        ;                   ;         ;
-+---------------------+-------------------+---------+
++-----------------------------------------------------------------------+
+; Pad To Core Delay Chain Fanout                                        ;
++-----------------------------------------+-------------------+---------+
+; Source Pin / Fanout                     ; Pad To Core Index ; Setting ;
++-----------------------------------------+-------------------+---------+
+; iRESETn                                 ;                   ;         ;
+; iSAM_INT                                ;                   ;         ;
+; iPEX_PIN11                              ;                   ;         ;
+; iPEX_PIN13                              ;                   ;         ;
+; iPEX_PIN23                              ;                   ;         ;
+; iPEX_PIN25                              ;                   ;         ;
+; iPEX_PIN31                              ;                   ;         ;
+; iPEX_PIN33                              ;                   ;         ;
+; iWM_PIO32                               ;                   ;         ;
+; iWM_TX                                  ;                   ;         ;
+; iHDMI_HPD                               ;                   ;         ;
+; iMIPI_D[0]                              ;                   ;         ;
+; iMIPI_D[1]                              ;                   ;         ;
+; iMIPI_CLK                               ;                   ;         ;
+; bSDRAM_DQ[0]                            ;                   ;         ;
+; bSDRAM_DQ[1]                            ;                   ;         ;
+; bSDRAM_DQ[2]                            ;                   ;         ;
+; bSDRAM_DQ[3]                            ;                   ;         ;
+; bSDRAM_DQ[4]                            ;                   ;         ;
+; bSDRAM_DQ[5]                            ;                   ;         ;
+; bSDRAM_DQ[6]                            ;                   ;         ;
+; bSDRAM_DQ[7]                            ;                   ;         ;
+; bSDRAM_DQ[8]                            ;                   ;         ;
+; bSDRAM_DQ[9]                            ;                   ;         ;
+; bSDRAM_DQ[10]                           ;                   ;         ;
+; bSDRAM_DQ[11]                           ;                   ;         ;
+; bSDRAM_DQ[12]                           ;                   ;         ;
+; bSDRAM_DQ[13]                           ;                   ;         ;
+; bSDRAM_DQ[14]                           ;                   ;         ;
+; bSDRAM_DQ[15]                           ;                   ;         ;
+; bMKR_AREF                               ;                   ;         ;
+; bMKR_A[0]                               ;                   ;         ;
+; bMKR_A[1]                               ;                   ;         ;
+; bMKR_A[2]                               ;                   ;         ;
+; bMKR_A[3]                               ;                   ;         ;
+; bMKR_A[4]                               ;                   ;         ;
+; bMKR_A[5]                               ;                   ;         ;
+; bMKR_A[6]                               ;                   ;         ;
+; bMKR_D[0]                               ;                   ;         ;
+; bMKR_D[2]                               ;                   ;         ;
+; bMKR_D[4]                               ;                   ;         ;
+; bMKR_D[5]                               ;                   ;         ;
+; bMKR_D[8]                               ;                   ;         ;
+; bMKR_D[9]                               ;                   ;         ;
+; bMKR_D[10]                              ;                   ;         ;
+; bMKR_D[11]                              ;                   ;         ;
+; bMKR_D[12]                              ;                   ;         ;
+; bMKR_D[13]                              ;                   ;         ;
+; bMKR_D[14]                              ;                   ;         ;
+; bPEX_RST                                ;                   ;         ;
+; bPEX_PIN6                               ;                   ;         ;
+; bPEX_PIN8                               ;                   ;         ;
+; bPEX_PIN10                              ;                   ;         ;
+; bPEX_PIN12                              ;                   ;         ;
+; bPEX_PIN14                              ;                   ;         ;
+; bPEX_PIN16                              ;                   ;         ;
+; bPEX_PIN20                              ;                   ;         ;
+; bPEX_PIN28                              ;                   ;         ;
+; bPEX_PIN30                              ;                   ;         ;
+; bPEX_PIN32                              ;                   ;         ;
+; bPEX_PIN42                              ;                   ;         ;
+; bPEX_PIN44                              ;                   ;         ;
+; bPEX_PIN45                              ;                   ;         ;
+; bPEX_PIN46                              ;                   ;         ;
+; bPEX_PIN47                              ;                   ;         ;
+; bPEX_PIN48                              ;                   ;         ;
+; bPEX_PIN49                              ;                   ;         ;
+; bPEX_PIN51                              ;                   ;         ;
+; bWM_PIO1                                ;                   ;         ;
+; bWM_PIO2                                ;                   ;         ;
+; bWM_PIO3                                ;                   ;         ;
+; bWM_PIO4                                ;                   ;         ;
+; bWM_PIO5                                ;                   ;         ;
+; bWM_PIO7                                ;                   ;         ;
+; bWM_PIO8                                ;                   ;         ;
+; bWM_PIO18                               ;                   ;         ;
+; bWM_PIO20                               ;                   ;         ;
+; bWM_PIO21                               ;                   ;         ;
+; bWM_PIO27                               ;                   ;         ;
+; bWM_PIO28                               ;                   ;         ;
+; bWM_PIO29                               ;                   ;         ;
+; bWM_PIO31                               ;                   ;         ;
+; bWM_PIO34                               ;                   ;         ;
+; bWM_PIO35                               ;                   ;         ;
+; bWM_PIO36                               ;                   ;         ;
+; oWM_RX                                  ;                   ;         ;
+; oWM_RESET                               ;                   ;         ;
+; bHDMI_SDA                               ;                   ;         ;
+; bHDMI_SCL                               ;                   ;         ;
+; bMIPI_SDA                               ;                   ;         ;
+; bMIPI_SCL                               ;                   ;         ;
+; bMIPI_GP[0]                             ;                   ;         ;
+; bMIPI_GP[1]                             ;                   ;         ;
+; oFLASH_MOSI                             ;                   ;         ;
+; iFLASH_MISO                             ;                   ;         ;
+; oFLASH_HOLD                             ;                   ;         ;
+; oFLASH_WP                               ;                   ;         ;
+; bMKR_D[1]                               ;                   ;         ;
+;      - control:control_seq|rf           ; 0                 ; 6       ;
+;      - control:control_seq|state.0001   ; 0                 ; 6       ;
+;      - control:control_seq|state.0011   ; 0                 ; 6       ;
+;      - control:control_seq|counter[16]  ; 0                 ; 6       ;
+;      - control:control_seq|counter[17]  ; 0                 ; 6       ;
+;      - control:control_seq|counter[18]  ; 0                 ; 6       ;
+;      - control:control_seq|counter[19]  ; 0                 ; 6       ;
+;      - control:control_seq|counter[20]  ; 0                 ; 6       ;
+;      - control:control_seq|counter[21]  ; 0                 ; 6       ;
+;      - control:control_seq|counter[22]  ; 0                 ; 6       ;
+;      - control:control_seq|counter[23]  ; 0                 ; 6       ;
+;      - control:control_seq|counter[24]  ; 0                 ; 6       ;
+;      - control:control_seq|counter[25]  ; 0                 ; 6       ;
+;      - control:control_seq|counter[26]  ; 0                 ; 6       ;
+;      - control:control_seq|counter[27]  ; 0                 ; 6       ;
+;      - control:control_seq|counter[28]  ; 0                 ; 6       ;
+;      - control:control_seq|counter[29]  ; 0                 ; 6       ;
+;      - control:control_seq|counter[30]  ; 0                 ; 6       ;
+;      - control:control_seq|counter[31]  ; 0                 ; 6       ;
+;      - control:control_seq|counter[5]   ; 0                 ; 6       ;
+;      - control:control_seq|counter[6]   ; 0                 ; 6       ;
+;      - control:control_seq|counter[8]   ; 0                 ; 6       ;
+;      - control:control_seq|counter[2]   ; 0                 ; 6       ;
+;      - control:control_seq|counter[3]   ; 0                 ; 6       ;
+;      - control:control_seq|counter[4]   ; 0                 ; 6       ;
+;      - control:control_seq|counter[7]   ; 0                 ; 6       ;
+;      - control:control_seq|counter[9]   ; 0                 ; 6       ;
+;      - control:control_seq|counter[10]  ; 0                 ; 6       ;
+;      - control:control_seq|counter[11]  ; 0                 ; 6       ;
+;      - control:control_seq|counter[12]  ; 0                 ; 6       ;
+;      - control:control_seq|counter[13]  ; 0                 ; 6       ;
+;      - control:control_seq|counter[14]  ; 0                 ; 6       ;
+;      - control:control_seq|counter[15]  ; 0                 ; 6       ;
+;      - control:control_seq|state.0110   ; 0                 ; 6       ;
+;      - control:control_seq|counter[1]   ; 0                 ; 6       ;
+;      - control:control_seq|state.0010   ; 0                 ; 6       ;
+;      - control:control_seq|counter[0]   ; 0                 ; 6       ;
+;      - control:control_seq|state.0100   ; 0                 ; 6       ;
+;      - control:control_seq|state.0101   ; 0                 ; 6       ;
+;      - control:control_seq|state.0000~0 ; 0                 ; 6       ;
+; bMKR_D[3]                               ;                   ;         ;
+; bMKR_D[6]                               ;                   ;         ;
+; bMKR_D[7]                               ;                   ;         ;
+; iCLK                                    ;                   ;         ;
+; iMIPI_D[0](n)                           ;                   ;         ;
+; iMIPI_D[1](n)                           ;                   ;         ;
+; iMIPI_CLK(n)                            ;                   ;         ;
++-----------------------------------------+-------------------+---------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------+
-; Control Signals                                                                                                                  ;
-+----------+----------------------+---------+-------+--------+----------------------+------------------+---------------------------+
-; Name     ; Location             ; Fan-Out ; Usage ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+----------+----------------------+---------+-------+--------+----------------------+------------------+---------------------------+
-; iCLK     ; PIN_E2               ; 1       ; Clock ; no     ; --                   ; --               ; --                        ;
-; wOSC_CLK ; OSCILLATOR_X1_Y15_N3 ; 33      ; Clock ; yes    ; Global Clock         ; GCLK1            ; --                        ;
-+----------+----------------------+---------+-------+--------+----------------------+------------------+---------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                                          ;
++-----------+----------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+; Name      ; Location             ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++-----------+----------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+; bMKR_D[1] ; PIN_N3               ; 40      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; iCLK      ; PIN_E2               ; 1       ; Clock        ; no     ; --                   ; --               ; --                        ;
+; wOSC_CLK  ; OSCILLATOR_X1_Y15_N3 ; 40      ; Clock        ; yes    ; Global Clock         ; GCLK4            ; --                        ;
++-----------+----------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -1306,7 +1347,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Name                                                                                          ; Location             ; Fan-Out ; Fan-Out Using Intentional Clock Skew ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +-----------------------------------------------------------------------------------------------+----------------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 ; SYSTEM_PLL:PLL_inst|altpll:altpll_component|SYSTEM_PLL_altpll:auto_generated|wire_pll1_clk[3] ; PLL_1                ; 1       ; 0                                    ; Global Clock         ; GCLK3            ; --                        ;
-; wOSC_CLK                                                                                      ; OSCILLATOR_X1_Y15_N3 ; 33      ; 0                                    ; Global Clock         ; GCLK1            ; --                        ;
+; wOSC_CLK                                                                                      ; OSCILLATOR_X1_Y15_N3 ; 40      ; 0                                    ; Global Clock         ; GCLK4            ; --                        ;
 +-----------------------------------------------------------------------------------------------+----------------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 
 
@@ -1315,62 +1356,63 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------+
 ; Routing Resource Type ; Usage                 ;
 +-----------------------+-----------------------+
-; Block interconnects   ; 40 / 47,787 ( < 1 % ) ;
-; C16 interconnects     ; 0 / 1,804 ( 0 % )     ;
-; C4 interconnects      ; 4 / 31,272 ( < 1 % )  ;
-; Direct links          ; 30 / 47,787 ( < 1 % ) ;
+; Block interconnects   ; 98 / 47,787 ( < 1 % ) ;
+; C16 interconnects     ; 1 / 1,804 ( < 1 % )   ;
+; C4 interconnects      ; 11 / 31,272 ( < 1 % ) ;
+; Direct links          ; 67 / 47,787 ( < 1 % ) ;
 ; Global clocks         ; 2 / 20 ( 10 % )       ;
-; Local interconnects   ; 41 / 15,408 ( < 1 % ) ;
-; R24 interconnects     ; 1 / 1,775 ( < 1 % )   ;
-; R4 interconnects      ; 6 / 41,310 ( < 1 % )  ;
+; Local interconnects   ; 44 / 15,408 ( < 1 % ) ;
+; R24 interconnects     ; 2 / 1,775 ( < 1 % )   ;
+; R4 interconnects      ; 23 / 41,310 ( < 1 % ) ;
 +-----------------------+-----------------------+
 
 
-+--------------------------------------------------------------------------+
-; LAB Logic Elements                                                       ;
-+--------------------------------------------+-----------------------------+
-; Number of Logic Elements  (Average = 9.20) ; Number of LABs  (Total = 5) ;
-+--------------------------------------------+-----------------------------+
-; 1                                          ; 1                           ;
-; 2                                          ; 0                           ;
-; 3                                          ; 0                           ;
-; 4                                          ; 0                           ;
-; 5                                          ; 0                           ;
-; 6                                          ; 1                           ;
-; 7                                          ; 1                           ;
-; 8                                          ; 0                           ;
-; 9                                          ; 0                           ;
-; 10                                         ; 0                           ;
-; 11                                         ; 0                           ;
-; 12                                         ; 0                           ;
-; 13                                         ; 0                           ;
-; 14                                         ; 0                           ;
-; 15                                         ; 0                           ;
-; 16                                         ; 2                           ;
-+--------------------------------------------+-----------------------------+
++---------------------------------------------------------------------------+
+; LAB Logic Elements                                                        ;
++---------------------------------------------+-----------------------------+
+; Number of Logic Elements  (Average = 12.86) ; Number of LABs  (Total = 7) ;
++---------------------------------------------+-----------------------------+
+; 1                                           ; 0                           ;
+; 2                                           ; 0                           ;
+; 3                                           ; 0                           ;
+; 4                                           ; 0                           ;
+; 5                                           ; 1                           ;
+; 6                                           ; 0                           ;
+; 7                                           ; 0                           ;
+; 8                                           ; 0                           ;
+; 9                                           ; 0                           ;
+; 10                                          ; 1                           ;
+; 11                                          ; 1                           ;
+; 12                                          ; 0                           ;
+; 13                                          ; 0                           ;
+; 14                                          ; 0                           ;
+; 15                                          ; 0                           ;
+; 16                                          ; 4                           ;
++---------------------------------------------+-----------------------------+
 
 
 +------------------------------------------------------------------+
 ; LAB-wide Signals                                                 ;
 +------------------------------------+-----------------------------+
-; LAB-wide Signals  (Average = 0.80) ; Number of LABs  (Total = 5) ;
+; LAB-wide Signals  (Average = 1.43) ; Number of LABs  (Total = 7) ;
 +------------------------------------+-----------------------------+
-; 1 Clock                            ; 4                           ;
+; 1 Clock                            ; 5                           ;
+; 1 Clock enable                     ; 5                           ;
 +------------------------------------+-----------------------------+
 
 
 +----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                        ;
 +----------------------------------------------+-----------------------------+
-; Number of Signals Sourced  (Average = 15.80) ; Number of LABs  (Total = 5) ;
+; Number of Signals Sourced  (Average = 18.57) ; Number of LABs  (Total = 7) ;
 +----------------------------------------------+-----------------------------+
 ; 0                                            ; 0                           ;
 ; 1                                            ; 0                           ;
-; 2                                            ; 1                           ;
+; 2                                            ; 0                           ;
 ; 3                                            ; 0                           ;
 ; 4                                            ; 0                           ;
 ; 5                                            ; 0                           ;
-; 6                                            ; 1                           ;
+; 6                                            ; 0                           ;
 ; 7                                            ; 0                           ;
 ; 8                                            ; 0                           ;
 ; 9                                            ; 1                           ;
@@ -1380,9 +1422,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 13                                           ; 0                           ;
 ; 14                                           ; 0                           ;
 ; 15                                           ; 0                           ;
-; 16                                           ; 0                           ;
-; 17                                           ; 0                           ;
-; 18                                           ; 0                           ;
+; 16                                           ; 2                           ;
+; 17                                           ; 1                           ;
+; 18                                           ; 1                           ;
 ; 19                                           ; 0                           ;
 ; 20                                           ; 0                           ;
 ; 21                                           ; 0                           ;
@@ -1390,66 +1432,62 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 23                                           ; 0                           ;
 ; 24                                           ; 0                           ;
 ; 25                                           ; 0                           ;
-; 26                                           ; 0                           ;
+; 26                                           ; 1                           ;
 ; 27                                           ; 0                           ;
-; 28                                           ; 0                           ;
-; 29                                           ; 0                           ;
-; 30                                           ; 1                           ;
-; 31                                           ; 0                           ;
-; 32                                           ; 1                           ;
+; 28                                           ; 1                           ;
 +----------------------------------------------+-----------------------------+
 
 
-+-------------------------------------------------------------------------------+
-; LAB Signals Sourced Out                                                       ;
-+-------------------------------------------------+-----------------------------+
-; Number of Signals Sourced Out  (Average = 7.40) ; Number of LABs  (Total = 5) ;
-+-------------------------------------------------+-----------------------------+
-; 0                                               ; 0                           ;
-; 1                                               ; 2                           ;
-; 2                                               ; 0                           ;
-; 3                                               ; 1                           ;
-; 4                                               ; 0                           ;
-; 5                                               ; 0                           ;
-; 6                                               ; 0                           ;
-; 7                                               ; 0                           ;
-; 8                                               ; 0                           ;
-; 9                                               ; 0                           ;
-; 10                                              ; 0                           ;
-; 11                                              ; 0                           ;
-; 12                                              ; 0                           ;
-; 13                                              ; 0                           ;
-; 14                                              ; 0                           ;
-; 15                                              ; 0                           ;
-; 16                                              ; 2                           ;
-+-------------------------------------------------+-----------------------------+
++--------------------------------------------------------------------------------+
+; LAB Signals Sourced Out                                                        ;
++--------------------------------------------------+-----------------------------+
+; Number of Signals Sourced Out  (Average = 10.57) ; Number of LABs  (Total = 7) ;
++--------------------------------------------------+-----------------------------+
+; 0                                                ; 0                           ;
+; 1                                                ; 0                           ;
+; 2                                                ; 0                           ;
+; 3                                                ; 1                           ;
+; 4                                                ; 0                           ;
+; 5                                                ; 1                           ;
+; 6                                                ; 0                           ;
+; 7                                                ; 0                           ;
+; 8                                                ; 0                           ;
+; 9                                                ; 1                           ;
+; 10                                               ; 0                           ;
+; 11                                               ; 0                           ;
+; 12                                               ; 1                           ;
+; 13                                               ; 1                           ;
+; 14                                               ; 0                           ;
+; 15                                               ; 0                           ;
+; 16                                               ; 2                           ;
++--------------------------------------------------+-----------------------------+
 
 
-+---------------------------------------------------------------------------+
-; LAB Distinct Inputs                                                       ;
-+---------------------------------------------+-----------------------------+
-; Number of Distinct Inputs  (Average = 8.40) ; Number of LABs  (Total = 5) ;
-+---------------------------------------------+-----------------------------+
-; 0                                           ; 0                           ;
-; 1                                           ; 0                           ;
-; 2                                           ; 2                           ;
-; 3                                           ; 1                           ;
-; 4                                           ; 0                           ;
-; 5                                           ; 0                           ;
-; 6                                           ; 0                           ;
-; 7                                           ; 0                           ;
-; 8                                           ; 0                           ;
-; 9                                           ; 0                           ;
-; 10                                          ; 0                           ;
-; 11                                          ; 0                           ;
-; 12                                          ; 0                           ;
-; 13                                          ; 0                           ;
-; 14                                          ; 0                           ;
-; 15                                          ; 0                           ;
-; 16                                          ; 0                           ;
-; 17                                          ; 1                           ;
-; 18                                          ; 1                           ;
-+---------------------------------------------+-----------------------------+
++----------------------------------------------------------------------------+
+; LAB Distinct Inputs                                                        ;
++----------------------------------------------+-----------------------------+
+; Number of Distinct Inputs  (Average = 13.43) ; Number of LABs  (Total = 7) ;
++----------------------------------------------+-----------------------------+
+; 0                                            ; 0                           ;
+; 1                                            ; 0                           ;
+; 2                                            ; 0                           ;
+; 3                                            ; 0                           ;
+; 4                                            ; 0                           ;
+; 5                                            ; 1                           ;
+; 6                                            ; 0                           ;
+; 7                                            ; 0                           ;
+; 8                                            ; 0                           ;
+; 9                                            ; 1                           ;
+; 10                                           ; 0                           ;
+; 11                                           ; 0                           ;
+; 12                                           ; 0                           ;
+; 13                                           ; 1                           ;
+; 14                                           ; 0                           ;
+; 15                                           ; 0                           ;
+; 16                                           ; 2                           ;
+; 17                                           ; 1                           ;
+; 18                                           ; 1                           ;
++----------------------------------------------+-----------------------------+
 
 
 +------------------------------------------+
@@ -1583,10 +1621,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; bMKR_A[6]          ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ;
 ; bMKR_D[0]          ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ;
 ; bMKR_D[2]          ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ;
-; bMKR_D[3]          ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ;
 ; bMKR_D[4]          ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ;
 ; bMKR_D[5]          ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ;
-; bMKR_D[7]          ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ;
 ; bMKR_D[8]          ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ;
 ; bMKR_D[9]          ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ;
 ; bMKR_D[10]         ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ;
@@ -1643,7 +1679,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; oFLASH_HOLD        ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ;
 ; oFLASH_WP          ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ;
 ; bMKR_D[1]          ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ;
+; bMKR_D[3]          ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ;
 ; bMKR_D[6]          ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ;
+; bMKR_D[7]          ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ;
 ; iCLK               ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; oHDMI_TX[0](n)     ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ;
 ; oHDMI_TX[1](n)     ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ;
@@ -1774,7 +1812,7 @@ Info (176235): Finished register packing
 Warning (15058): PLL "SYSTEM_PLL:PLL_inst|altpll:altpll_component|SYSTEM_PLL_altpll:auto_generated|pll1" is in normal or source synchronous mode with output clock "compensate_clock" set to clk[3] that is not fully compensated because it feeds an output pin -- only PLLs in zero delay buffer mode can fully compensate output pins File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/db/system_pll_altpll.v Line: 51
 Warning (15064): PLL "SYSTEM_PLL:PLL_inst|altpll:altpll_component|SYSTEM_PLL_altpll:auto_generated|pll1" output port clk[3] feeds output pin "oSDRAM_CLK~output" via non-dedicated routing -- jitter performance depends on switching rate of other design elements. Use PLL dedicated clock outputs to ensure jitter performance File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/db/system_pll_altpll.v Line: 51
 Info (128000): Starting physical synthesis optimizations for speed
-Info (128001): Physical synthesis optimizations for speed complete: elapsed time is 00:00:01
+Info (128001): Physical synthesis optimizations for speed complete: elapsed time is 00:00:00
 Warning (15705): Ignored locations or region assignments to the following nodes
     Warning (15706): Node "bWM_PIO16" is assigned to location or region, but does not exist in design
     Warning (15706): Node "bWM_PIO17" is assigned to location or region, but does not exist in design
@@ -1783,7 +1821,7 @@ Warning (15705): Ignored locations or region assignments to the following nodes
     Warning (15706): Node "iWM_CTS" is assigned to location or region, but does not exist in design
     Warning (15706): Node "iWM_RTS" is assigned to location or region, but does not exist in design
     Warning (15706): Node "panel_en" is assigned to location or region, but does not exist in design
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:03
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:01
 Info (14896): Fitter has disabled Advanced Physical Optimization because it is not supported for the current family.
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
@@ -1792,14 +1830,14 @@ Info (170137): Fitter placement was successful
 Info (170192): Fitter placement operations ending: elapsed time is 00:00:01
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X0_Y10 to location X9_Y19
+    Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X0_Y0 to location X9_Y9
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
-Info (11888): Total time spent on timing analysis during the Fitter is 0.25 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.17 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:02
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Warning (169180): Following 2 pins must use external clamping diodes.
     Info (169178): Pin oFLASH_MOSI uses I/O standard 3.3-V LVTTL at C1 File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v Line: 117
@@ -1842,10 +1880,8 @@ Warning (169177): 91 pins must meet Intel FPGA requirements for 3.3-, 3.0-, and 
     Info (169178): Pin bMKR_A[6] uses I/O standard 3.3-V LVTTL at G2 File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v Line: 45
     Info (169178): Pin bMKR_D[0] uses I/O standard 3.3-V LVTTL at G1 File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v Line: 46
     Info (169178): Pin bMKR_D[2] uses I/O standard 3.3-V LVTTL at P3 File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v Line: 46
-    Info (169178): Pin bMKR_D[3] uses I/O standard 3.3-V LVTTL at R3 File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v Line: 46
     Info (169178): Pin bMKR_D[4] uses I/O standard 3.3-V LVTTL at T3 File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v Line: 46
     Info (169178): Pin bMKR_D[5] uses I/O standard 3.3-V LVTTL at T2 File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v Line: 46
-    Info (169178): Pin bMKR_D[7] uses I/O standard 3.3-V LVTTL at G15 File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v Line: 46
     Info (169178): Pin bMKR_D[8] uses I/O standard 3.3-V LVTTL at F16 File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v Line: 46
     Info (169178): Pin bMKR_D[9] uses I/O standard 3.3-V LVTTL at F15 File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v Line: 46
     Info (169178): Pin bMKR_D[10] uses I/O standard 3.3-V LVTTL at C16 File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v Line: 46
@@ -1894,7 +1930,9 @@ Warning (169177): 91 pins must meet Intel FPGA requirements for 3.3-, 3.0-, and 
     Info (169178): Pin oFLASH_HOLD uses I/O standard 3.3-V LVTTL at R7 File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v Line: 119
     Info (169178): Pin oFLASH_WP uses I/O standard 3.3-V LVTTL at T7 File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v Line: 122
     Info (169178): Pin bMKR_D[1] uses I/O standard 3.3-V LVTTL at N3 File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v Line: 46
+    Info (169178): Pin bMKR_D[3] uses I/O standard 3.3-V LVTTL at R3 File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v Line: 46
     Info (169178): Pin bMKR_D[6] uses I/O standard 3.3-V LVTTL at G16 File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v Line: 46
+    Info (169178): Pin bMKR_D[7] uses I/O standard 3.3-V LVTTL at G15 File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v Line: 46
     Info (169178): Pin iCLK uses I/O standard 3.3-V LVTTL at E2 File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v Line: 26
 Warning (169203): PCI-clamp diode is not supported in this mode. The following 2 pins must meet the Intel FPGA requirements for 3.3V, 3.0V, and 2.5V interfaces if they are connected to devices other than the supported configuration devices. In these cases, Intel recommends termination method as specified in the Application Note 447.
     Info (169178): Pin oFLASH_MOSI uses I/O standard 3.3-V LVTTL at C1 File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v Line: 117
@@ -1926,10 +1964,8 @@ Warning (169064): Following 87 pins have no output enable or a GND or VCC output
     Info (169065): Pin bMKR_A[6] has a permanently disabled output enable File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v Line: 45
     Info (169065): Pin bMKR_D[0] has a permanently disabled output enable File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v Line: 46
     Info (169065): Pin bMKR_D[2] has a permanently disabled output enable File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v Line: 46
-    Info (169065): Pin bMKR_D[3] has a permanently disabled output enable File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v Line: 46
     Info (169065): Pin bMKR_D[4] has a permanently disabled output enable File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v Line: 46
     Info (169065): Pin bMKR_D[5] has a permanently disabled output enable File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v Line: 46
-    Info (169065): Pin bMKR_D[7] has a permanently disabled output enable File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v Line: 46
     Info (169065): Pin bMKR_D[8] has a permanently disabled output enable File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v Line: 46
     Info (169065): Pin bMKR_D[9] has a permanently disabled output enable File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v Line: 46
     Info (169065): Pin bMKR_D[10] has a permanently disabled output enable File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v Line: 46
@@ -1986,13 +2022,15 @@ Warning (169064): Following 87 pins have no output enable or a GND or VCC output
     Info (169065): Pin oFLASH_HOLD has a permanently disabled output enable File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v Line: 119
     Info (169065): Pin oFLASH_WP has a permanently disabled output enable File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v Line: 122
     Info (169065): Pin bMKR_D[1] has a permanently disabled output enable File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v Line: 46
+    Info (169065): Pin bMKR_D[3] has a permanently disabled output enable File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v Line: 46
     Info (169065): Pin bMKR_D[6] has a permanently enabled output enable File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v Line: 46
+    Info (169065): Pin bMKR_D[7] has a permanently enabled output enable File: C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/MKRVIDOR4000_top.v Line: 46
 Info (144001): Generated suppressed messages file C:/Users/Solom/OneDrive/Desktop/Control/FPGA/vidordemo/projects/MKRVIDOR4000_template/output_files/MKRVIDOR4000.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 48 warnings
-    Info: Peak virtual memory: 5450 megabytes
-    Info: Processing ended: Thu Mar 23 17:52:13 2023
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:12
+    Info: Peak virtual memory: 5452 megabytes
+    Info: Processing ended: Fri Apr 21 23:35:36 2023
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:08
 
 
 +----------------------------+

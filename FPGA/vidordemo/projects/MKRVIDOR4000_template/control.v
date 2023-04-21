@@ -1,99 +1,22 @@
-module control(trig, clk, rf);
- /*
-input trig; // trigger input
-input clk; // fpga clock as input
-output rf; // outputs to rf controller
-
-
-integer counter = 0; 
-integer pi_2 = 333;  // this changes the frequency, it is the number of clock cycles for which the pin is low or high. 
-integer pi; // sets pi pulse to be twice the length of the pi over 2 
-assign pi = pi_2 * 2;
-
-// user inputs
-integer dead_time = 5; //multiples of 5, micro seconds
-assign dead_counts = (dead_time/5) * 333;
-integer interval = 1000;
-assign interval_counts = (interval / 5) * 333;*/
-
-
-
-// always @(posedge clk) begin
-// 	// deadtime at start. 
-// 	if (counter <= dead_counts) begin
-// 		$display("deadtime");
-// 		rf = 0;
-// 		counter <= counter + 1; 
-// 	end 
-// 	// pi/2 pulse 
-// 	else if ( dead_counts < counter <= (pi_2 + dead_counts)) begin 
-// 		$display("pi/2");
-// 		rf = 1;
-// 		counter <= counter + 1;
-// 	end 
-// 	// first interval
-// 	else if ((dead_counts + pi_2) < counter <= (dead_counts + pi_2 + interval_counts)) begin 
-// 		$display("interval 1");
-// 		rf = 0;
-// 		counter <= counter + 1; 
-// 	end 
-// 	// pi pulse
-// 	else if ((dead_counts + pi_2 + interval_counts) < counter <= (dead_counts + pi_2 + interval_counts + pi)) begin
-// 		$display("pi pulse");
-// 		rf = 1;
-// 		counter <= counter + 1; 
-// 	end
-// end
-	
-	
-	// interval
-
-	
-	// pi/2 pulse
-	
-	//else if
-
-// 
-// endmodule
-
+module control(trig, rabi_trig, clk, rf, rabi);
+/* a module for generion of a raman pulse scan and pi and pi/2 pulses with an arduino MKR Vidor development board in a TE2V atom interferometer
+-> when digital pin 1 is high the mach zehnder pulses are released.
+-> when digital pin 3 is high the raman pulse scan is released
+ */
 
 	output rf;
-	//output clock;
-	//output counter;
+	output rabi;
 	input wire trig;
+	input wire rabi_trig;
 	input wire clk;
-	//reg clk;
+
 	reg count;
 	reg out;
-	
 	reg rf;
-	//integer counter;
-	integer long_counter;
-	//parameter pi_2 = 5;
-	parameter interval = 20;
+
+
 	
-	parameter mz_start_time = 0;
-	integer pi_start;
-	integer interval_2_start;
-	integer second_pi_2_start;
-	integer end_time;
-	
-	/*
-	parameter PI = 666;
-	parameter PI_2 = 333;
-	parameter HALF_WAIT = 66666;
-	parameter WAIT = 33333;
-	parameter START = 66666;
-	*/
-	
-	parameter PI = 666;
-	parameter PI_2 = 333;
-	parameter HALF_WAIT = 66666;
-	parameter WAIT = 133332;
-	parameter START = 66666;
-		//reg[7:0] pi_start
-	
-	// square wave generation.
+	// square wave generation, for testing.
 	/*
 	integer N = 50;
 	integer pulses = 0;
@@ -108,178 +31,122 @@ assign interval_counts = (interval / 5) * 333;*/
 		end
 	end 
 	*/
-	
-	
-	/*always @(posedge clk) begin 
-		if (count == 17895697)
-			begin 
-				count <= 0; 
-				rf <= ~rf; 
-			end
-		else
-			begin
-				count <= count + 1;
-				rf <= rf;
-			end
-	end
-	*/
-	
-	/*
-	always @(posedge clk) begin
-		case(counter)
-		((mz_start_time <= counter) & (counter < (pi_2 + mz_start_time))) : rf  = 1; // first pi/2 pulse
-		(( pi_start <= counter) & (counter < interval_2_start)) : rf = 1; // pi pulse
-		((second_pi_2_start <= counter) & (counter < end_time)) : rf = 1; //second pi/2 pulse
-		default : rf = 0;
-		endcase
-		counter = counter + 1; 
-	end
-	*/
-	/*
-	always @(posedge clk) begin
-		counter <= counter + 1;
-		if (counter == START ) begin
-			rf <= 1;
-		end
-		if (counter == (START + PI_2)) begin 
-			rf <= 0; 
-		end 
-	
-		if (counter == (START + PI_2 + WAIT)) begin
-			rf <= 1; 
-		end
-		
-		if (counter == (START + PI_2 + WAIT + PI)) begin
-			rf <= 0;
-		end 
-	end */ 
-	
-	//generating 5mus pulses every 1ms
-	/*
-	always @(posedge clk) begin
-		if (trig == 1) begin
-			counter <= counter + 1;
-			if (counter == WAIT - PI) begin
-				rf <= 1;
-			end
-			else if (counter == WAIT) begin
-				rf <= 0;
-				counter <= 0;
-			end
 
-	
-			long_counter <= long_counter + 1;
-			if (long_counter == WAIT - PI_2) begin
-				rf <= 1;
-			end
-			else if (long_counter == WAIT) begin
-				rf <= 0;
-				long_counter <= 0;
-			end
-		end
-	end*/
-	/*
-	always @(posedge clk) begin
-		counter <= counter + 1;
-	*/
-	
+
+// mach zehnder pulses settings 
 	reg[3:0] state = 0;
 	reg[31:0] counter = 0; // need this to be at least 17 bit as wait for intervals is larger than 16 bit number 
 	
-	always @(posedge clk) begin
-    if (counter == 33) begin
-        counter <= 0;
-        rf <= ~ rf;
-    end else begin
-        counter <= counter + 1;
-    end
-	end
+	reg[31:0] before_interval = 33300; // sets the wait time after trigger to emit
+	reg[31:0] interval = 33300; // change integer here to set interval between pulses, T. 
+	reg[31:0] pi_pulse = 666; // change this integer to set the length of the pi pulse, pi_2 is calculated automatically
+	reg[31:0] pi_2_pulse; // automatically calculated
+	reg[31:0] after_interval = 33300; // sets the time for which nothing happens after the sequence
 	
-	/*
+	
+// raman pulse scan sequence settings 
+	reg[31:0] pulse_length = 66; // sets the initial pulse length for the raman pulse scan to start at
+	reg[32:0] pulse_increment =66; // amount to increment pulse by each time
+	reg[31:0] r_counter;
+	reg[7:0] r_state = 0;
+	
 	always @(posedge clk) begin
-		if (trig == 1) begin
+		if (trig == 1) begin // if the trigger pin (digital pin 7) is high the sequence runs 
 			counter <= counter + 1;
 			case (state)
 				0: begin // idle state
 					rf <= 0;
-					if (counter >= 33300) begin
+					if (counter >= before_interval) begin // change 33300 to change length of interval, this is approx 5 micro seconds
 						counter <= 0;
 						state <= 1;
 					end
 				end
 				1: begin // first pulse state
 					rf <= 1;
-					if (counter >= 240) begin
+					if (counter >= pi_2_pulse) begin // change integer here to set length of pulse
 						counter <= 0;
 						state <= 2;
 					end
 				end
 				2: begin // pause state
 					rf <= 0;
-					if (counter >= 48000) begin
+					if (counter >= interval) begin 
 						counter <= 0;
 						state <= 3;
 					end
 				end
 				3: begin // second pulse state
 					rf <= 1;
-					if (counter >= 480) begin
+					if (counter >= pi_pulse) begin 
 						counter <= 0;
 						state <= 4;
 					end
 				end
 				4: begin // third pulse state
 					rf <= 0;
-					if (counter >= 48000) begin
+					if (counter >= interval) begin
 						counter <= 0;
 						state <= 5;
 					end
 				end
 				5: begin // final pulse state
 					rf <= 1;
-					if (counter >= 240) begin
+					if (counter >= pi_2_pulse) begin
 					  rf <= 0;
 					  state <= 6;
 					  counter <= 0;
 					end
-					end
+				end
 				6: begin // end delay to allow arduino pin to change
-						if (counter >= 24000) begin
+						if (counter >= after_interval) begin
 							rf <= 0; 
 							state <= 0;
 							counter <= 0;
 						end
 					end
 			endcase
-	 //end else begin
-		//counter<=0;
-	end 
-end
-*/	
+	end else if (rabi == 1) begin
+	 // probably dont need a pin to select the rabi script, just use trigger pin 
+				case (r_state)
+					0: begin // idle state
+						$display("rabi idle");
+						rabi <= 0; 
+						if (rabi_trig) begin // when pulse release pin is trigd, should only need a fixed trigger pulse length as should run till pulse is ended 
+							r_state <= 1;
+						end
+					end
+					1: begin // pulse state 
+						$display("rabi pulse");
+						r_counter <= r_counter + 1; // increment r_counter when trig pin is high
+						rabi <= 1; // set high 
+						if (r_counter >= (pulse_length)) begin
+							pulse_length <= pulse_length + 66; // increase pulse length with each pulse
+							r_counter <= 0; // reset counter
+							r_state <= 2; // reset state, change this to 2 if we add delay after
+						end
+					end
+					2: begin // wait state
+						if (rabi_trig == 0) begin 
+							r_state <= 0; // only go back to state 0 when trig is off
+						end 
+						else begin
+							r_counter <= r_counter + 1;
+						end
+					end 
+				endcase
+		end
+	end
 	initial begin 
-		//$monitor("Time =%0t clk = %0d rf = %0d counter = %0d", $time, clk, rf, counter);
+		// mach zehnder initial state
 		rf <= 0;
 		counter <= 0;
-		long_counter <= HALF_WAIT;
-		//clk = 0;
-		//clock = 0;
-		//pi_2 <= 1;
-		//interval <= 1;
-		//pi <= pi_2 * 2;
-		//mz_start_time <= 0;
+		pi_2_pulse <= pi_pulse/2;
 		
-		//out = 0;
-
-		//reg[7:0] pi_start;
-		pi_start = mz_start_time + PI_2 + interval; // 30
-		interval_2_start = mz_start_time + PI_2 + interval + PI; // 50
-		second_pi_2_start = mz_start_time + PI_2 + PI + (2 * interval); // 70
-		end_time = second_pi_2_start + PI_2;
-		//$display("interval 2 start = %0d, pi start = %0d, second pi_2 start= %0d", interval_2_start, pi_start, second_pi_2_start);
+		// rabi initial state
+		
+		 
+		
 	end
-
-
-
 endmodule
 	
 

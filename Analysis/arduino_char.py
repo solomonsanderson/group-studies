@@ -249,16 +249,17 @@ axs[2].vlines([0, 1e-3, 2e-3], ymin = 0, ymax=80, color="red")
 axs[2].set_xlim((0,7.5))
 
 for ax in axs.flatten():
-    ax.set_ylabel("Time (S)")
+    ax.set_ylabel("Voltage (V)")
+    # ax.set_yticks(range(0,4))
+    ticks_y= ticker.FuncFormatter(lambda y, pos: '{0:g}'.format(y*multi))
+    ax.yaxis.set_major_formatter(ticks_y)
 
 
-axs[0].get_yaxis().set_ticks([0])
-axs[1].get_yaxis().set_ticks([0])
-axs[2].get_yaxis().set_ticks([0])
+
 
 fig.tight_layout()
 
 # x_alt, y_alt, alt_ticks, sp=get_data(pd.read_csv(fpga_alt))
 # x_pulse, y_pulse, pulse_ticks, sp = get_data(pd.read_csv(ard_3_pulse))
-
+plt.savefig("mz_ax.png")
 plt.show()
